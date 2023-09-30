@@ -9,12 +9,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Trang Chủ 1</title>
 <!-- Bootstrap core CSS -->
-<link rel="stylesheet"
-	href="<c:url value='/static/dist/css/lib/bootstrap.min.css'">
-<link rel="stylesheet"
-	href="<c:url value='/static/dist/css/swipe.min.css'">
-<link rel="icon" type="image/png"
-	href="<c:url value="/static/dist/img/favicon.png"">
+<link rel="stylesheet" href="<c:url value='/static/dist/css/lib/bootstrap.min.css' />">
+<link rel="stylesheet" href="<c:url value='/static/dist/css/swipe.min.css' />">
+<link rel="icon" type="image/png" href="<c:url value='/static/dist/img/favicon.png' />">
+
 </head>
 <body>
 <body>
@@ -1551,20 +1549,17 @@
 	<!-- Bootstrap/Swipe core JavaScript
 		================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
+<script src="<c:url value='/static/dist/js/jquery-3.3.1.slim.min.js' />"></script>
+<script>
+    if (!window.jQuery) {
+        document.write('<script src="/static/dist/js/vendor/jquery-slim.min.js"><\/script>');
+    }
+</script>
 
-<!-- 	<script src="<c:url value='/static/dist/js/jquery-3.3.1.slim.min.js' "
-		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-		crossorigin="anonymous"></script>
-
-	<script>
-		if (!window.jQuery) {
-			document
-					.write('<script src="<c:url value=\'/static/dist/js/vendor/jquery-slim.min.js\' />\"><\/script>');
-		}
-	</script>
-	<script src="<c:url value='/static/dist/js/vendor/popper.min.js' "></script>
-	<script src="<c:url value='/static/dist/js/swipe.min.js' "></script>
-	<script src="<c:url value='/static/dist/js/bootstrap.min.js' "></script> -->
+<script src="/static/dist/js/vendor/popper.min.js"></script>
+<script src="/static/dist/js/swipe.min.js"></script>
+<script src="/static/dist/js/bootstrap.min.js"></script>
+	
 	<script>
 		function scrollToBottom(el) {
 			el.scrollTop = el.scrollHeight;
@@ -1572,21 +1567,7 @@
 
 		scrollToBottom(document.getElementById('content'));
 
-		function displaySelectedImage(event) {
-			const fileInput = event.target;
-			const image = document
-					.querySelector('.avatar-female-1, .avatar-female-2, .avatar-female-3, .avatar-male-2, .avatar-male-3, .avatar-male-4'); // Lấy thẻ img bằng class
-
-			if (fileInput.files && fileInput.files[0]) {
-				const reader = new FileReader();
-
-				reader.onload = function(e) {
-					image.src = e.target.result; // Đặt thuộc tính src của thẻ img bằng dữ liệu hình ảnh đã chọn
-				};
-
-				reader.readAsDataURL(fileInput.files[0]);
-			}
-		}
+	
 	</script>
 
 

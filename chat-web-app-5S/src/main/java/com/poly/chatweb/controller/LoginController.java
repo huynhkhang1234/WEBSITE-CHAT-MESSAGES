@@ -15,7 +15,7 @@ import com.chatweb.services.UserServiceInterface;
 import com.chatweb.services.impl.UserService;
 import com.poly.chatweb.models.User;
 
-@WebServlet({"/login"})
+@WebServlet({"/sign-in"})
 public class LoginController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -30,14 +30,14 @@ public class LoginController extends HttpServlet {
 		String url  = request.getContextPath();
 		if (FileServiceAbstract.rootURL.isEmpty() || FileServiceAbstract.rootURL.contains("localhost")) {
 			
-			FileServiceAbstract.rootURL = url.replaceAll("login", "files/");
+			FileServiceAbstract.rootURL = url.replaceAll("sign-in", "files/");
 			System.out.println(FileServiceAbstract.rootURL);
 		}
 		User user = (User) request.getSession().getAttribute("user");
 		if (user != null) {
 			response.sendRedirect(url+"/chat");
 		} else {
-			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/login.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/sign-in.jsp");
 			rd.forward(request, response);
 		}
 	}
@@ -48,7 +48,7 @@ public class LoginController extends HttpServlet {
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		User user = userService.findUser(username, password);
-		String destPage = "/login";
+		String destPage = "/sign-in";
 		if (user != null) {
 			HttpSession httpSession = request.getSession();
 			httpSession.setAttribute("user", user);
