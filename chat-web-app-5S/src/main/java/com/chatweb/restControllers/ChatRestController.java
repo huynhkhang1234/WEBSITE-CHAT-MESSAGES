@@ -35,7 +35,6 @@ public class ChatRestController extends HttpServlet {
 		System.out.println("tin nhắn đã nhắn:" + messages);
 		ObjectMapper objectMapper = new ObjectMapper();
 		String json = objectMapper.writeValueAsString(messages);
-
 		response.setContentType("application/json");
 		response.setCharacterEncoding("UTF-8");
 

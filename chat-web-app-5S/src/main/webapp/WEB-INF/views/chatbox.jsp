@@ -16,6 +16,14 @@
 	href="<c:url value="/static/images/icon.jpg" />">
 <title>Chat</title>
 </head>
+<style>
+    #manage-user {
+        background-image: url('<c:url value="/static/images/hinhnen.jpg" />');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+</style>
+
 <body>
 	<p id="username" style="display: none">${user.username}</p>
 	<p id="userAvatar" style="display: none">

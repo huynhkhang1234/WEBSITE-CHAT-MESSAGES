@@ -9,12 +9,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/cute")
+@WebServlet("/index")
 public class test extends HttpServlet {
 	 protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	        // Đoạn mã xử lý ở đây, ví dụ: chuyển hướng trang
 	      System.out.println("cu te no ko bat");
-	      RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/group-form.jsp");
+	      RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/index1.jsp");
 			rd.forward(request, response);
+			
 	    }
 }
