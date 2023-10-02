@@ -1,32 +1,33 @@
 package com.chatweb.services;
 
 import java.io.File;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 
 import javax.servlet.http.HttpServletResponse;
 
 public abstract class FileServiceAbstract {
-
-	public static Path rootLocation = Paths.get("archive");
-
-	public static String rootURL = "";
 	
+	//đường dẫn tổng từ trang ở đỉa lên trang web	      
+	public static String rootLocation = "D:\\CongoTY5S_Group\\code\\WEBSITE-CHAT-MESSAGES\\chat-web-app-5S\\src\\main\\webapp\\static";
+	//đường dẫn từ hình ảnh mới tạo lên vd: khang-> khang.jpg.
+	public static String rootLocationURLImage = "";	
+	
+	public static String rootLocationShowImage = "http://localhost:8080/chat-web-app/static";
+	
+	public static String rootURL = "";	
 	public static String toTagHtml(String type, String username, String message) {
-		System.out.println("Hàm chạy FIleService: url là gì: " + rootURL);
-		
-		System.out.println(username);
-		System.out.println(message);
+		//giữ liệu hiện thị đường dẫn trên image khi chat.
 		String tag = "";
-		String url = rootURL + username + "/" + message;
+		String url = "/chat-web-app/static/data/"+ username + "/" + message;		
 		if (type.startsWith("audio")) {
 			tag = "<audio controls>\r\n" + "  <source src=\"" + url + "\" type=\"" + type + "\">\r\n" + "</audio>";
 		} else if (type.startsWith("video")) {
 			tag = "<video width=\"400\" controls>\r\n" + "  <source src=\"" + url + "\" type=\"" + type + "\">\r\n"
 					+ "</video>";
 		} else if (type.startsWith("image")) {
-			System.out.println("Hình ảnh :" +url);
+			//System.out.println("Hình ảnh :" +url);
 			tag = "<img src=\"" + url + "\" alt=\"\">";
+			//tag = "<img src=\"" +"/chat-web-app/static/images/anh2.png" + "\" alt=\"\">";
+			//tag = "<img src=\"" +"http://localhost:8080/chat-web-app/static/images/anh2.jpg" + "\" alt=\"\">";
 		}
 		else {
 			tag = "<a href="+url+">"+message+"</a>";

@@ -21,6 +21,8 @@ import com.poly.chatweb.dto.FileDTO;
 import com.poly.chatweb.dto.MessageDTO;
 import com.poly.chatweb.models.User;
 
+
+
 public class ChatService extends ChatServiceAbstract {
 
 	private static ChatService chatService = null;
@@ -68,28 +70,44 @@ public class ChatService extends ChatServiceAbstract {
 			}
 		});
 	}
-
+	//gửi hình là chạy vô. 
 	@Override
 	public void sendMessageToOneUser(MessageDTO message, Queue<FileDTO> fileDTOs) {
 		if (!message.getType().equals("text")) {
 			String fileName = message.getMessage();
 			fileName = fileName.replaceAll("\\s+", "");
-			String destFile = FileServiceAbstract.rootLocation.toString() + "/" + message.getUsername() + "/"
-					+ fileName;
+			//lấy đường dẫn tọa file mới chứa ảnh.
+			String destFile = FileServiceAbstract.rootLocationURLImage.toString() + "/" + message.getUsername() + "/"
+					+ fileName;			
+			String destFile2 = FileServiceAbstract.rootLocationURLImage.toString() + "/" + message.getUsername();					
 			File uploadedFile = new File(destFile);
+			File uploadedFile2 = new File(destFile2);			System.out.println("tạo file:" + uploadedFile);
+			if (!uploadedFile2.exists()) {
+			    System.out.println("Tạo thư mục");
+			    uploadedFile2.mkdirs(); // Tạo cả thư mục cha "D:\data" nếu nó chưa tồn tại
+			}
+			
 			String sender = message.getUsername();
 			String receiver = message.getReceiver();
 			Long groupId = message.getGroupId();
-			String url = FileServiceAbstract.rootURL + sender + "/" + fileName;
+			String url = FileServiceAbstract.rootLocationShowImage+"/data/"+sender+"/" +fileName;						
 			try {
 				FileOutputStream fileOutputStream = new FileOutputStream(uploadedFile, false);
 				FileDTO newFileDTO = new FileDTO(fileName, message.getType(), fileOutputStream, sender, receiver,
 						groupId, url);
+				System.out.println("fileOutStream:" + fileOutputStream);
+				////
+				long initialSize = fileOutputStream.getChannel().size();	
+				System.out.println("Kích thước ban đầu của fileOutputStream: " + initialSize + " byte");		
 				fileDTOs.add(newFileDTO);
 			} catch (FileNotFoundException ex) {
 				ex.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
 		} else {
+			//gửi tin nhắn dạng chữ.
 			if (message.getReceiver() != null) {
 				chatWebsockets.stream()
 						.filter(chatWebsocket -> chatWebsocket.getUsername().equals(message.getReceiver()))
@@ -122,7 +140,7 @@ public class ChatService extends ChatServiceAbstract {
 			}
 		}
 	}
-
+	//đợi hàng chờ khi gửi file lên và cập nhật file.
 	@Override
 	public void handleFileUpload(ByteBuffer byteBuffer, boolean last, Queue<FileDTO> fileDTOs) {
 		try {

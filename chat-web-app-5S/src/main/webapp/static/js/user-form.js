@@ -1,3 +1,4 @@
+console.log('test')
 window.onload = function() {
 	var imageFile = document.querySelector(".image-profile");
 

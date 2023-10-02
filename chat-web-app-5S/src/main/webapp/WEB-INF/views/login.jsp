@@ -16,8 +16,7 @@
 <body>
 	<div class="container">
 		<div class="form-container">
-			<h2 class="form-title">Star Messenger</h2>
-			<img alt="" src="/chat-web-app/khang/c0f02c94cb9002ec3433c105b0b81413.jpeg">
+			<h2 class="form-title">Star Messenger</h2>			
 			<div class="tab-control">
 				<h3 class="active tab-control-btn login">Sign in</h3>
 				<h3 class="tab-control-btn register">

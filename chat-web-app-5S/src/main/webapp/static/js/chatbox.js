@@ -23,10 +23,10 @@ var typeChat = "user";
 var listUserAdd = [];
 var listUserDelete = [];
 var numberMember = 0;
-window.onload = function() {	
+window.onload = function() {
 	if ("WebSocket" in window) {
 		username = document.getElementById("username").textContent;
-		userAvatar = document.getElementById("userAvatar").textContent;		
+		userAvatar = document.getElementById("userAvatar").textContent;
 		console.log(username);
 		console.log(userAvatar);
 		websocket = new WebSocket('ws://' + window.location.host + '/chat-web-app/chat/' + username);
@@ -74,10 +74,11 @@ function cleanUp() {
 	websocket = null;
 	receiver = null;
 }
-
+// clicl vào hiện thị thông tin nhắn tin bên phải.
 function setReceiver(element) {
 	groupId = null;
 	receiver = element.id;
+	//hiện thị icon người dùng trên header.
 	receiverAvatar = document.getElementById('img-' + receiver).src;
 	var status = '';
 	if (document.getElementById('status-' + receiver).classList.contains('online')) {
@@ -126,7 +127,7 @@ function setReceiver(element) {
 }
 //set thông tin người vào group.
 function setGroup(element) {
-	console.log('thêm group vào'+element);
+	//console.log('thêm group vào' + element);
 	receiver = null;
 	groupName = element.getAttribute("data-name");
 	groupId = element.getAttribute("data-id");
@@ -214,13 +215,13 @@ function createGroup(e) {
 	e.preventDefault();
 
 	let groupName = document.querySelector(".txt-group-name").value;
-//tạo 2 object
+	//tạo 2 object
 	let object = new Object();
 	let user = new Object();
 
 	user.username = username;
 	user.admin = true;
-//object name là tên group
+	//object name là tên group
 	object.name = groupName;
 	//những người được mời vào.
 	object.users = [];
@@ -277,7 +278,7 @@ function addMember(e) {
 
 	listUserAdd.forEach(function(username) {
 		let user = new Object();
-	//gán tên
+		//gán tên
 		user.username = username;
 		//gán người thêm vào nhóm với quyền user.
 		user.admin = false;
@@ -306,7 +307,7 @@ function addMember(e) {
 			if (inviteNumber) inviteNumber.innerHTML = numberMember + " paticipants";
 			//set vào
 			document.getElementById("group-" + groupId).querySelector(".user-contain").setAttribute("data-number", numberMember);
-	// thêm vào lạ group.
+			// thêm vào lạ group.
 			toggleAllModal();
 		});
 }
@@ -318,7 +319,7 @@ function fetchUser() {
 		.then(users => {
 			document.querySelector(".manage-member-body .list-user ul").innerHTML = "";
 			//chi tiết group.
-		//nếu user trong group ko có 
+			//nếu user trong group ko có 
 			if (users.length == 1) {
 				document.querySelector(".manage-member-body .list-user ul").innerHTML = "Bạn là thành viên duy nhất";
 				document.querySelector(".manage-member-body .list-user ul").style = "text-align: center; font-size: 1.8rem;";
@@ -339,7 +340,7 @@ function fetchUser() {
 					+ '<div class="user-info" style="flex-grow: 1;">'
 					+ '<span class="user-name">' + data.username + '</span>'
 					+ '</div>';
-					//chỉ có admin mới có quyền xóa nhóm.
+				//chỉ có admin mới có quyền xóa nhóm.
 
 				if (!data.admin)
 					appendUser += '<div class="user-delete" style="font-weight: 700;" data-username="' + data.username + '" onclick="deleteMember(this)">Delete</div>'
@@ -427,7 +428,7 @@ function chatOne(ele) {
 }
 
 function chatGroup(ele) {
-	
+
 	console.log('2323')
 	typeChat = "group";
 	resetChat();
@@ -681,13 +682,13 @@ function renderFile(typeFile) {
 function sendMessage(e) {
 	e.preventDefault();
 	//lấy dữu liệu
-	var inputText = document.getElementById("message").value;	
+	var inputText = document.getElementById("message").value;
 	if (inputText != '') {
 		//có dữ liệu
-	console.log(inputText+'inputtest');
+		console.log(inputText + 'inputtest');
 		sendText();
 	} else {
-	console.log('dữ liệu  rông');
+		console.log('dữ liệu  rông');
 		sendAttachments();
 	}
 
@@ -695,10 +696,10 @@ function sendMessage(e) {
 }
 //gửi dữ liệu đi trong tin nhắn.
 function sendText() {
-	console.log('vô test');
+
 	var messageContent = document.getElementById("message").value;
 	var messageType = "text";
-	console.log('Nội dung tin nhắn' + messageContent);
+	//console.log('Nội dung tin nhắn' + messageContent);
 	document.getElementById("message").value = '';
 	//lấy dữ liệu data về và kiểm tra kiểu gửi.
 	var message = buildMessageToJson(messageContent, messageType);
@@ -708,15 +709,17 @@ function sendText() {
 //ảnh và file được sử lí.
 function sendAttachments() {
 	var messageType = "attachment";
-		console.log('Vô hàm kiểm tra file');
+	console.log('Vô hàm kiểm tra file');
 	for (file of listFile) {
 		//lấy tên file
 		messageContent = file.name.trim();
 		//đuôi ảnh .jpg chăng hạng.
 		messageType = file.type;
-		console.log('Kiểu file là gì:'+messageType);
-		console.log('Nội dung file là gì:'+ messageContent);
+		console.log('Kiểu file là gì:' + messageType);
+		console.log('Nội dung file là gì:' + messageContent);
 		var message = buildMessageToJson(messageContent, messageType);
+	//	console.log('message là gì: ' + message);
+		//dùng để lưu hình ảnh trong database.
 		websocket.send(JSON.stringify(message));
 		websocket.send(file);
 		//kiểm tra để render đúng theo yêu cầu..
@@ -729,9 +732,23 @@ function sendAttachments() {
 				+ '<source src="' + URL.createObjectURL(file) + '" type="' + messageType + '">'
 				+ '</video>';
 		} else if (messageType.startsWith("image")) {
+			console.log('FIle này là dạng hình ảnh');
+			 console.log('file hiện thị hình ảnh là: ' + URL.createObjectURL(file));
+			//cai file la hinh anh hay tat ca gi do			
 			message.message = '<img src="' + URL.createObjectURL(file) + '" alt="">';
+			 console.log('chạy vô hình ảnh file: ' + file);
+			
+			
+			// console.log('message.message là gì: ' +message.message);
+			 //hien thij file gui di ko anh.
+        var imgElement = document.createElement('img');
+        imgElement.src = URL.createObjectURL(file);
+        imgElement.alt = "";
+        message.message = imgElement.outerHTML;
+        console.log('chay qua in html')
 		}
 		else {
+			
 			message.message = '<a href= "' + URL.createObjectURL(file) + '">' + messageContent + '</a>'
 		}
 		setMessage(message);
@@ -752,11 +769,11 @@ function buildMessageToJson(message, type) {//kiểm tra kiểu tin nhắn hay h
 	};
 }
 //hàm gửi và đồng thời load lại thông tin.
-function setMessage(msg) {	
-	console.log('msg là gì:' + msg);
+function setMessage(msg) {
+	//console.log('msg là gì:' + msg);
 	if (msg.message != '[P]open' && msg.message != '[P]close') {
 		var currentChat = document.getElementById('chat').innerHTML;
-		console.log('in ra thông tin của chat:' + currentChat);
+	//	console.log('in ra thông tin của chat:' + currentChat);
 		var newChatMsg = '';
 		if (msg.receiver != null) {
 			newChatMsg = customLoadMessage(msg.username, msg.message);
@@ -829,8 +846,8 @@ function loadMessages() {
 				} catch (ex) {
 
 				}
-			});
-			currentChatbox.innerHTML = chatbox;
+			});		
+			currentChatbox.innerHTML = chatbox;			
 			//cuonjso xuống tin nhắn gần nhất.
 			goLastestMsg();
 		}
@@ -839,21 +856,26 @@ function loadMessages() {
 		+ "&receiver=" + receiver, true);
 	xhttp.send();
 }
+//load tin nhắn của 2 người.
 //hiện thị thông tin nhắn cho 2 người.
 function customLoadMessage(sender, message) {
-	console.log('hiện thị thông tin người dùng custom:' + sender,message);
-	console.log('receiver:' + receiver);
-	console.log('receiver:' + username);
+	//console.log('hiện thị thông tin người dùng custom:' + sender, message);
+//	console.log('receiver:' + receiver);
+	//console.log('username:' + username);
+	//console.log('sender:' + sender);
+		//console.log('img:' + userAvatar);
+	//console.log('Hiện thi thông tin message:' + message);
 	var imgSrc = receiverAvatar;
+	
 	//kết hợp hiện thị ra.
-	var msgDisplay = '<li>'
-		+ '<div class="message';
+	var msgDisplay = '<li>'+ '<div class="message';
 	if (receiver != sender && username != sender) {
 		return '';
 	}
 	else if (receiver == sender) {
 		msgDisplay += '">';
 	} else {
+		//hình ảnh người mình nhắn.
 		imgSrc = userAvatar;
 		msgDisplay += ' right">';
 	}
@@ -867,7 +889,7 @@ function customLoadMessage(sender, message) {
 
 function customLoadMessageGroup(sender, groupIdFromServer, message, avatar) {
 	//let imgSrc = 'http://' + window.location.host + '/files/' + sender + '/' + avatar;
-	let imgSrc ='/chat-web-app/static/images/anh1.jpg';
+	let imgSrc = '/chat-web-app/static/images/anh5.jpg';
 	var msgDisplay = '<li>'
 		+ '<div class="message';
 	if (groupIdFromServer != groupId) {
@@ -881,7 +903,7 @@ function customLoadMessageGroup(sender, groupIdFromServer, message, avatar) {
 	}
 	return msgDisplay + '<div class="message-img">'
 		+ '<img src="' + imgSrc + '" alt="">'
-		+ '<div class="sender-name">'+ sender +'</div>'
+		+ '<div class="sender-name">' + sender + '</div>'
 		+ ' </div>'
 		+ '<div class="message-text">' + message + '</div>'
 		+ '</div>'
@@ -941,7 +963,7 @@ function searchMemberByKeyword(ele) {
 					+ '<div class="user-contain">'
 					+ '<div class="user-img">'
 					+ '<img '
-					+ ' src="/chat-web-app/static/images/anh1.jpg"'
+					+ ' src="/chat-web-app/static/images/anh12.jpg"'
 					+ 'alt="Image of user">'
 					+ '</div>'
 					+ '<div class="user-info">'
@@ -998,14 +1020,14 @@ function searchGroupByKeyword(value) {
 function searchUser(ele) {
 	console.log(ele.value);
 	if (typeChat == "user") {
-	console.log('chay vo if đầu');		
+		console.log('chay vo if đầu');
 		searchFriendByKeyword(ele.value);
 	} else {
 		if (ele.value == "") {
-	console.log('chay vo if 2');
+			console.log('chay vo if 2');
 			fetchGroup();
 		} else {
-	console.log('chay vo if 3');
+			console.log('chay vo if 3');
 			searchGroupByKeyword(ele.value);
 		}
 	}

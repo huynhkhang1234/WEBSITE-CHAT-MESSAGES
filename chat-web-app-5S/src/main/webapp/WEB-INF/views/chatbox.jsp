@@ -18,8 +18,9 @@
 </head>
 <body>
 	<p id="username" style="display: none">${user.username}</p>
+	<!-- thông tin người thứ 2. chat -->
 	<p id="userAvatar" style="display: none">
-		<c:url value="/files/${user.username}/${user.avatar}" />
+		<c:url value="/static/images/anh2.jpg" />
 	</p>
 	<div class="container">
 		<div class="conversation-container">
@@ -109,7 +110,7 @@
 											src="<c:url value="/files/${friend.username}/${friend.avatar}" />"
 											alt="Image of user"> --%>
 											<img id="img-${friend.username}"
-											src="<c:url value="/static/images/anh1.jpg" />"
+											 src="<c:url value="/static/images/anh1.jpg" />" 
 											alt="Image of user"> 
 										<div id="status-${friend.username}" class="user-img-dot"></div>
 									</div>
@@ -122,7 +123,9 @@
 					</ul>
 				</div>
 			</div>
-			<div class="right-side" id="receiver"></div>
+			<div class="right-side" id="receiver">
+			
+			</div>
 		</div>
 	</div>
 
