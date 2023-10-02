@@ -7,6 +7,8 @@ import com.poly.chatweb.models.User;
 public interface UserDaoInterface extends GenericDaoInterface<User> {
 	User findByUserNameAndPassword(String userName, String password);
 
+	public User findByUsername(String username);
+	
 	void saveUser(Boolean isRegister, User user);
 
 	List<User> findFriends(String userName);

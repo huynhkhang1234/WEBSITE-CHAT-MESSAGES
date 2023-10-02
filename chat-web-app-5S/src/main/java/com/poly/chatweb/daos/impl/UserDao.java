@@ -100,4 +100,12 @@ public class UserDao extends GenericDao<User> implements UserDaoInterface {
 		return users;
 	}
 
+	@Override
+	public User findByUsername(String username) {
+		StringBuilder sql = new StringBuilder("select username, gender, avatar");
+		sql.append(" from users where username=?");
+		List<User> users = query(sql.toString(), new UserMapper(), username);
+		return users.isEmpty() ? null : users.get(0);
+	}
+
 }

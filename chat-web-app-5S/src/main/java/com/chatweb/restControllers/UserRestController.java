@@ -1,14 +1,19 @@
 package com.chatweb.restControllers;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.PrintWriter;
 import java.util.List;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
 
 import com.chatweb.services.UserServiceInterface;
 import com.chatweb.services.impl.ChatService;
@@ -17,6 +22,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.poly.chatweb.models.User;
 
 @WebServlet("/users-rest-controller")
+@MultipartConfig
 public class UserRestController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -27,25 +33,24 @@ public class UserRestController extends HttpServlet {
 		super();
 	}
 
-	
-	//sử lí kiểm tra xem có tồn tại user và trang thái on hay ko bằng socket.
+	// sử lí kiểm tra xem có tồn tại user và trang thái on hay ko bằng socket.
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String userName = request.getParameter("username");
 		String keyWord = request.getParameter("keyword");
-		System.out.println("name:"+userName);
-		System.out.println("key"+keyWord);
+		System.out.println("name:" + userName);
+		System.out.println("key" + keyWord);
 		String conversationId = request.getParameter("conversationId");
-		System.out.println("id"+conversationId);
+		System.out.println("id" + conversationId);
 		List<User> listUsers;
 		if (conversationId != null && !conversationId.isEmpty()) {
 			Long id = Long.parseLong(conversationId);
 			listUsers = userServiceInterface.getFriendsNotInConversation(userName, keyWord, id);
 		}
-		//tìm kiếm bạn khi key rỗng
+		// tìm kiếm bạn khi key rỗng
 		else if (keyWord.isEmpty()) {
 			listUsers = userServiceInterface.findFriends(userName);
-		}//tìm bạn theo keys 
+		} // tìm bạn theo keys
 		else {
 			listUsers = userServiceInterface.findFriendsByKeyWord(userName, keyWord);
 		}
@@ -61,5 +66,26 @@ public class UserRestController extends HttpServlet {
 		PrintWriter printWriter = response.getWriter();
 		printWriter.print(json);
 		printWriter.flush();
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+		//kiểm tra username đã tồn tại
+		if(userServiceInterface.usernameIsExit(username)==true) {
+			//status 400
+			response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+			//đặt định dạng của phản hồi
+			response.setContentType("text/plain");
+			//lấy đối tượng PrintWriter
+			PrintWriter writer = response.getWriter();
+			//in dòng thông báo
+			writer.println("Username already exist!");
+			return;
+		}
+		Boolean gender= Boolean.valueOf(request.getParameter("gender"));	
+		Part avarta = request.getPart("avarta");
+		userServiceInterface.saveUser(true, username, password, gender, avarta);
 	}
 }

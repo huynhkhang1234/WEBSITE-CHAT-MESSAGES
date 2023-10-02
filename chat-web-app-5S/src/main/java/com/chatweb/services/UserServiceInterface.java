@@ -7,10 +7,12 @@ import javax.servlet.http.Part;
 import com.poly.chatweb.models.User;
 
 public interface UserServiceInterface {
-
+	
 	public void saveUser(Boolean isRegister, String username, String password, boolean gender, Part avatar);
 
 	public User findUser(String username, String password);
+	
+	public boolean usernameIsExit(String username);
 	
 	public List<User> findFriends(String username);
 	

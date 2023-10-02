@@ -37,14 +37,18 @@ public class UserService implements UserServiceInterface {
 	@Override
 	public void saveUser(Boolean isRegister, String username, String password, boolean gender, Part avatar) {
 		try {
-			File privateDir = new File(FileServiceAbstract.rootLocation.toString() + "/" + username);
-			privateDir.mkdir();
+//			String basePath = "C:/Users/Admin/eclipse-workspace_Java6/WEBSITE-CHAT-MESSAGES/chat-web-app-5S/";
+			String basePath = System.getProperty("user.dir");
+			String relativePath = "src/main/webapp/static/images/" + username;
+			File privateDir = new File(basePath + relativePath);
+			privateDir.mkdirs();
+			System.out.println(privateDir.getPath());
 			String origin = avatar.getSubmittedFileName();
 			String fileName = "";
 			if (!origin.isEmpty()) {
-				String tail = origin.substring(origin.lastIndexOf("."), origin.length());
-				fileName = username + tail;
-				avatar.write(privateDir.getAbsolutePath() + File.separator + fileName);
+			    String tail = origin.substring(origin.lastIndexOf("."), origin.length());
+			    fileName = username + tail;
+			    avatar.write(privateDir.getAbsolutePath() + File.separator + fileName);
 			} else {
 				File defaultAvatar = new File(FileServiceAbstract.rootLocation.toString() + "/default/user-male.jpg");
 				if (gender == false) {
@@ -85,4 +89,15 @@ public class UserService implements UserServiceInterface {
 		List<User> friends = userDaoInterface.findFriendsNotInConversation(userName, keyword, conversationId);
 		return friends;
 	}
+
+	@Override
+	public boolean usernameIsExit(String username) {
+		User user = userDaoInterface.findByUsername(username);
+		if(user==null) {
+		return false;
+		}
+		return true;
+	}
+
+	
 }
