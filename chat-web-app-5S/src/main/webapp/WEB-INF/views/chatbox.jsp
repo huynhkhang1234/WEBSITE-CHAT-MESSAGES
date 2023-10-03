@@ -89,6 +89,7 @@
 						style="text-decoration: none; color: white;margin-right: 3rem;">Welcome
 						${user.username}</a>
 					:
+					<img alt="not found" src="static/images/${user.username}/${user.username}.png" >
 					<a href="<c:url value="/users/logout"/>"
 						style="text-decoration: none; color: white; margin-left: 3rem;">Logout</a>
 				</h2>

@@ -2,7 +2,10 @@ package com.chatweb.services.impl;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.List;
 
@@ -26,29 +29,38 @@ public class UserService implements UserServiceInterface {
 		return instance;
 	}
 
-	private UserService() {
-		File uploadDir = new File(FileServiceAbstract.rootLocation.toString());
-		if (!uploadDir.exists()) {
-			uploadDir.mkdir();
-		}
-		System.out.println("Root path: " + uploadDir.getAbsolutePath());
-	}
+//	private UserService() {
+//		File uploadDir = new File(FileServiceAbstract.rootLocation.toString());
+//		if (!uploadDir.exists()) {
+//			uploadDir.mkdir();
+//		}
+//		System.out.println("Root path: " + uploadDir.getAbsolutePath());
+//	}
 
 	@Override
 	public void saveUser(Boolean isRegister, String username, String password, boolean gender, Part avatar) {
 		try {
-//			String basePath = "C:/Users/Admin/eclipse-workspace_Java6/WEBSITE-CHAT-MESSAGES/chat-web-app-5S/";
-			String basePath = System.getProperty("user.dir");
-			String relativePath = "src/main/webapp/static/images/" + username;
+			Path projectDirectory = Paths.get(System.getProperty("user.dir"));
+			// Lấy thư mục cha của projectDirectory
+			Path adminDirectory = projectDirectory.getParent();
+			// In ra thư mục adminDirectory
+
+			String basePath = adminDirectory.toString();
+
+			String relativePath = "/eclipse-workspace_Java6/WEBSITE-CHAT-MESSAGES/chat-web-app-5S/src/main/webapp/static/images/"
+					+ username;
 			File privateDir = new File(basePath + relativePath);
-			privateDir.mkdirs();
+			if (!privateDir.exists()) {
+				privateDir.mkdirs();
+			}
 			System.out.println(privateDir.getPath());
 			String origin = avatar.getSubmittedFileName();
 			String fileName = "";
 			if (!origin.isEmpty()) {
-			    String tail = origin.substring(origin.lastIndexOf("."), origin.length());
-			    fileName = username + tail;
-			    avatar.write(privateDir.getAbsolutePath() + File.separator + fileName);
+				String tail = origin.substring(origin.lastIndexOf("."), origin.length());
+				fileName = username + tail;
+				avatar.write(privateDir.getAbsolutePath() + File.separator + fileName);
+
 			} else {
 				File defaultAvatar = new File(FileServiceAbstract.rootLocation.toString() + "/default/user-male.jpg");
 				if (gender == false) {
@@ -93,11 +105,10 @@ public class UserService implements UserServiceInterface {
 	@Override
 	public boolean usernameIsExit(String username) {
 		User user = userDaoInterface.findByUsername(username);
-		if(user==null) {
-		return false;
+		if (user == null) {
+			return false;
 		}
 		return true;
 	}
 
-	
 }
