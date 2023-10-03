@@ -14,7 +14,7 @@ public class test extends HttpServlet {
 	 protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	        // Đoạn mã xử lý ở đây, ví dụ: chuyển hướng trang
 	      System.out.println("cu te no ko bat");
-	      RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/ChatGroup/sign-in.jsp");
+	      RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/ChatGroup/index2.jsp");
 			rd.forward(request, response);
 	    }
 }

@@ -1,18 +1,20 @@
+<%@page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="utf-8">
 	<title>Poly Chat</title>
 	<meta name="description" content="#">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!-- Bootstrap core CSS -->
-	<link href="dist/css/lib/bootstrap.min.css" type="text/css" rel="stylesheet">
+	<link href="<c:url value="/static/dist/css/lib/bootstrap.min.css" />" type="text/css" rel="stylesheet">
 	<!-- Swipe core CSS -->
-	<link href="dist/css/swipe.min.css" type="text/css" rel="stylesheet">
+	<link href="<c:url value="/static/dist/css/swipe.min.css" />" type="text/css" rel="stylesheet">
 	<!-- Favicon -->
-	<link href="dist/img/favicon.png" type="image/png" rel="icon">
-	<link rel="stylesheet" href="Styles.css">
+	<link href="<c:url value="/static/dist/img/favicon.png" />" type="image/png" rel="icon">	
+	<link rel="stylesheet" href="<c:url value="/static/dist/css/Styles.css" />"
 </head>
 
 <body style="font-family: 'Times New Roman', Times, serif">
@@ -23,7 +25,9 @@
 				<div class="container">
 					<div class="inside">
 						<div class="nav nav-tab menu">
-							<button class="btn"><img class="avatar-xl" src="dist/img/avatars/avatar-male-1.jpg"
+						<%-- src="<c:url value="/static/images/anh1.jpg" />"  --%>
+							<button class="btn">
+							<img class="avatar-xl" src="<c:url value="/static/dist/img/avatars/avatar-male-1.jpg"  />" 
 									alt="avatar"></button>
 							<a href="#members" onclick="toggleSidebar()" data-toggle="tab"><i
 									class="material-icons">account_circle</i></a>
@@ -73,7 +77,7 @@
 									<h1 class="name">Liên hệ</h1>
 									<div class="list-group" id="contacts" role="tablist">
 										<a href="#" class="filterMembers all online contact" data-toggle="list">
-											<img class="avatar-md" src="dist/img/avatars/avatar-female-1.jpg"
+											<img class="avatar-md" src="<c:url value="/static/dist/img/avatars/avatar-male-1.jpg"  />" 
 												data-toggle="tooltip" data-placement="top" title="Janette" alt="avatar">
 											<div class="status">
 												<i class="material-icons online">fiber_manual_record</i>
@@ -85,7 +89,7 @@
 
 										</a>
 										<a href="#" class="filterMembers all online contact" data-toggle="list">
-											<img class="avatar-md" src="dist/img/avatars/avatar-male-1.jpg"
+											<img class="avatar-md" src="<c:url value="/static/dist/img/avatars/avatar-male-1.jpg"  />" 
 												data-toggle="tooltip" data-placement="top" title="Michael" alt="avatar">
 											<div class="status">
 												<i class="material-icons online">fiber_manual_record</i>
@@ -97,7 +101,7 @@
 
 										</a>
 										<a href="#" class="filterMembers all online contact" data-toggle="list">
-											<img class="avatar-md" src="dist/img/avatars/avatar-female-2.jpg"
+											<img class="avatar-md" src="<c:url value="/static/dist/img/avatars/avatar-female-2.jpg" />"
 												data-toggle="tooltip" data-placement="top" title="Lean" alt="avatar">
 											<div class="status">
 												<i class="material-icons online">fiber_manual_record</i>
@@ -109,7 +113,7 @@
 
 										</a>
 										<a href="#" class="filterMembers all online contact" data-toggle="list">
-											<img class="avatar-md" src="dist/img/avatars/avatar-male-2.jpg"
+											<img class="avatar-md" src="<c:url value="/static/dist/img/avatars/avatar-male-2.jpg" />"
 												data-toggle="tooltip" data-placement="top" title="Mariette"
 												alt="avatar">
 											<div class="status">
@@ -151,7 +155,7 @@
 									<div class="list-group" id="chats" role="tablist">
 										<a href="#list-chat" class="filterDiscussions all unread single active"
 											id="list-chat-list" data-toggle="list" role="tab">
-											<img class="avatar-md" src="dist/img/avatars/avatar-female-1.jpg"
+											<img class="avatar-md" src="<c:url value="/static/dist/img/avatars/avatar-female-1.jpg" />"
 												data-toggle="tooltip" data-placement="top" title="Janette" alt="avatar">
 											<div class="status">
 												<i class="material-icons online">fiber_manual_record</i>
@@ -167,7 +171,7 @@
 										</a>
 										<a href="#list-empty" class="filterDiscussions all unread single"
 											id="list-empty-list" data-toggle="list" role="tab">
-											<img class="avatar-md" src="dist/img/avatars/avatar-male-1.jpg"
+											<img class="avatar-md" src="<c:url value="/static/dist/img/avatars/avatar-male-1.jpg" />"
 												data-toggle="tooltip" data-placement="top" title="Michael" alt="avatar">
 											<div class="status">
 												<i class="material-icons offline">fiber_manual_record</i>
@@ -183,7 +187,7 @@
 										</a>
 										<a href="#list-chat" class="filterDiscussions all read single"
 											id="list-chat-list2" data-toggle="list" role="tab">
-											<img class="avatar-md" src="dist/img/avatars/avatar-female-2.jpg"
+											<img class="avatar-md" src="<c:url value="/static/dist/img/avatars/avatar-female-2.jpg" />"
 												data-toggle="tooltip" data-placement="top" title="Lean" alt="avatar">
 											<div class="status">
 												<i class="material-icons offline">fiber_manual_record</i>
@@ -196,7 +200,7 @@
 										</a>
 										<a href="#list-empty" class="filterDiscussions all read single"
 											id="list-empty-list2" data-toggle="list" role="tab">
-											<img class="avatar-md" src="dist/img/avatars/avatar-male-2.jpg"
+											<img class="avatar-md" src="<c:url value="/static/dist/img/avatars/avatar-male-2.jpg" />"
 												data-toggle="tooltip" data-placement="top" title="Mariette"
 												alt="avatar">
 											<div class="status">
@@ -210,7 +214,7 @@
 										</a>
 										<a href="#list-chat" class="filterDiscussions all read single"
 											id="list-chat-list3" data-toggle="list" role="tab">
-											<img class="avatar-md" src="dist/img/avatars/avatar-female-3.jpg"
+											<img class="avatar-md" src="<c:url value="/static/dist/img/avatars/avatar-female-3.jpg" />"
 												data-toggle="tooltip" data-placement="top" title="Harmony" alt="avatar">
 											<div class="status">
 												<i class="material-icons online">fiber_manual_record</i>
@@ -223,7 +227,7 @@
 										</a>
 										<a href="#list-empty" class="filterDiscussions all read single"
 											id="list-empty-list3" data-toggle="list" role="tab">
-											<img class="avatar-md" src="dist/img/avatars/avatar-female-5.jpg"
+											<img class="avatar-md" src="<c:url value="/static/dist/img/avatars/avatar-female-5.jpg" />"
 												data-toggle="tooltip" data-placement="top" title="Keith" alt="avatar">
 											<div class="status">
 												<i class="material-icons offline">fiber_manual_record</i>
@@ -236,7 +240,7 @@
 										</a>
 										<a href="#list-request" class="filterDiscussions all unread single"
 											id="list-request-list" data-toggle="list" role="tab">
-											<img class="avatar-md" src="dist/img/avatars/avatar-female-6.jpg"
+											<img class="avatar-md" src="<c:url value="/static/dist/img/avatars/avatar-female-6.jpg" />"
 												data-toggle="tooltip" data-placement="top" title="Louis" alt="avatar">
 											<div class="status">
 												<i class="material-icons offline">fiber_manual_record</i>
@@ -252,7 +256,7 @@
 										</a>
 										<a href="#list-empty" class="filterDiscussions all read single"
 											id="list-empty-list4" data-toggle="list" role="tab">
-											<img class="avatar-md" src="dist/img/avatars/avatar-male-3.jpg"
+											<img class="avatar-md" src="<c:url value="/static/dist/img/avatars/avatar-male-3.jpg" />"
 												data-toggle="tooltip" data-placement="top" title="Ryan" alt="avatar">
 											<div class="status">
 												<i class="material-icons offline">fiber_manual_record</i>
@@ -265,7 +269,7 @@
 										</a>
 										<a href="#list-chat" class="filterDiscussions all unread single"
 											id="list-chat-list5" data-toggle="list" role="tab">
-											<img class="avatar-md" src="dist/img/avatars/avatar-male-4.jpg"
+											<img class="avatar-md" src="<c:url value="/static/dist/img/avatars/avatar-male-4.jpg" />"
 												data-toggle="tooltip" data-placement="top" title="Mildred" alt="avatar">
 											<div class="status">
 												<i class="material-icons offline">fiber_manual_record</i>
@@ -306,7 +310,7 @@
 									<div class="list-group" id="alerts" role="tablist">
 										<a href="#" class="filterNotifications all latest notification"
 											data-toggle="list">
-											<img class="avatar-md" src="dist/img/avatars/avatar-female-1.jpg"
+											<img class="avatar-md" src="<c:url value="/static/dist/img/avatars/avatar-female-1.jpg" />"
 												data-toggle="tooltip" data-placement="top" title="Janette" alt="avatar">
 											<div class="status">
 												<i class="material-icons online">fiber_manual_record</i>
@@ -318,7 +322,7 @@
 										</a>
 										<a href="#" class="filterNotifications all latest notification"
 											data-toggle="list">
-											<img class="avatar-md" src="dist/img/avatars/avatar-male-1.jpg"
+											<img class="avatar-md" src="<c:url value="/static/dist/img/avatars/avatar-male-1.jpg" />"
 												data-toggle="tooltip" data-placement="top" title="Michael" alt="avatar">
 											<div class="status">
 												<i class="material-icons online">fiber_manual_record</i>
@@ -330,7 +334,7 @@
 										</a>
 										<a href="#" class="filterNotifications all latest notification"
 											data-toggle="list">
-											<img class="avatar-md" src="dist/img/avatars/avatar-male-2.jpg"
+											<img class="avatar-md" src="<c:url value="/static/dist/img/avatars/avatar-male-2.jpg" />"
 												data-toggle="tooltip" data-placement="top" title="Mariette"
 												alt="avatar">
 											<div class="status">
@@ -343,7 +347,7 @@
 										</a>
 										<a href="#" class="filterNotifications all latest notification"
 											data-toggle="list">
-											<img class="avatar-md" src="dist/img/avatars/avatar-female-6.jpg"
+											<img class="avatar-md" src="<c:url value="/static/dist/img/avatars/avatar-female-6.jpg" />"
 												data-toggle="tooltip" data-placement="top" title="Louis" alt="avatar">
 											<div class="status">
 												<i class="material-icons online">fiber_manual_record</i>
@@ -355,7 +359,7 @@
 										</a>
 										<a href="#" class="filterNotifications all latest notification"
 											data-toggle="list">
-											<img class="avatar-md" src="dist/img/avatars/avatar-female-3.jpg"
+											<img class="avatar-md" src="<c:url value="/static/dist/img/avatars/avatar-female-3.jpg" />"
 												data-toggle="tooltip" data-placement="top" title="Janette" alt="avatar">
 											<div class="status">
 												<i class="material-icons online">fiber_manual_record</i>
@@ -367,7 +371,7 @@
 										</a>
 										<a href="#" class="filterNotifications all oldest notification"
 											data-toggle="list">
-											<img class="avatar-md" src="dist/img/avatars/avatar-female-5.jpg"
+											<img class="avatar-md" src="<c:url value="/static/dist/img/avatars/avatar-female-5.jpg" />"
 												data-toggle="tooltip" data-placement="top" title="Janette" alt="avatar">
 											<div class="status">
 												<i class="material-icons offline">fiber_manual_record</i>
@@ -379,7 +383,7 @@
 										</a>
 										<a href="#" class="filterNotifications all oldest notification"
 											data-toggle="list">
-											<img class="avatar-md" src="dist/img/avatars/avatar-female-2.jpg"
+											<img class="avatar-md" src="<c:url value="/static/dist/img/avatars/avatar-female-2.jpg" />"
 												data-toggle="tooltip" data-placement="top" title="Janette" alt="avatar">
 											<div class="status">
 												<i class="material-icons offline">fiber_manual_record</i>
@@ -391,7 +395,7 @@
 										</a>
 										<a href="#" class="filterNotifications all oldest notification"
 											data-toggle="list">
-											<img class="avatar-md" src="dist/img/avatars/avatar-male-3.jpg"
+											<img class="avatar-md" src="<c:url value="/static/dist/img/avatars/avatar-male-3.jpg" />"
 												data-toggle="tooltip" data-placement="top" title="Janette" alt="avatar">
 											<div class="status">
 												<i class="material-icons offline">fiber_manual_record</i>
@@ -403,7 +407,7 @@
 										</a>
 										<a href="#" class="filterNotifications all oldest notification"
 											data-toggle="list">
-											<img class="avatar-md" src="dist/img/avatars/avatar-male-4.jpg"
+											<img class="avatar-md" src="<c:url value="/static/dist/img/avatars/avatar-male-4.jpg" />"
 												data-toggle="tooltip" data-placement="top" title="Janette" alt="avatar">
 											<div class="status">
 												<i class="material-icons offline">fiber_manual_record</i>
@@ -421,7 +425,7 @@
 							<div class="tab-pane fade" id="settings">
 								<div class="settings">
 									<div class="profile">
-										<img class="avatar-xl" src="dist/img/avatars/avatar-male-1.jpg" alt="avatar">
+										<img class="avatar-xl" src="<c:url value="/static/dist/img/avatars/avatar-male-1.jpg" />" alt="avatar">
 										<h1><a href="#">Bảo Khang</a></h1>
 										<span>Đồng Tháp, Việt Nam</span>
 										<div class="stats">
@@ -645,7 +649,7 @@
 												data-parent="#accordionSettings">
 												<div class="content">
 													<div class="app">
-														<img src="dist/img/integrations/slack.svg" alt="app">
+														<img src="<c:url value="/static/dist/img/avatars/integrations/slack.svg" alt="app"> />"
 														<div class="permissions">
 															<h5>Skrill</h5>
 															<p>Đọc, viết, bình luận</p>
@@ -656,7 +660,7 @@
 														</label>
 													</div>
 													<div class="app">
-														<img src="dist/img/integrations/dropbox.svg" alt="app">
+														<img  src="<c:url value="/static/dist/img/avatars/integrations/dropbox.svg" alt="app"> />"
 														<div class="permissions">
 															<h5>Dropbox</h5>
 															<p>Đọc, viết, tải lên</p>
@@ -667,7 +671,7 @@
 														</label>
 													</div>
 													<div class="app">
-														<img src="dist/img/integrations/drive.svg" alt="app">
+														<img  src="<c:url value="/static/dist/img/avatars/integrations/drive.svg" alt="app"> />"
 														<div class="permissions">
 															<h5>Google Drive</h5>
 															<p>Chưa đặt quyền</p>
@@ -678,7 +682,7 @@
 														</label>
 													</div>
 													<div class="app">
-														<img src="dist/img/integrations/trello.svg" alt="app">
+														<img  src="<c:url value="/static/dist/img/avatars/integrations/trello.svg" alt="app"> />"
 														<div class="permissions">
 															<h5>Trello</h5>
 															<p>Chưa đặt quyền</p>
@@ -879,8 +883,8 @@
 									<div class="col-md-12">
 										<div class="inside">
 											<a href="#"><img class="avatar-md"
-													src="dist/img/avatars/avatar-female-5.jpg" data-toggle="tooltip"
-													data-placement="top" title="Keith" alt="avatar"></a>
+													 src="<c:url value="/static/dist/img/avatars/avatar-female-5.jpg" />" data-toggle="tooltip"
+													data-placement="top" title="Keith" alt="avatar"></a> 
 											<div class="status">
 												<i class="material-icons online">fiber_manual_record</i>
 											</div>
@@ -929,8 +933,7 @@
 										</div>
 										<!-- đây là người khác chat cho mình -->
 										<div class="message">
-											<img class="avatar-md" src="dist/img/avatars/avatar-female-5.jpg"
-												data-toggle="tooltip" data-placement="top" title="Keith" alt="avatar">
+										
 											<div class="text-main">
 												<div class="text-group">
 													<div class="text">
@@ -1051,6 +1054,8 @@
 									</div>
 								</div>
 							</div>
+						
+						
 							<div class="container">
 								<div class="col-md-12">
 									<div class="bottom">
@@ -1163,285 +1168,17 @@
 								</div>
 							</div>
 						</div>
-						<!--END MODAL ADD GROUP-->
-						<!-- MODAL CHON ANH-->
-						<div class="modal fade" id="ModalAnh" tabindex="-1" role="dialog" aria-hidden="true">
-							<div class="modal-dialog modal-dialog-centered" role="document">
-								<div class="requests">
-									<div class="title">
-										<h1>Cập nhật ảnh đại diên</h1>
-										<button type="button" class="btn" data-dismiss="modal" aria-label="Close"><i
-												class="material-icons">close</i></button>
-									</div>
-									<div class="content">
-
-										<div class="container ">
-											<!-- Tạo một nút để truy cập và chọn ảnh -->
-											<input type="file" id="uploadButton" style="display: none;">
-											<button style="background-color: rgb(154, 225, 248); color: blue;"
-												type="submit" class="btn button w-100" onclick="openFileExplorer()"><i
-													class="material-icons">
-													image
-												</i> Tải lên từ máy tính</button>
-
-
-										</div>
-										<div class="form-group row mt-3 ">
-											<label for="user">Bộ sưu tập</label>
-										</div>
-
-									</div>
-								</div>
-							</div>
-						</div>
-						<!--END MODAL CHON ANH -->
-
-						<!-- Start of Call -->
-						<div class="call" id="call1">
-							<div class="content">
-								<div class="container">
-									<div class="col-md-12">
-										<div class="inside">
-											<div class="panel">
-												<div class="participant">
-													<img class="avatar-xxl" src="dist/img/avatars/avatar-female-5.jpg"
-														alt="avatar">
-													<span>Connecting</span>
-												</div>
-												<div class="options">
-													<button class="btn option"><i
-															class="material-icons md-30">mic</i></button>
-													<button class="btn option"><i
-															class="material-icons md-30">videocam</i></button>
-													<button class="btn option call-end"><i
-															class="material-icons md-30">call_end</i></button>
-													<button class="btn option"><i
-															class="material-icons md-30">person_add</i></button>
-													<button class="btn option"><i
-															class="material-icons md-30">volume_up</i></button>
-												</div>
-												<button class="btn back" name="1"><i
-														class="material-icons md-24">chat</i></button>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- End of Call -->
-					</div>
-					<!-- End of Babble -->
-					<!-- Start of Babble -->
-					<div class="babble tab-pane fade" id="list-empty" role="tabpanel" aria-labelledby="list-empty-list">
-						<!-- Start of Chat -->
-						<div class="chat" id="chat2">
-							<div class="top">
-								<div class="container">
-									<div class="col-md-12">
-										<div class="inside">
-											<a href="#"><img class="avatar-md"
-													src="dist/img/avatars/avatar-female-2.jpg" data-toggle="tooltip"
-													data-placement="top" title="Lean" alt="avatar"></a>
-											<div class="status">
-												<i class="material-icons offline">fiber_manual_record</i>
-											</div>
-											<div class="data">
-												<h5><a href="#">Lean Avent</a></h5>
-												<span>Inactive</span>
-											</div>
-											<button class="btn connect d-md-block d-none" name="2"><i
-													class="material-icons md-30">phone_in_talk</i></button>
-											<button class="btn connect d-md-block d-none" name="2"><i
-													class="material-icons md-36">videocam</i></button>
-											<button class="btn d-md-block d-none"><i
-													class="material-icons md-30">info</i></button>
-											<div class="dropdown">
-												<button class="btn" data-toggle="dropdown" aria-haspopup="true"
-													aria-expanded="false"><i
-														class="material-icons md-30">more_vert</i></button>
-												<div class="dropdown-menu dropdown-menu-right">
-													<button class="dropdown-item connect" name="2"><i
-															class="material-icons">phone_in_talk</i>Voice Call</button>
-													<button class="dropdown-item connect" name="2"><i
-															class="material-icons">videocam</i>Video Call</button>
-													<hr>
-													<button class="dropdown-item"><i
-															class="material-icons">clear</i>Clear History</button>
-													<button class="dropdown-item"><i
-															class="material-icons">block</i>Block Contact</button>
-													<button class="dropdown-item"><i
-															class="material-icons">delete</i>Delete Contact</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="content empty">
-								<div class="container">
-									<div class="col-md-12">
-										<div class="no-messages">
-											<i class="material-icons md-48">forum</i>
-											<p>Seems people are shy to start the chat. Break the ice send the first
-												message.</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="container">
-								<div class="col-md-12">
-									<div class="bottom">
-										<form class="position-relative w-100">
-											<textarea class="form-control" placeholder="Start typing for reply..."
-												rows="1"></textarea>
-											<button class="btn emoticons"><i
-													class="material-icons">insert_emoticon</i></button>
-											<button type="submit" class="btn send"><i
-													class="material-icons">send</i></button>
-										</form>
-										<label>
-											<input type="file">
-											<span class="btn attach d-sm-block d-none"><i
-													class="material-icons">attach_file</i></span>
-										</label>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- End of Chat -->
-						<!-- Start of Call -->
-						<div class="call" id="call2">
-							<div class="content">
-								<div class="container">
-									<div class="col-md-12">
-										<div class="inside">
-											<div class="panel">
-												<div class="participant">
-													<img class="avatar-xxl" src="dist/img/avatars/avatar-female-2.jpg"
-														alt="avatar">
-													<span>Connecting</span>
-												</div>
-												<div class="options">
-													<button class="btn option"><i
-															class="material-icons md-30">mic</i></button>
-													<button class="btn option"><i
-															class="material-icons md-30">videocam</i></button>
-													<button class="btn option call-end"><i
-															class="material-icons md-30">call_end</i></button>
-													<button class="btn option"><i
-															class="material-icons md-30">person_add</i></button>
-													<button class="btn option"><i
-															class="material-icons md-30">volume_up</i></button>
-												</div>
-												<button class="btn back" name="2"><i
-														class="material-icons md-24">chat</i></button>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- End of Call -->
-					</div>
-					<!-- End of Babble -->
-					<!-- Start of Babble -->
-					<div class="babble tab-pane fade" id="list-request" role="tabpanel"
-						aria-labelledby="list-request-list">
-						<!-- Start of Chat -->
-						<div class="chat" id="chat3">
-							<div class="top">
-								<div class="container">
-									<div class="col-md-12">
-										<div class="inside">
-											<a href="#"><img class="avatar-md"
-													src="dist/img/avatars/avatar-female-6.jpg" data-toggle="tooltip"
-													data-placement="top" title="Louis" alt="avatar"></a>
-											<div class="status">
-												<i class="material-icons offline">fiber_manual_record</i>
-											</div>
-											<div class="data">
-												<h5><a href="#">Louis Martinez</a></h5>
-												<span>Inactive</span>
-											</div>
-											<button class="btn disabled d-md-block d-none" disabled><i
-													class="material-icons md-30">phone_in_talk</i></button>
-											<button class="btn disabled d-md-block d-none" disabled><i
-													class="material-icons md-36">videocam</i></button>
-											<button class="btn d-md-block disabled d-none" disabled><i
-													class="material-icons md-30">info</i></button>
-											<div class="dropdown">
-												<button class="btn disabled" data-toggle="dropdown" aria-haspopup="true"
-													aria-expanded="false" disabled><i
-														class="material-icons md-30">more_vert</i></button>
-												<div class="dropdown-menu dropdown-menu-right">
-													<button class="dropdown-item"><i
-															class="material-icons">phone_in_talk</i>Voice Call</button>
-													<button class="dropdown-item"><i
-															class="material-icons">videocam</i>Video Call</button>
-													<hr>
-													<button class="dropdown-item"><i
-															class="material-icons">clear</i>Clear History</button>
-													<button class="dropdown-item"><i
-															class="material-icons">block</i>Block Contact</button>
-													<button class="dropdown-item"><i
-															class="material-icons">delete</i>Delete Contact</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="content empty">
-								<div class="container">
-									<div class="col-md-12">
-										<div class="no-messages request">
-											<a href="#"><img class="avatar-xl"
-													src="dist/img/avatars/avatar-female-6.jpg" data-toggle="tooltip"
-													data-placement="top" title="Louis" alt="avatar"></a>
-											<h5>Louis Martinez would like to add you as a contact. <span>Hi Keith, I'd
-													like to add you as a contact.</span></h5>
-											<div class="options">
-												<button class="btn button"><i class="material-icons">check</i></button>
-												<button class="btn button"><i class="material-icons">close</i></button>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="container">
-								<div class="col-md-12">
-									<div class="bottom">
-										<form class="position-relative w-100">
-											<textarea class="form-control" placeholder="Messaging unavailable" rows="1"
-												disabled></textarea>
-											<button class="btn emoticons disabled" disabled><i
-													class="material-icons">insert_emoticon</i></button>
-											<button class="btn send disabled" disabled><i
-													class="material-icons">send</i></button>
-										</form>
-										<label>
-											<input type="file" disabled>
-											<span class="btn attach disabled d-sm-block d-none"><i
-													class="material-icons">attach_file</i></span>
-										</label>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- End of Chat -->
-					</div>
-					<!-- End of Babble -->
-				</div>
-			</div>
-		</div> <!-- Layout -->
+					
 	</main>
 	<!-- Bootstrap/Swipe core JavaScript
+	
 		================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="dist/js/jquery-3.3.1.slim.min.js"
+	<script 
+	src="<c:url value="/dist/js/jquery-3.3.1.slim.min.js" />" charset="utf-8"
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
 		crossorigin="anonymous"></script>
-	<script>window.jQuery || document.write('<script src="dist/js/vendor/jquery-slim.min.js"><\/script>')
+	<script>window.jQuery || document.write('<script src="<c:url value="/dist/js/vendor/jquery-slim.min.js" />" charset="utf-8"><\/script>')
 
 		function w3_open() {
 			document.getElementById("sidebar").style.width = "50%";
@@ -1475,16 +1212,14 @@
 			// Thực hiện hành động khi nút power được nhấn
 		}
 
-
-	</script>
-	<script src="dist/js/vendor/popper.min.js"></script>
-	<script src="dist/js/swipe.min.js"></script>
-	<script src="dist/js/bootstrap.min.js"></script>
-	<script src="script.js"></scripts>
+<%-- 	<script src="<c:url value="/static/dist/js/vendor/popper.min.js" />" charset="utf-8"></script>
+ <script src="<c:url value="/static/dist/js/swipe.min.js" />" charset="utf-8"></script> 
+ <script src="<c:url value="/static/dist/js/bootstrap.min.js" />" charset="utf-8"></script>
+ <script src="<c:url value="/static/dist/js/script.js"/>"  charset="utf-8"></script> --%>
 		<script>
 			function scrollToBottom(el) { el.scrollTop = el.scrollHeight; }
 			scrollToBottom(document.getElementById('content'));
-		</script>
+		</script>  --%>
 </body>
 
 
