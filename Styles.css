@@ -1,0 +1,112 @@
+/* Styles.css */
+
+/* Mặc định cho chế độ sáng */
+:root {
+    --background-color: white;
+    --text-color: black;
+}
+
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+/* Định dạng nền và màu chữ cho giao diện Dark Mode */
+.dark-mode {
+    background-color: #333333; /* Màu nền đen */
+    color: white; /* Màu chữ trắng */
+}
+
+/* Định dạng nền và màu chữ cho các phần tử trong thanh điều hướng */
+.dark-mode .navigation {
+    background-color: #333333; /* Màu nền cho thanh điều hướng */
+}
+
+.dark-mode .navigation a {
+    color: #ffffff; /* Màu chữ cho các liên kết trong thanh điều hướng */
+}
+
+/* Định dạng nền và màu chữ cho các nút trong thanh điều hướng */
+.dark-mode .navigation .btn {
+    background-color: #333333; /* Màu nền cho nút */
+    color: #ffffff; /* Màu chữ cho nút */
+}
+
+/* Định dạng nền và màu chữ cho nút chế độ Dark Mode */
+.dark-mode .navigation .btn.mode{
+    background-color: #333333; /* Màu nền cho nút chế độ Dark Mode */
+    color: #ffffff; /* Màu chữ cho nút chế độ Dark Mode */
+}
+
+/* Định dạng nền và màu chữ khi nút chế độ Dark Mode được kích hoạt */
+.dark-mode .navigation .btn.mode.active {
+    background-color: #ffffff; /* Màu nền cho nút chế độ Dark Mode đã kích hoạt */
+    color: #333333; /* Màu chữ cho nút chế độ Dark Mode đã kích hoạt */
+}
+
+.dark-mode .sidebar{
+    background-color: #333333;
+}
+ .dark-mode .contacts > .name{
+    color: #ffffff;
+}
+.dark-mode .discussions > .name{
+    color: #ffffff;
+}
+.dark-mode .notifications > .name{
+    color: #ffffff;
+}  
+  /* Thay đổi màu nền và biểu tượng nếu cần */
+  .dark-mode .dropdown-menu {
+    background-color: #222; /* Màu nền menu dropdown trong chế độ tối */
+    color: black; /* Màu chữ trong menu dropdown trong chế độ tối */
+  }
+  
+  /* Thay đổi màu nền của khung chat và kiểu chữ trong khung chat */
+  .dark-mode .chat {
+    background-color: #222; /* Màu nền khung chat trong chế độ tối */
+    color: black; /* Màu chữ trong khung chat trong chế độ tối */
+  }
+  
+  /* Thay đổi màu nền của khung chat rỗng và kiểu chữ trong khung chat rỗng */
+  .dark-mode .chat.empty {
+    color: black; /* Màu chữ trong khung chat rỗng trong chế độ tối */
+    
+  }
+  .dark-mode .chat .inside{
+    color: #ffffff;
+  }
+  .dark-mode .chat .text-main{
+    color: #ffffff;
+  }
+
+  .dark-mode .chat .date{
+    color: #ffffff;
+  }
+  .dark-mode .chat .message{
+    color: #ffffff;
+  }
+  .form-control {
+    padding: 25px 15px;
+    background-color: rgba(245, 245, 245, 0.5);
+    width: 100% !important;
+    border-radius: 6px;
+    border: none;
+    font-size: 17px;
+    color: black !important;
+  }
+  #sidebar.active {
+    /* Các thuộc tính CSS cho sidebar khi nó được kích hoạt */
+    width: 150%;
+    display: none;
+    width: 250px;
+
+}
+
+
+/* CSS cho nút avatar */
+.btn-avatar {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
