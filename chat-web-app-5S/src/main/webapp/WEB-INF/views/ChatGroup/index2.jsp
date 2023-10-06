@@ -42,7 +42,7 @@
 							</button>
 							<a style="cursor: pointer;" id="members"
 								onclick="toggleSidebar(this.id)" data-toggle="tab"
-								class="show active "><i class="material-icons clickdouble">account_circle</i></a>
+								class="show active "><i onclick="chatOne(this)" class="material-icons clickdouble">account_circle</i></a>
 							<a style="cursor: pointer;" id="discussions"
 								onclick="toggleSidebar(this.id)" data-toggle="tab" class="show"><i
 								class="material-icons clickdouble" onclick="chatGroup(this)" >chat_bubble_outline</i></a> <a
