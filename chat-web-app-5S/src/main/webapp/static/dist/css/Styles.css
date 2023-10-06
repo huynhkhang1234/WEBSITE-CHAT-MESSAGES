@@ -48,6 +48,24 @@ body {
 .dark-mode .sidebar{
     background-color: #333333;
 }
+.dark-mode  .user-contact{
+	 background-color: #333333;
+}
+
+.dark-mode  .user-name{
+	 color: #fff;
+}
+.dark-mode  .form-send-message{
+	 background: #ccc;
+}
+.dark-mode  .txt-input{
+	 background: #ccc;
+	 color: black;
+}
+.dark-mode  .message-text{
+	 background: #444141;	 
+}
+
  .dark-mode .contacts > .name{
     color: #ffffff;
 }

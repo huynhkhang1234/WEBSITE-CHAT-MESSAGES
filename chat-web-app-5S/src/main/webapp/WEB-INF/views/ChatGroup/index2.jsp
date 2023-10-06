@@ -55,7 +55,7 @@
 							</button>
 							<input type="checkbox" id="darkModeToggle" hidden=""> <label
 								for="darkModeToggle"><i class="material-icons">brightness_2</i></label>
-							<a href="#settings" onclick="toggleSidebar()" data-toggle="tab"><i
+							<a id="setting" onclick="toggleSidebar(this.id)" data-toggle="tab"><i
 								class="material-icons">settings</i></a>
 							<button class="btn power" onclick="visitPage();">
 								<i class="material-icons">power_settings_new</i>
@@ -226,7 +226,7 @@
 							<!-- End of Notifications -->
 							<!-- Start of Notifications Settings -->
 							<div class="category">
-								<a href="#" class="title collapsed" id="headingThree"
+								<!-- <a href="#" class="title collapsed" id="headingThree"
 									data-toggle="collapse" data-target="#collapseThree"
 									aria-expanded="true" aria-controls="collapseThree"> <i
 									class="material-icons md-30 online">notifications_none</i>
@@ -234,7 +234,7 @@
 										<h5>Thông báo</h5>
 										<p>Bật hoặc tắt thông báo</p>
 									</div> <i class="material-icons">keyboard_arrow_right</i>
-								</a>
+								</a> -->
 								<div class="collapse" id="collapseThree"
 									aria-labelledby="headingThree" data-parent="#accordionSettings">
 									<div class="content no-layer">
@@ -303,7 +303,7 @@
 							</div>
 							<!-- End of Notifications Settings -->
 							<!-- Start of Settings -->
-							<div class="tab-pane fade" id="settings">
+							<div class="tab-pane fade " id="settings">
 								<div class="settings">
 									<div class="profile">
 										<img class="avatar-xl"
@@ -708,7 +708,7 @@
 			<div class="main">
 				<div class="tab-content" id="nav-tabContent">
 					<!-- Start of Babble -->
-					<div style="background: #dadada;" class="babble tab-pane fade active show" 
+					<div  style="background: #dadada; border: 1px solid #a7a6a6;" class="babble tab-pane fade active show" 
 						role="tabpanel" aria-labelledby="list-chat-list">
 						<!-- Start of Chat -->
 							<!-- code phần bỏ vô nhắn tin -->											
@@ -1249,8 +1249,9 @@
 			var member = document.getElementById('membersModal');
 			var dis = document.getElementById('discussionsModal');
 			var notifications = document.getElementById('notificationModal');
+			var setting = document.getElementById('settings');
 			if (id === 'members') {
-				if (sidebar.classList.contains("active")) {
+				if (members.classList.contains("active")) {
 					// Nếu có class "active", thực hiện xử lý tương ứng
 					sidebar.classList.toggle("active");
 				}
@@ -1263,12 +1264,18 @@
 					notifications.classList.remove("active");
 					notifications.classList.remove("show");
 				}
+				if (setting != null) {
+					setting.classList.remove("active");
+					setting.classList.remove("show");
+				}
+				
 				member.classList.add("active");
 				member.classList.add("show");
 
 			}
+	
 			if (id === 'discussions') {
-				if (sidebar.classList.contains("active")) {
+				if (discussions.classList.contains("active")) {
 					// Nếu có class "active", thực hiện xử lý tương ứng
 					sidebar.classList.toggle("active");
 				}
@@ -1279,6 +1286,10 @@
 				if (notifications != null) {
 					notifications.classList.remove("active");
 					notifications.classList.remove("show");
+				}
+				if (setting != null) {
+					setting.classList.remove("active");
+					setting.classList.remove("show");
 				}
 				dis.classList.add("active");
 				dis.classList.add("show");
@@ -1286,7 +1297,7 @@
 			}
 
 			if (id === 'notifications') {
-				if (sidebar.classList.contains("active")) {
+				if (notifications.classList.contains("active")) {
 					// Nếu có class "active", thực hiện xử lý tương ứng
 					sidebar.classList.toggle("active");
 				}
@@ -1298,9 +1309,36 @@
 					dis.classList.remove("active");
 					dis.classList.remove("show");
 				}
-
+				
+				if (setting != null) {
+					setting.classList.remove("active");
+					setting.classList.remove("show");
+				}
 				notifications.classList.add("active");
 				notifications.classList.add("show");
+			}
+			
+	
+			if (id === 'setting') {				
+				if (setting.classList.contains("active")) {
+					// Nếu có class "active", thực hiện xử lý tương ứng
+					sidebar.classList.toggle("active");
+				}
+				if (member != null) {
+					member.classList.remove("active");
+					member.classList.remove("show");
+				}
+				if (dis != null) {
+					dis.classList.remove("active");
+					dis.classList.remove("show");
+				} 
+				if (notifications != null) {
+					notifications.classList.remove("active");
+					notifications.classList.remove("show");
+				} 
+
+				setting.classList.add("active");
+				setting.classList.add("show");
 			}
 
 		}
