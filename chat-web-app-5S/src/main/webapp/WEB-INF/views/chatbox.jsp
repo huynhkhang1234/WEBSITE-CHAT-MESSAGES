@@ -23,7 +23,8 @@
 		<c:url value="/static/images/anh2.jpg" />
 	</p>
 	<div class="container">
-		<div class="conversation-container">
+	
+		<div class="conversation-container">				
 			<div class="modal-box border" id="add-group">
 				<div class="modal-box-head">
 					<div class="modal-box-title">
@@ -82,7 +83,7 @@
 					</div>
 				</div>	
 			</div>
-			
+					
 			<div class="left-side active">
 				<div class="add-group border toggle-btn" data-id="add-group" onclick="toggleModal(this, true)"><i class="fa fa-plus-circle"></i></div>
 				<h2>
@@ -123,6 +124,8 @@
 					</ul>
 				</div>
 			</div>
+			
+			
 			<div class="right-side" id="receiver">
 			
 			</div>
