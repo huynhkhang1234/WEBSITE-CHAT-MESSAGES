@@ -106,10 +106,11 @@
 												src="<c:url value="/static/data/${friend.username}/${friend.avatar}" />"
 												data-toggle="tooltip" data-placement="top" title="Janette"
 												alt="avatar">
-												<div class="status" id="status-${friend.username}"
+												<%-- <div class="status" id="status-${friend.username}"
 													class="user-img-dot">
 													<i class="material-icons online">fiber_manual_record</i>
-												</div>
+												</div> --%>
+												<div id="status-${friend.username}" class="user-img-dot"></div>
 												<div class="data">
 													<h5>${friend.username}</h5>
 													<p>Bạc Liêu, VIệt Nam</p>

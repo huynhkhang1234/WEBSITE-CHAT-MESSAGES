@@ -322,14 +322,14 @@ img {
 }
 
 .user-img-dot {
-    position: absolute;
+     position: absolute;
     width: 1rem;
-    height: 1rem;
+    height: 1rem; 
     border-radius: 50%;
     z-index: 2;
     background: var(--offlineStatus);
-    right: .2rem;
-    bottom: .2rem;
+  	left: 1.2rem;    
+    bottom: 9.2rem;
     border: .3rem solid var(--txtColorSecond);
 }
 
