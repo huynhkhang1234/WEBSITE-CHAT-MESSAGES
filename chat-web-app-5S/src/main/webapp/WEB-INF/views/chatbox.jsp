@@ -18,11 +18,13 @@
 </head>
 <body>
 	<p id="username" style="display: none">${user.username}</p>
+	<!-- thông tin người thứ 2. chat -->
 	<p id="userAvatar" style="display: none">
-		<c:url value="/files/${user.username}/${user.avatar}" />
+		<c:url value="/static/images/anh2.jpg" />
 	</p>
 	<div class="container">
-		<div class="conversation-container">
+	
+		<div class="conversation-container">				
 			<div class="modal-box border" id="add-group">
 				<div class="modal-box-head">
 					<div class="modal-box-title">
@@ -81,7 +83,7 @@
 					</div>
 				</div>	
 			</div>
-			
+					
 			<div class="left-side active">
 				<div class="add-group border toggle-btn" data-id="add-group" onclick="toggleModal(this, true)"><i class="fa fa-plus-circle"></i></div>
 				<h2>
@@ -110,7 +112,7 @@
 											src="<c:url value="/files/${friend.username}/${friend.avatar}" />"
 											alt="Image of user"> --%>
 											<img id="img-${friend.username}"
-											src="<c:url value="/static/images/anh1.jpg" />"
+											 src="<c:url value="/static/images/anh1.jpg" />" 
 											alt="Image of user"> 
 										<div id="status-${friend.username}" class="user-img-dot"></div>
 									</div>
@@ -123,7 +125,11 @@
 					</ul>
 				</div>
 			</div>
-			<div class="right-side" id="receiver"></div>
+			
+			
+			<div class="right-side" id="receiver">
+			
+			</div>
 		</div>
 	</div>
 

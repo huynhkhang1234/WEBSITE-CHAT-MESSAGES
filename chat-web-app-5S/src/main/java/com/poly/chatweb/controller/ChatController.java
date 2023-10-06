@@ -47,6 +47,6 @@ public class ChatController extends HttpServlet {
 		boolean isAccept = Boolean.parseBoolean(request.getParameter("isAccept"));
 		friendDao.saveFriend(isAccept, new Friend(sender, receiver, sender, status));
 		String url = request.getContextPath();
-		response.sendRedirect(url+"/chat");
+		response.sendRedirect(url+"/index");
 	}
 }

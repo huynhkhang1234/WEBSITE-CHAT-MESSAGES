@@ -43,6 +43,7 @@ public class UserDao extends GenericDao<User> implements UserDaoInterface {
 
 	@Override
 	public void saveUser(Boolean isRegister, User user) {
+		System.out.println("chạy vô đăng kí");
 		String username = user.getUsername();
 		String password = user.getPassword();
 		Boolean gender = user.isGender();

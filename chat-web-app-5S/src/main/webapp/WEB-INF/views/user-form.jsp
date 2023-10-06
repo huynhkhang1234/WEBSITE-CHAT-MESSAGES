@@ -56,7 +56,25 @@
 		</div>
 	</div>
 
-	<script type="text/javascript"
-		src="<c:url value="/static/js/user-form.js" />" charset="utf-8"></script>
+	<%-- <script
+		src="<c:url value="/static/js/user-form.js" />" charset="utf-8"></script> --%>
+		<script type="text/javascript">
+		console.log('test')
+		window.onload = function() {
+			var imageFile = document.querySelector(".image-profile");
+
+			document.querySelector(".image-file").addEventListener("change", function(e) {
+				imageFile.src = URL.createObjectURL(e.target.files[0]);
+			});
+
+			document.querySelector(".gender-select").addEventListener("change", function(e) {
+				if (e.target.value == "true") {
+					document.querySelector(".image-profile").src = window.location.origin + "/chat-web-app/static/images/user-male.jpg";
+				} else {
+					document.querySelector(".image-profile").src = window.location.origin + "/chat-web-app/static/images/user-female.jpg";
+				}
+			});
+		}
+		</script>
 </body>
 </html>

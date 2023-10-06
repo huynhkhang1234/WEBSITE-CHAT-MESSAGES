@@ -29,16 +29,25 @@ public class UserService implements UserServiceInterface {
 		return instance;
 	}
 
-//	private UserService() {
-//		File uploadDir = new File(FileServiceAbstract.rootLocation.toString());
-//		if (!uploadDir.exists()) {
-//			uploadDir.mkdir();
-//		}
-//		System.out.println("Root path: " + uploadDir.getAbsolutePath());
-//	}
+	private UserService() {
+		 // Thay "ten_thu_muc_moi" bằng tên thư mục bạn muốn tạo
+		String newDirectoryName = "data";
+		//đường dẫn tạo file mới: khang chằng hạng.
+		String newDirectoryPath = FileServiceAbstract.rootLocation + File.separator + newDirectoryName;
+		//lưu đường dẫn cuối cùng. để hiện thị.
+		FileServiceAbstract.rootLocationURLImage = newDirectoryPath;
+		File newDirectory = new File(newDirectoryPath);
+		System.out.println("Root path: " + newDirectoryPath);
+		if (!newDirectory.exists()) {
+		    System.out.println("Tạo thư mục");
+		    newDirectory.mkdirs(); // Tạo cả thư mục cha "D:\data" nếu nó chưa tồn tại
+		}
+	}
 
 	@Override
 	public void saveUser(Boolean isRegister, String username, String password, boolean gender, Part avatar) {
+		System.out.println("Kiểm tra ảnh có tồn tại trong thư mục hay ko");
+		System.out.println("avatar bên đây" +avatar);		 
 		try {
 			Path projectDirectory = Paths.get(System.getProperty("user.dir"));
 			// Lấy thư mục cha của projectDirectory
@@ -54,6 +63,11 @@ public class UserService implements UserServiceInterface {
 				privateDir.mkdirs();
 			}
 			System.out.println(privateDir.getPath());
+			//đường dẫn ảnh tạo ra khi đăng kí với tên
+			System.out.println("toi muon kiem tra hinh anh:" + FileServiceAbstract.rootLocation.toString() + "/" + username);
+			File privateDir = new File(FileServiceAbstract.rootLocation.toString() + "/" + username);
+			privateDir.mkdir();
+			//tên thư mục gốc.
 			String origin = avatar.getSubmittedFileName();
 			String fileName = "";
 			if (!origin.isEmpty()) {
@@ -62,14 +76,20 @@ public class UserService implements UserServiceInterface {
 				avatar.write(privateDir.getAbsolutePath() + File.separator + fileName);
 
 			} else {
+				System.out.println("origin"+origin);
+				System.out.println("FileService:"+FileServiceAbstract.rootLocation.toString());
 				File defaultAvatar = new File(FileServiceAbstract.rootLocation.toString() + "/default/user-male.jpg");
 				if (gender == false) {
 					defaultAvatar = new File(FileServiceAbstract.rootLocation.toString() + "/default/user-female.jpg");
 				}
 				fileName = username + ".jpg";
+				//đường dẫn ảnh tạo ra khi đăng kí với tên
 				File newFile = new File(privateDir.toString() + "/" + fileName);
+				System.out.println("Tạo thư mục:" +newFile);
 				Files.copy(defaultAvatar.toPath(), newFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
+				System.out.println("file name:" +fileName);
 			}
+			//tạo user mới.
 			User userEntity = new User(username, password, gender, fileName);
 			userDaoInterface.saveUser(isRegister, userEntity);
 		} catch (IOException ex) {

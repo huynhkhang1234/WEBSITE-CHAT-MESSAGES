@@ -68,8 +68,14 @@ public class UserController extends HttpServlet {
 
 		String path = request.getPathInfo();
 		if (path.endsWith("register")) {
+			System.out.println("chạy tới interface save");
+			System.out.println("url đăng kí:" + url);
+			System.out.println("user name:" + username);
+			System.out.println("pass word:" + password);
+			System.out.println("gender:" + gender);
+			System.out.println("avatar:" + avatar);
 			userService.saveUser(true, username, password, Boolean.valueOf(gender), avatar);
-			response.sendRedirect(url+"/login");
+			//response.sendRedirect(url+"/login");
 		} else if (path.endsWith("update")) {
 			userService.saveUser(false, username, password, Boolean.valueOf(gender), avatar);
 			response.sendRedirect(url+"/users/update");

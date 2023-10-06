@@ -23,10 +23,10 @@ var typeChat = "user";
 var listUserAdd = [];
 var listUserDelete = [];
 var numberMember = 0;
-window.onload = function() {	
+window.onload = function() {
 	if ("WebSocket" in window) {
 		username = document.getElementById("username").textContent;
-		userAvatar = document.getElementById("userAvatar").textContent;		
+		userAvatar = document.getElementById("userAvatar").textContent;
 		console.log(username);
 		console.log(userAvatar);
 		websocket = new WebSocket('ws://' + window.location.host + '/chat-web-app/chat/' + username);
@@ -74,10 +74,12 @@ function cleanUp() {
 	websocket = null;
 	receiver = null;
 }
-
+// clicl vào hiện thị thông tin nhắn tin bên phải.
 function setReceiver(element) {
+
 	groupId = null;
 	receiver = element.id;
+	//hiện thị icon người dùng trên header.
 	receiverAvatar = document.getElementById('img-' + receiver).src;
 	var status = '';
 	if (document.getElementById('status-' + receiver).classList.contains('online')) {
@@ -126,17 +128,13 @@ function setReceiver(element) {
 }
 //set thông tin người vào group.
 function setGroup(element) {
-	console.log('thêm group vào'+element);
+	console.log(element);	
 	receiver = null;
 	groupName = element.getAttribute("data-name");
-	groupId = element.getAttribute("data-id");
-
-	receiverAvatar = document.getElementById("img-group-" + groupId).src;
-
-	listUserAdd = [];
-
+	groupId = element.getAttribute("data-id");	
+	receiverAvatar = document.getElementById("img-group-" + groupId).src;	
+	listUserAdd = [];			
 	numberMember = parseInt(element.getAttribute("data-number"));
-
 
 	fetch("http://" + window.location.host + "/chat-web-app/conversations-rest-controller?usersConversationId=" + groupId)
 		.then(data => data.json())
@@ -192,8 +190,10 @@ function setGroup(element) {
 }
 
 function resetChat() {
+	//lấy thẻ chứa icon và icon.
 	let chatBtn = document.querySelectorAll(".tab-control i");
-	let searchTxt = document.querySelector(".list-user-search input");
+	//lấy thẻ chứa  class và cả  thẻ search.
+	let searchTxt = document.querySelector("#conversations");
 	let addGroupBtn = document.querySelector(".add-group");
 
 	searchTxt.value = "";
@@ -213,14 +213,14 @@ function resetChat() {
 function createGroup(e) {
 	e.preventDefault();
 
-	let groupName = document.querySelector(".txt-group-name").value;
-//tạo 2 object
+	let groupName = document.querySelector(".txt-group-name").value;	
+	//tạo 2 object
 	let object = new Object();
 	let user = new Object();
 
 	user.username = username;
 	user.admin = true;
-//object name là tên group
+	//object name là tên group
 	object.name = groupName;
 	//những người được mời vào.
 	object.users = [];
@@ -241,27 +241,34 @@ function createGroup(e) {
 			return data.json();
 		})
 		.then(function(data) {
-
-			if (typeChat != "group") return;
+		
+			//if (typeChat != "group") return;
 
 			let numberMember = data.users.length;
-
+			
 			let imgSrc = ' src="http://' + window.location.host + '/files/group-' + data.id + '/' + data.avatar + '"';
 			//let imgSrc = 'src="/chat-web-app/static/images/anh2.jpg"';
-			let appendUser = '<li id="group-' + data.id + '">'
-				+ '<div class="user-contain" data-id="' + data.id + '" data-number="' + numberMember + '" data-name="' + data.name + '" onclick="setGroup(this);">'
-				+ '<div class="user-img">'
-				+ '<img id="img-group-' + data.id + '"'
-				+ imgSrc
-				+ ' alt="Image of user">'
-				+ '</div>'
-				+ '<div class="user-info" style="flex-grow:1 ;">'
-				+ '<span class="user-name">' + data.name + '</span>'
-				+ '</div>'
-				+ '</div>'
-				+ '<div class="group-delete border" data-id="' + data.id + '" onclick="deleteGroup(this)">Delete</div>'
-				+ '</li>';
-			document.querySelector(".left-side .list-user").innerHTML += appendUser;
+			let appendUser = '<a id="group-' + data.id + '"' +
+			    'class="filterDiscussions all unread single active" ' +
+			    'data-toggle="list" role="tab"> '+
+			    '<img class="avatar-md" id="img-group-' + data.id + '" ' +
+			     'src="http://localhost:8080/chat-web-app/static/data/khang/anh1.jpg" ' +
+			    'data-toggle="tooltip" data-placement="top" title="Janette" ' +
+			    'alt="avatar"> ' +
+			    '<div class="status"> ' +
+			    '<i class="material-icons online">fiber_manual_record</i> ' +
+			    '</div> ' +
+			    '<div class="new bg-yellow"> ' +
+			    '<span>+7</span> ' +
+			    '</div> ' +
+			    '<div class="data" ' + data.id + '" data-number="' + numberMember + '" data-name="' + data.name + '" onclick="setGroup(this);" > ' +
+			    '<h5>' + data.name + '</h5> ' +
+			    '<p>Mới tạo nhóm</p> ' +
+			    '</div> ' +
+			    '<button data-id="' + data.id + '" onclick="deleteGroup(this)">Xóa</button>' +
+			    '</a>';
+				
+			document.querySelector("#discussionsChats").innerHTML += appendUser;
 			document.querySelector(".txt-group-name").value = "";
 		});
 }
@@ -277,7 +284,7 @@ function addMember(e) {
 
 	listUserAdd.forEach(function(username) {
 		let user = new Object();
-	//gán tên
+		//gán tên
 		user.username = username;
 		//gán người thêm vào nhóm với quyền user.
 		user.admin = false;
@@ -306,7 +313,7 @@ function addMember(e) {
 			if (inviteNumber) inviteNumber.innerHTML = numberMember + " paticipants";
 			//set vào
 			document.getElementById("group-" + groupId).querySelector(".user-contain").setAttribute("data-number", numberMember);
-	// thêm vào lạ group.
+			// thêm vào lạ group.
 			toggleAllModal();
 		});
 }
@@ -318,7 +325,7 @@ function fetchUser() {
 		.then(users => {
 			document.querySelector(".manage-member-body .list-user ul").innerHTML = "";
 			//chi tiết group.
-		//nếu user trong group ko có 
+			//nếu user trong group ko có 
 			if (users.length == 1) {
 				document.querySelector(".manage-member-body .list-user ul").innerHTML = "Bạn là thành viên duy nhất";
 				document.querySelector(".manage-member-body .list-user ul").style = "text-align: center; font-size: 1.8rem;";
@@ -339,7 +346,7 @@ function fetchUser() {
 					+ '<div class="user-info" style="flex-grow: 1;">'
 					+ '<span class="user-name">' + data.username + '</span>'
 					+ '</div>';
-					//chỉ có admin mới có quyền xóa nhóm.
+				//chỉ có admin mới có quyền xóa nhóm.
 
 				if (!data.admin)
 					appendUser += '<div class="user-delete" style="font-weight: 700;" data-username="' + data.username + '" onclick="deleteMember(this)">Delete</div>'
@@ -354,10 +361,9 @@ function fetchUser() {
 
 }
 
-function deleteGroup(ele) {
-	let grpId = ele.getAttribute("data-id");
-
-	if (grpId == groupId) document.querySelector(".right-side").innerHTML = "";
+function deleteGroup(ele) {	
+	let grpId = ele.getAttribute('data-id');
+	if (grpId == groupId) document.querySelector('#receiver').innerHTML = "";
 
 	fetch("http://" + window.location.host + "/chat-web-app/conversations-rest-controller?conversationId=" + grpId, {
 		method: 'delete'
@@ -365,8 +371,7 @@ function deleteGroup(ele) {
 		.then(function(data) {
 			return data.json();
 		})
-		.then(function(data) {
-
+		.then(function(data) {			
 			let groupNumber = document.getElementById("group-" + grpId);
 			if (groupNumber) groupNumber.outerHTML = "";
 
@@ -399,39 +404,37 @@ function deleteMember(ele) {
 function toggleAllModal() {
 	let modalBox = document.querySelectorAll(".modal-box");
 
-	modalBox.forEach(function(modal) {
-		modal.classList.remove("active");
+modalBox.forEach(function(modal) {
+	//	modal.classList.remove("active");
 	});
 
 }
 
 function toggleModal(ele, mode) {
+	
 	let modalBox = document.querySelectorAll(".modal-box");
 	let id = ele.getAttribute("data-id");
-
 	modalBox.forEach(function(modal) {
 		modal.classList.remove("active");
 	});
-
-
 	if (mode) document.getElementById(id).classList.add("active");
+	
 	else document.getElementById(id).classList.remove("active");
 }
 
 function chatOne(ele) {
 	typeChat = "user";
-	resetChat();
-	ele.classList.add("active");
+	//resetChat();
+	//ele.classList.add("active");
 	searchFriendByKeyword("");
 	listFiles = [];
 }
 
 function chatGroup(ele) {
 	
-	console.log('2323')
 	typeChat = "group";
-	resetChat();
-	ele.classList.add("active");
+	//resetChat();
+	//ele.classList.add("active");
 	fetchGroup();
 	listFiles = [];
 }
@@ -542,38 +545,47 @@ function makeFriend(rightSide) {
 		.catch(ex => console.log(ex));
 }
 
-function fetchGroup() {
+function fetchGroup() {	
 	fetch("http://" + window.location.host + "/chat-web-app/conversations-rest-controller?username=" + username)
 		.then(function(data) {
 			return data.json();
 		})
 		.then(data => {
 
-			document.querySelector(".left-side .list-user").innerHTML = "";
+			document.querySelector("#discussionsChats").innerHTML = "";
 			data.forEach(function(data) {
 				let numberMember = data.users ? data.users.length : 0;
 
 				let findObject = data.users.find(element => element.username == username);
 				let isAdmin = findObject.admin;
-
+	
 				//let imgSrc = ' src="http://' + window.location.host + '/files/group-' + data.id + '/' + data.avatar + '"';
 				let imgSrc = 'src="/chat-web-app/static/images/anh2.jpg"';
-				let appendUser = '<li id="group-' + data.id + '">'
-					+ '<div class="user-contain" data-id="' + data.id + '" data-number="' + numberMember + '" data-name="' + data.name + '" onclick="setGroup(this);">'
-					+ '<div class="user-img">'
-					+ '<img id="img-group-' + data.id + '"'
-					+ imgSrc
-					+ ' alt="Image of user">'
-					+ '</div>'
-					+ '<div class="user-info" style="flex-grow:1 ;">'
-					+ '<span class="user-name">' + data.name + '</span>'
-					+ '</div>'
-					+ '</div>';
-				if (isAdmin) {
-					appendUser += '<div class="group-delete border" data-id="' + data.id + '" onclick="deleteGroup(this)">Delete</div>';
-				}
-				appendUser += '</li>';
-				document.querySelector(".left-side .list-user").innerHTML += appendUser;
+				
+						let appendUser = '<a  data-id="' + data.id + '"  data-number="' + numberMember + '" data-name="' + data.name + '"  onclick="setGroup(this)"' +
+			    'class="filterDiscussions all unread single active" ' +
+			    'data-toggle="list" role="tab"> '+
+			    '<img class="avatar-md" id="img-group-' + data.id + '"  ' +
+			     'src="http://localhost:8080/chat-web-app/static/data/khang/anh1.jpg" ' +
+			    'data-toggle="tooltip" data-placement="top" title="Janette" ' +
+			    'alt="avatar"> ' +
+			    '<div class="status"> ' +
+			    '<i class="material-icons online">fiber_manual_record</i> ' +
+			    '</div> ' +
+			    '<div class="new bg-yellow"> ' +
+			    '<span>+7</span> ' +
+			    '</div> ' +
+			    '<div class="data-id"> ' +
+			    '<h5>' + data.name + '</h5> ' +
+			    '<p>Mới tạo nhóm</p> ' +
+			    '</div> ' +
+			    '<button data-id="' + data.id + '" onclick="deleteGroup(this)">Xóa</button>' +
+			    '</a>';
+			//	if (isAdmin) {
+				//	appendUser += '<div class="group-delete border" data-id="' + data.id + '" onclick="deleteGroup(this)">Delete</div>';
+				//}
+				
+				document.querySelector("#discussionsChats").innerHTML += appendUser;
 			});
 		}).catch(ex => {
 			console.log(ex);
@@ -681,13 +693,13 @@ function renderFile(typeFile) {
 function sendMessage(e) {
 	e.preventDefault();
 	//lấy dữu liệu
-	var inputText = document.getElementById("message").value;	
+	var inputText = document.getElementById("message").value;
 	if (inputText != '') {
 		//có dữ liệu
-	console.log(inputText+'inputtest');
+		console.log(inputText + 'inputtest');
 		sendText();
 	} else {
-	console.log('dữ liệu  rông');
+		console.log('dữ liệu  rông');
 		sendAttachments();
 	}
 
@@ -695,10 +707,10 @@ function sendMessage(e) {
 }
 //gửi dữ liệu đi trong tin nhắn.
 function sendText() {
-	console.log('vô test');
+
 	var messageContent = document.getElementById("message").value;
 	var messageType = "text";
-	console.log('Nội dung tin nhắn' + messageContent);
+	//console.log('Nội dung tin nhắn' + messageContent);
 	document.getElementById("message").value = '';
 	//lấy dữ liệu data về và kiểm tra kiểu gửi.
 	var message = buildMessageToJson(messageContent, messageType);
@@ -708,15 +720,17 @@ function sendText() {
 //ảnh và file được sử lí.
 function sendAttachments() {
 	var messageType = "attachment";
-		console.log('Vô hàm kiểm tra file');
+	console.log('Vô hàm kiểm tra file');
 	for (file of listFile) {
 		//lấy tên file
 		messageContent = file.name.trim();
 		//đuôi ảnh .jpg chăng hạng.
 		messageType = file.type;
-		console.log('Kiểu file là gì:'+messageType);
-		console.log('Nội dung file là gì:'+ messageContent);
+		console.log('Kiểu file là gì:' + messageType);
+		console.log('Nội dung file là gì:' + messageContent);
 		var message = buildMessageToJson(messageContent, messageType);
+		//	console.log('message là gì: ' + message);
+		//dùng để lưu hình ảnh trong database.
 		websocket.send(JSON.stringify(message));
 		websocket.send(file);
 		//kiểm tra để render đúng theo yêu cầu..
@@ -729,9 +743,23 @@ function sendAttachments() {
 				+ '<source src="' + URL.createObjectURL(file) + '" type="' + messageType + '">'
 				+ '</video>';
 		} else if (messageType.startsWith("image")) {
+			console.log('FIle này là dạng hình ảnh');
+			console.log('file hiện thị hình ảnh là: ' + URL.createObjectURL(file));
+			//cai file la hinh anh hay tat ca gi do			
 			message.message = '<img src="' + URL.createObjectURL(file) + '" alt="">';
+			console.log('chạy vô hình ảnh file: ' + file);
+
+
+			// console.log('message.message là gì: ' +message.message);
+			//hien thij file gui di ko anh.
+			var imgElement = document.createElement('img');
+			imgElement.src = URL.createObjectURL(file);
+			imgElement.alt = "";
+			message.message = imgElement.outerHTML;
+			console.log('chay qua in html')
 		}
 		else {
+
 			message.message = '<a href= "' + URL.createObjectURL(file) + '">' + messageContent + '</a>'
 		}
 		setMessage(message);
@@ -752,11 +780,11 @@ function buildMessageToJson(message, type) {//kiểm tra kiểu tin nhắn hay h
 	};
 }
 //hàm gửi và đồng thời load lại thông tin.
-function setMessage(msg) {	
-	console.log('msg là gì:' + msg);
+function setMessage(msg) {
+	//console.log('msg là gì:' + msg);
 	if (msg.message != '[P]open' && msg.message != '[P]close') {
 		var currentChat = document.getElementById('chat').innerHTML;
-		console.log('in ra thông tin của chat:' + currentChat);
+		//	console.log('in ra thông tin của chat:' + currentChat);
 		var newChatMsg = '';
 		if (msg.receiver != null) {
 			newChatMsg = customLoadMessage(msg.username, msg.message);
@@ -839,21 +867,26 @@ function loadMessages() {
 		+ "&receiver=" + receiver, true);
 	xhttp.send();
 }
+//load tin nhắn của 2 người.
 //hiện thị thông tin nhắn cho 2 người.
 function customLoadMessage(sender, message) {
-	console.log('hiện thị thông tin người dùng custom:' + sender,message);
-	console.log('receiver:' + receiver);
-	console.log('receiver:' + username);
+	//console.log('hiện thị thông tin người dùng custom:' + sender, message);
+	//	console.log('receiver:' + receiver);
+	//console.log('username:' + username);
+	//console.log('sender:' + sender);
+	//console.log('img:' + userAvatar);
+	//console.log('Hiện thi thông tin message:' + message);
 	var imgSrc = receiverAvatar;
+
 	//kết hợp hiện thị ra.
-	var msgDisplay = '<li>'
-		+ '<div class="message';
+	var msgDisplay = '<li>' + '<div class="message';
 	if (receiver != sender && username != sender) {
 		return '';
 	}
 	else if (receiver == sender) {
 		msgDisplay += '">';
 	} else {
+		//hình ảnh người mình nhắn.
 		imgSrc = userAvatar;
 		msgDisplay += ' right">';
 	}
@@ -867,7 +900,7 @@ function customLoadMessage(sender, message) {
 
 function customLoadMessageGroup(sender, groupIdFromServer, message, avatar) {
 	//let imgSrc = 'http://' + window.location.host + '/files/' + sender + '/' + avatar;
-	let imgSrc ='/chat-web-app/static/images/anh1.jpg';
+	let imgSrc = '/chat-web-app/static/images/anh5.jpg';
 	var msgDisplay = '<li>'
 		+ '<div class="message';
 	if (groupIdFromServer != groupId) {
@@ -881,7 +914,7 @@ function customLoadMessageGroup(sender, groupIdFromServer, message, avatar) {
 	}
 	return msgDisplay + '<div class="message-img">'
 		+ '<img src="' + imgSrc + '" alt="">'
-		+ '<div class="sender-name">'+ sender +'</div>'
+		+ '<div class="sender-name">' + sender + '</div>'
 		+ ' </div>'
 		+ '<div class="message-text">' + message + '</div>'
 		+ '</div>'
@@ -896,25 +929,24 @@ function searchFriendByKeyword(keyword) {
 		})
 		.then(data => {
 
-			document.querySelector(".left-side .list-user").innerHTML = "";
+			document.querySelector("#contacts").innerHTML = "";
 			data.forEach(function(data) {
 				if (data.online) status = "online";
 				else status = "";
 
-				let appendUser = '<li id="' + data.username + '" onclick="setReceiver(this);">'
-					+ '<div class="user-contain">'
-					+ '<div class="user-img">'
-					+ '<img id="img-' + data.username + '"'
-					+ ' src="/chat-web-app/static/images/anh2.jpg"'
-					+ 'alt="Image of user">'
-					+ '<div id="status-' + data.username + '" class="user-img-dot ' + status + '"></div>'
-					+ '</div>'
-					+ '<div class="user-info">'
-					+ '<span class="user-name">' + data.username + '</span>'
-					+ '</div>'
-					+ '</div>'
-					+ '</li>';
-				document.querySelector(".left-side .list-user").innerHTML += appendUser;
+				
+				let appendUser = '<a id="' + data.username + '" onclick="setReceiver(this);" class="filterMembers all online contact" data-toggle="list">'
+			    + '<img id="img-' + data.username + '" class="avatar-md" src="http://localhost:8080/chat-web-app/static/data/' + data.username +'/'+ data.avatar+'"data-toggle="tooltip" data-placement="top" title="Janette" alt="avatar">'
+			    + '<div class="status" id="status-' + data.username + '" class="user-img-dot">'
+			    + '<i class="material-icons online">fiber_manual_record</i>'
+			    + '</div>'
+			    + '<div class="data">'
+			    + '<h5>' + data.username + '</h5>'
+			    + '<p>Bạc Liêu, VIệt Nam</p>'
+			    + '</div>'
+			    + '</a>';
+	
+				document.querySelector("#contacts").innerHTML += appendUser;
 			});
 		});
 }
@@ -941,7 +973,7 @@ function searchMemberByKeyword(ele) {
 					+ '<div class="user-contain">'
 					+ '<div class="user-img">'
 					+ '<img '
-					+ ' src="/chat-web-app/static/images/anh1.jpg"'
+					+ ' src="/chat-web-app/static/images/anh12.jpg"'
 					+ 'alt="Image of user">'
 					+ '</div>'
 					+ '<div class="user-info">'
@@ -957,14 +989,14 @@ function searchMemberByKeyword(ele) {
 }
 
 function searchGroupByKeyword(value) {
-	let keyword = value;
-	fetch("http://" + window.location.host + "/conversations-rest-controller?username=" + username + "&conversationKeyword=" + keyword)
+	let keyword = value;	
+	fetch("http://" + window.location.host + "/chat-web-app/conversations-rest-controller?username=" + username + "&conversationKeyword=" + keyword)
 		.then(function(data) {
 			return data.json();
 		})
 		.then(data => {
 
-			document.querySelector(".left-side .list-user").innerHTML = "";
+			document.querySelector("#discussionsChats").innerHTML = "";
 			data.forEach(function(data) {
 
 				let numberMember = data.users ? data.users.length : 0;
@@ -974,38 +1006,45 @@ function searchGroupByKeyword(value) {
 				if (findObject) isAdmin = findObject.admin;
 				//đường dẫn khi thêm vào nhóm ở đây.
 				//let imgSrc = ' src="http://' + window.location.host + '/files/group-' + data.id + '/' + data.avatar + '"';
-				let imgSrc = 'src="/chat-web-app/static/images/anh2.jpg"';
-				let appendUser = '<li id="group-' + data.id + '">'
-					+ '<div class="user-contain" data-id="' + data.id + '" data-number="' + numberMember + '" data-name="' + data.name + '" onclick="setGroup(this);">'
-					+ '<div class="user-img">'
-					+ '<img id="img-group-' + data.id + '"'
-					+ imgSrc
-					+ ' alt="Image of user">'
-					+ '</div>'
-					+ '<div class="user-info" style="flex-grow:1 ;">'
-					+ '<span class="user-name">' + data.name + '</span>'
-					+ '</div>'
-					+ '</div>';
-				if (isAdmin)
-					appendUser += '<div class="group-delete border" data-id="' + data.id + '" onclick="deleteGroup(this)">Delete</div>';
-
-				appendUser += '</li>';
-				document.querySelector(".left-side .list-user").innerHTML += appendUser;
+								
+				let imgSrc = 'src="/chat-web-app/static/images/anh2.jpg"';				
+						let appendUser = '<a  data-id="' + data.id + '"  data-number="' + numberMember + '" data-name="' + data.name + '"  onclick="setGroup(this)"' +
+			    'class="filterDiscussions all unread single active" ' +
+			    'data-toggle="list" role="tab"> '+
+			    '<img class="avatar-md" id="img-group-' + data.id + '"  ' +
+			     'src="http://localhost:8080/chat-web-app/static/data/khang/anh1.jpg" ' +
+			    'data-toggle="tooltip" data-placement="top" title="Janette" ' +
+			    'alt="avatar"> ' +
+			    '<div class="status"> ' +
+			    '<i class="material-icons online">fiber_manual_record</i> ' +
+			    '</div> ' +
+			    '<div class="new bg-yellow"> ' +
+			    '<span>+7</span> ' +
+			    '</div> ' +
+			    '<div class="data-id"> ' +
+			    '<h5>' + data.name + '</h5> ' +
+			    '<p>Mới tạo nhóm</p> ' +
+			    '</div> ' +
+			    '<button data-id="' + data.id + '" onclick="deleteGroup(this)">Xóa</button>' +
+			    '</a>';
+			//	if (isAdmin) {
+				//	appendUser += '<div class="group-delete border" data-id="' + data.id + '" onclick="deleteGroup(this)">Delete</div>';
+				//}				
+				document.querySelector("#discussionsChats").innerHTML += appendUser;									
 			});
 		});
 }
 
 function searchUser(ele) {
-	console.log(ele.value);
 	if (typeChat == "user") {
-	console.log('chay vo if đầu');		
+		console.log('tìm kiếm bạn bè');
 		searchFriendByKeyword(ele.value);
 	} else {
-		if (ele.value == "") {
-	console.log('chay vo if 2');
+		console.log('tìm kiếm nhóm');
+		if (ele.value == "") {			
 			fetchGroup();
 		} else {
-	console.log('chay vo if 3');
+			console.log('chay vo if 3');
 			searchGroupByKeyword(ele.value);
 		}
 	}

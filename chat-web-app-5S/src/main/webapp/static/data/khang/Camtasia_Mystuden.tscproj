@@ -1,0 +1,5001 @@
+{
+  "title" : "",
+  "description" : "",
+  "author" : "",
+  "targetLoudness" : -18.0,
+  "shouldApplyLoudnessNormalization" : true,
+  "videoFormatFrameRate" : 30,
+  "audioFormatSampleRate" : 44100,
+  "width" : 1364.0,
+  "height" : 768.0,
+  "version" : "4.0",
+  "editRate" : 30,
+  "authoringClientName" :  {
+    "name" : "Camtasia",
+    "platform" : "Windows",
+    "version" : "20.0"
+  },
+  "sourceBin" : [
+    {
+      "id" : 1,
+      "src" : "C:\\Users\\ADMIN\\Downloads\\yt1s.com - 热门旋律 DJ旋律版  支先生  夜的钢琴曲5  Nhạc Nên Hot Tiktok Douyin 抖音.mp3",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20220106T144322",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1711019375],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 0,
+          "numChannels" : 2,
+          "integratedLUFS" : -6.86508138588794,
+          "peakLevel" : 1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144400.945402"
+      }
+    },
+    {
+      "id" : 2,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323516446_f79d22518514e245c0e762a3832db3e8.jpg",
+      "rect" : [0, 0, 960, 1280],
+      "lastMod" : "20220106T142049",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 960, 1280],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.748053"
+      }
+    },
+    {
+      "id" : 3,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323612225_75dccc47735a9f6d404af4c56402de4c.jpg",
+      "rect" : [0, 0, 960, 1280],
+      "lastMod" : "20220106T142132",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 960, 1280],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.749050"
+      }
+    },
+    {
+      "id" : 4,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323631664_0db54a66c434aaa8cf3158e68230cc7b.jpg",
+      "rect" : [0, 0, 1280, 960],
+      "lastMod" : "20220106T142126",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 1280, 960],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.750046"
+      }
+    },
+    {
+      "id" : 5,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323685309_b707a9ceb4b35ebbed6ede43f89d5810.jpg",
+      "rect" : [0, 0, 960, 1280],
+      "lastMod" : "20220106T142114",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 960, 1280],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.750046"
+      }
+    },
+    {
+      "id" : 6,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323736881_1d6728af00748b404feff1f29ca9e5c5.jpg",
+      "rect" : [0, 0, 1280, 960],
+      "lastMod" : "20220106T142105",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 1280, 960],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.751042"
+      }
+    },
+    {
+      "id" : 7,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323767421_f32c00ea51a891fb1d0337d15c082821.jpg",
+      "rect" : [0, 0, 960, 1280],
+      "lastMod" : "20220106T142111",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 960, 1280],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.752039"
+      }
+    },
+    {
+      "id" : 8,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323803627_44e9ba076178d363ef11f80811407e99.jpg",
+      "rect" : [0, 0, 960, 1280],
+      "lastMod" : "20220106T142139",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 960, 1280],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.753034"
+      }
+    },
+    {
+      "id" : 9,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323804834_3d921de063eb583805aa73ad242b8d7c.jpg",
+      "rect" : [0, 0, 1280, 960],
+      "lastMod" : "20220106T142138",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 1280, 960],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.753034"
+      }
+    },
+    {
+      "id" : 10,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323809353_87c2a1aa8dd73cb364d5d780ef0826bb.jpg",
+      "rect" : [0, 0, 1280, 960],
+      "lastMod" : "20220106T142137",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 1280, 960],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.754031"
+      }
+    },
+    {
+      "id" : 11,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323816501_846e30dbe2079b909a9bc327228b05e6.jpg",
+      "rect" : [0, 0, 960, 1280],
+      "lastMod" : "20220106T142136",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 960, 1280],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.755027"
+      }
+    },
+    {
+      "id" : 12,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323819673_742ddff689c73714d5a08f029f5144d8.jpg",
+      "rect" : [0, 0, 960, 1280],
+      "lastMod" : "20220106T142135",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 960, 1280],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.756024"
+      }
+    },
+    {
+      "id" : 13,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323824074_73566955193a3ffd35a828190e7ba8b9.jpg",
+      "rect" : [0, 0, 960, 1280],
+      "lastMod" : "20220106T142134",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 960, 1280],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.757020"
+      }
+    },
+    {
+      "id" : 14,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323827101_8217cbf84da18557582c74f438c69c98.jpg",
+      "rect" : [0, 0, 960, 1280],
+      "lastMod" : "20220106T142133",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 960, 1280],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.758017"
+      }
+    },
+    {
+      "id" : 15,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323834084_549d7b2973b9bb7a725866a94974d108.jpg",
+      "rect" : [0, 0, 960, 1280],
+      "lastMod" : "20220106T142129",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 960, 1280],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.759014"
+      }
+    },
+    {
+      "id" : 16,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323835431_7621bddffa2d5dd3247f76ca9c929154.jpg",
+      "rect" : [0, 0, 960, 1280],
+      "lastMod" : "20220106T142131",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 960, 1280],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.760010"
+      }
+    },
+    {
+      "id" : 17,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323837812_860324ee04eb538a455f3ff3399fff55.jpg",
+      "rect" : [0, 0, 960, 1280],
+      "lastMod" : "20220106T142128",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 960, 1280],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.761007"
+      }
+    },
+    {
+      "id" : 18,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323843332_86a50dbdfde6964077264c177d7c3f4d.jpg",
+      "rect" : [0, 0, 960, 1280],
+      "lastMod" : "20220106T142127",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 960, 1280],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.763000"
+      }
+    },
+    {
+      "id" : 19,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323848784_5c9a1365ecaada9a85bcef57b66d7643.jpg",
+      "rect" : [0, 0, 960, 1280],
+      "lastMod" : "20220106T142125",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 960, 1280],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.763997"
+      }
+    },
+    {
+      "id" : 20,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323852127_2ffb27a6f030b9395bbf8632842af4b8.jpg",
+      "rect" : [0, 0, 842, 1280],
+      "lastMod" : "20220106T142124",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 842, 1280],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.764992"
+      }
+    },
+    {
+      "id" : 21,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323854851_fb2ba6bd8496bf4ba3542f0fd798679b.jpg",
+      "rect" : [0, 0, 1280, 591],
+      "lastMod" : "20220106T142123",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 1280, 591],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.766985"
+      }
+    },
+    {
+      "id" : 22,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323855188_46dd85536ff52961edddb0d4324648bd.jpg",
+      "rect" : [0, 0, 1280, 591],
+      "lastMod" : "20220106T142122",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 1280, 591],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.768979"
+      }
+    },
+    {
+      "id" : 23,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323868021_cb2a7d7932e426570ab8b7492d34db77.jpg",
+      "rect" : [0, 0, 720, 540],
+      "lastMod" : "20220106T142120",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 720, 540],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.769975"
+      }
+    },
+    {
+      "id" : 24,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323868272_7192d81dd1ff966d024ab8e7845a908a.jpg",
+      "rect" : [0, 0, 1280, 960],
+      "lastMod" : "20220106T142119",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 1280, 960],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.771968"
+      }
+    },
+    {
+      "id" : 25,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323872274_48a80def23ab4e58a59d9ded1709fdba.jpg",
+      "rect" : [0, 0, 960, 1280],
+      "lastMod" : "20220106T142121",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 960, 1280],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.773962"
+      }
+    },
+    {
+      "id" : 26,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323874141_c091f08595426878619207e8c9a0b0e6.jpg",
+      "rect" : [0, 0, 1280, 960],
+      "lastMod" : "20220106T142118",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 1280, 960],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.775955"
+      }
+    },
+    {
+      "id" : 27,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323876173_17738f3726f315be3a454aaa74d02445.jpg",
+      "rect" : [0, 0, 600, 600],
+      "lastMod" : "20220106T142117",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 600, 600],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.777949"
+      }
+    },
+    {
+      "id" : 28,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323881982_dee7e4316ff1431b18868a781cf930ca.jpg",
+      "rect" : [0, 0, 1280, 960],
+      "lastMod" : "20220106T142115",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 1280, 960],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.779942"
+      }
+    },
+    {
+      "id" : 29,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323882239_80a28f56623c8d53c8164f8a63d98fba.jpg",
+      "rect" : [0, 0, 960, 1280],
+      "lastMod" : "20220106T142116",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 960, 1280],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.781936"
+      }
+    },
+    {
+      "id" : 30,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323890861_36f0698f33cc6462fe8bd9c62469bf79.jpg",
+      "rect" : [0, 0, 960, 1280],
+      "lastMod" : "20220106T142113",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 960, 1280],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.783928"
+      }
+    },
+    {
+      "id" : 31,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323891612_3de9c66060fd23a6639eff0987bf73f1.jpg",
+      "rect" : [0, 0, 960, 1280],
+      "lastMod" : "20220106T142112",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 960, 1280],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.785922"
+      }
+    },
+    {
+      "id" : 32,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323897751_09b454de4b8916983acb58ec5af43e81.jpg",
+      "rect" : [0, 0, 960, 1280],
+      "lastMod" : "20220106T142100",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 960, 1280],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.787915"
+      }
+    },
+    {
+      "id" : 33,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323899262_ee02af8af6a1f17575c5d3bf1795023c.jpg",
+      "rect" : [0, 0, 960, 1280],
+      "lastMod" : "20220106T142057",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 960, 1280],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.790905"
+      }
+    },
+    {
+      "id" : 34,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323904897_925f599f008078f5199a4e445f022fea.jpg",
+      "rect" : [0, 0, 960, 1280],
+      "lastMod" : "20220106T142059",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 960, 1280],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.792898"
+      }
+    },
+    {
+      "id" : 35,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323905623_374eb679984279a147176b888cd12355.jpg",
+      "rect" : [0, 0, 960, 1280],
+      "lastMod" : "20220106T142058",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 960, 1280],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.795889"
+      }
+    },
+    {
+      "id" : 36,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323912828_89e128e587582c17b2bc32b22426b1f5.jpg",
+      "rect" : [0, 0, 960, 1280],
+      "lastMod" : "20220106T142103",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 960, 1280],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.797882"
+      }
+    },
+    {
+      "id" : 37,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323913322_fd02cebc66c06b8cbe75daec54c69787.jpg",
+      "rect" : [0, 0, 960, 1280],
+      "lastMod" : "20220106T142102",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 960, 1280],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.800872"
+      }
+    },
+    {
+      "id" : 38,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323915856_2109d474b056335d799c4c0e3d7b5cb6.jpg",
+      "rect" : [0, 0, 960, 1280],
+      "lastMod" : "20220106T142106",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 960, 1280],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.802865"
+      }
+    },
+    {
+      "id" : 39,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323920497_fec50316879366ba068f74678ab23608.jpg",
+      "rect" : [0, 0, 960, 1280],
+      "lastMod" : "20220106T142101",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 960, 1280],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.805855"
+      }
+    },
+    {
+      "id" : 40,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323925652_f75e9a25a51e7091674aa61a39fd4054.jpg",
+      "rect" : [0, 0, 960, 1280],
+      "lastMod" : "20220106T142109",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 960, 1280],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.809055"
+      }
+    },
+    {
+      "id" : 41,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323928094_ead7f251e1ea57add67a16e45f6202ed.jpg",
+      "rect" : [0, 0, 1280, 960],
+      "lastMod" : "20220106T142104",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 1280, 960],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.811975"
+      }
+    },
+    {
+      "id" : 42,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323934644_ceea2914a3b25d9422f48047d3495ace.jpg",
+      "rect" : [0, 0, 1280, 960],
+      "lastMod" : "20220106T142108",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 1280, 960],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.814965"
+      }
+    },
+    {
+      "id" : 43,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323936460_72236869079a747e3e6bdf8ba3f9589c.jpg",
+      "rect" : [0, 0, 1280, 960],
+      "lastMod" : "20220106T142107",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 1280, 960],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.817955"
+      }
+    },
+    {
+      "id" : 44,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323942044_e3240ba9c155fb03ab6ba9c2073745ed.jpg",
+      "rect" : [0, 0, 960, 1280],
+      "lastMod" : "20220106T142110",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 960, 1280],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.820945"
+      }
+    },
+    {
+      "id" : 45,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323945973_ca0d11bc465c9196a5093224afa08cf3.jpg",
+      "rect" : [0, 0, 960, 1280],
+      "lastMod" : "20220106T142056",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 960, 1280],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.823935"
+      }
+    },
+    {
+      "id" : 46,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323948177_11e967f48edb6e66aacfbb2d447453fe.jpg",
+      "rect" : [0, 0, 960, 1280],
+      "lastMod" : "20220106T142054",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 960, 1280],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.825928"
+      }
+    },
+    {
+      "id" : 47,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323950934_ec3fafbe8477e6cf679a3e1bab1f4628.jpg",
+      "rect" : [0, 0, 1280, 960],
+      "lastMod" : "20220106T142052",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 1280, 960],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.828920"
+      }
+    },
+    {
+      "id" : 48,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323951104_03e1cfd83f5caab02c67ed67502e09d4.jpg",
+      "rect" : [0, 0, 960, 1280],
+      "lastMod" : "20220106T142055",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 960, 1280],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.831908"
+      }
+    },
+    {
+      "id" : 49,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323954504_5e3d167fedd4259431a59555f36f54fc.jpg",
+      "rect" : [0, 0, 960, 1280],
+      "lastMod" : "20220106T142053",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 960, 1280],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.834898"
+      }
+    },
+    {
+      "id" : 50,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323960511_484fe3e4c0436fd7f8faea4ad6f8f40b.jpg",
+      "rect" : [0, 0, 960, 1280],
+      "lastMod" : "20220106T142051",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 960, 1280],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.836891"
+      }
+    },
+    {
+      "id" : 51,
+      "src" : "C:\\Users\\ADMIN\\Pictures\\Photoshop my\\z3087323963209_95f4e8a2c8edbf2f532401e63643db68.jpg",
+      "rect" : [0, 0, 960, 1280],
+      "lastMod" : "20220106T142050",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 960, 1280],
+          "sampleRate" : 0,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20220106T144528.839882"
+      }
+    }
+  ],
+  "timeline" : {
+    "id" : 52,
+    "sceneTrack" : {
+      "scenes" : [
+        {
+          "csml" : {
+            "tracks" : [
+              {
+                "trackIndex" : 0,
+                "medias" : [
+                  {
+                    "id" : 53,
+                    "_type" : "IMFile",
+                    "src" : 31,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 145,
+                    "attributes" : {
+                      "ident" : "z3087323891612_3de9c66060fd23a6639eff0987bf73f1"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 2866,
+                    "duration" : 5,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  }
+                ]
+              },
+              {
+                "trackIndex" : 1,
+                "medias" : [
+                  {
+                    "id" : 54,
+                    "_type" : "IMFile",
+                    "src" : 2,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "z3087323516446_f79d22518514e245c0e762a3832db3e8"
+                    },
+                    "parameters" : {
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 0,
+                    "duration" : 61,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-scale0" : 0.6,
+                      "default-scale1" : 0.6,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 55,
+                    "_type" : "IMFile",
+                    "src" : 2,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 132,
+                    "attributes" : {
+                      "ident" : "z3087323516446_f79d22518514e245c0e762a3832db3e8"
+                    },
+                    "parameters" : {
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 61,
+                    "duration" : 18,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-scale0" : 0.6,
+                      "default-scale1" : 0.6,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 56,
+                    "_type" : "IMFile",
+                    "src" : 3,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "z3087323612225_75dccc47735a9f6d404af4c56402de4c"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 79,
+                    "duration" : 53,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 57,
+                    "_type" : "IMFile",
+                    "src" : 3,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 129,
+                    "attributes" : {
+                      "ident" : "z3087323612225_75dccc47735a9f6d404af4c56402de4c"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 132,
+                    "duration" : 21,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 58,
+                    "_type" : "IMFile",
+                    "src" : 4,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "z3087323631664_0db54a66c434aaa8cf3158e68230cc7b"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.8,
+                      "scale1" : 0.8,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 153,
+                    "duration" : 36,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 1024.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 59,
+                    "_type" : "IMFile",
+                    "src" : 4,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 115,
+                    "attributes" : {
+                      "ident" : "z3087323631664_0db54a66c434aaa8cf3158e68230cc7b"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.8,
+                      "scale1" : 0.8,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 189,
+                    "duration" : 35,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 1024.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 60,
+                    "_type" : "IMFile",
+                    "src" : 5,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "z3087323685309_b707a9ceb4b35ebbed6ede43f89d5810"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 224,
+                    "duration" : 54,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 61,
+                    "_type" : "IMFile",
+                    "src" : 5,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 119,
+                    "attributes" : {
+                      "ident" : "z3087323685309_b707a9ceb4b35ebbed6ede43f89d5810"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 278,
+                    "duration" : 31,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 62,
+                    "_type" : "IMFile",
+                    "src" : 6,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "z3087323736881_1d6728af00748b404feff1f29ca9e5c5"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.8,
+                      "scale1" : 0.8,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 309,
+                    "duration" : 54,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 1024.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 63,
+                    "_type" : "IMFile",
+                    "src" : 6,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 119,
+                    "attributes" : {
+                      "ident" : "z3087323736881_1d6728af00748b404feff1f29ca9e5c5"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.8,
+                      "scale1" : 0.8,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 363,
+                    "duration" : 31,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 1024.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 64,
+                    "_type" : "IMFile",
+                    "src" : 7,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "z3087323767421_f32c00ea51a891fb1d0337d15c082821"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 394,
+                    "duration" : 32,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 65,
+                    "_type" : "IMFile",
+                    "src" : 7,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 93,
+                    "attributes" : {
+                      "ident" : "z3087323767421_f32c00ea51a891fb1d0337d15c082821"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 426,
+                    "duration" : 57,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 66,
+                    "_type" : "IMFile",
+                    "src" : 8,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "z3087323803627_44e9ba076178d363ef11f80811407e99"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 483,
+                    "duration" : 48,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 67,
+                    "_type" : "IMFile",
+                    "src" : 8,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 107,
+                    "attributes" : {
+                      "ident" : "z3087323803627_44e9ba076178d363ef11f80811407e99"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 531,
+                    "duration" : 43,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 68,
+                    "_type" : "IMFile",
+                    "src" : 9,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "z3087323804834_3d921de063eb583805aa73ad242b8d7c"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.8,
+                      "scale1" : 0.8,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 574,
+                    "duration" : 66,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 1024.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 69,
+                    "_type" : "IMFile",
+                    "src" : 9,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 122,
+                    "attributes" : {
+                      "ident" : "z3087323804834_3d921de063eb583805aa73ad242b8d7c"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.8,
+                      "scale1" : 0.8,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 640,
+                    "duration" : 28,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 1024.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 70,
+                    "_type" : "IMFile",
+                    "src" : 10,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "z3087323809353_87c2a1aa8dd73cb364d5d780ef0826bb"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.8,
+                      "scale1" : 0.8,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 668,
+                    "duration" : 61,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 1024.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 71,
+                    "_type" : "IMFile",
+                    "src" : 10,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 128,
+                    "attributes" : {
+                      "ident" : "z3087323809353_87c2a1aa8dd73cb364d5d780ef0826bb"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.8,
+                      "scale1" : 0.8,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 729,
+                    "duration" : 22,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 1024.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 72,
+                    "_type" : "IMFile",
+                    "src" : 12,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "z3087323819673_742ddff689c73714d5a08f029f5144d8"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 751,
+                    "duration" : 79,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 73,
+                    "_type" : "IMFile",
+                    "src" : 13,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "z3087323824074_73566955193a3ffd35a828190e7ba8b9"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 830,
+                    "duration" : 49,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 74,
+                    "_type" : "IMFile",
+                    "src" : 12,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 131,
+                    "attributes" : {
+                      "ident" : "z3087323819673_742ddff689c73714d5a08f029f5144d8"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 879,
+                    "duration" : 19,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 75,
+                    "_type" : "IMFile",
+                    "src" : 13,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 104,
+                    "attributes" : {
+                      "ident" : "z3087323824074_73566955193a3ffd35a828190e7ba8b9"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 898,
+                    "duration" : 46,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 76,
+                    "_type" : "IMFile",
+                    "src" : 14,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "z3087323827101_8217cbf84da18557582c74f438c69c98"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 944,
+                    "duration" : 74,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 77,
+                    "_type" : "IMFile",
+                    "src" : 14,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 112,
+                    "attributes" : {
+                      "ident" : "z3087323827101_8217cbf84da18557582c74f438c69c98"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 1018,
+                    "duration" : 38,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 78,
+                    "_type" : "IMFile",
+                    "src" : 15,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "z3087323834084_549d7b2973b9bb7a725866a94974d108"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 1056,
+                    "duration" : 69,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 79,
+                    "_type" : "IMFile",
+                    "src" : 15,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 124,
+                    "attributes" : {
+                      "ident" : "z3087323834084_549d7b2973b9bb7a725866a94974d108"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 1125,
+                    "duration" : 26,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 80,
+                    "_type" : "IMFile",
+                    "src" : 16,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "z3087323835431_7621bddffa2d5dd3247f76ca9c929154"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 1151,
+                    "duration" : 51,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 81,
+                    "_type" : "IMFile",
+                    "src" : 16,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 126,
+                    "attributes" : {
+                      "ident" : "z3087323835431_7621bddffa2d5dd3247f76ca9c929154"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 1202,
+                    "duration" : 24,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 82,
+                    "_type" : "IMFile",
+                    "src" : 17,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "z3087323837812_860324ee04eb538a455f3ff3399fff55"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 1226,
+                    "duration" : 43,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 83,
+                    "_type" : "IMFile",
+                    "src" : 17,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 122,
+                    "attributes" : {
+                      "ident" : "z3087323837812_860324ee04eb538a455f3ff3399fff55"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 1269,
+                    "duration" : 28,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 84,
+                    "_type" : "IMFile",
+                    "src" : 18,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "z3087323843332_86a50dbdfde6964077264c177d7c3f4d"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 1297,
+                    "duration" : 49,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 85,
+                    "_type" : "IMFile",
+                    "src" : 18,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 119,
+                    "attributes" : {
+                      "ident" : "z3087323843332_86a50dbdfde6964077264c177d7c3f4d"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 1346,
+                    "duration" : 31,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 86,
+                    "_type" : "IMFile",
+                    "src" : 19,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "z3087323848784_5c9a1365ecaada9a85bcef57b66d7643"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 1377,
+                    "duration" : 48,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 87,
+                    "_type" : "IMFile",
+                    "src" : 19,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 116,
+                    "attributes" : {
+                      "ident" : "z3087323848784_5c9a1365ecaada9a85bcef57b66d7643"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 1425,
+                    "duration" : 34,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 88,
+                    "_type" : "IMFile",
+                    "src" : 20,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "z3087323852127_2ffb27a6f030b9395bbf8632842af4b8"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 1459,
+                    "duration" : 42,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 505.2
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 89,
+                    "_type" : "IMFile",
+                    "src" : 20,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 124,
+                    "attributes" : {
+                      "ident" : "z3087323852127_2ffb27a6f030b9395bbf8632842af4b8"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 1501,
+                    "duration" : 26,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 505.2
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 90,
+                    "_type" : "IMFile",
+                    "src" : 21,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "z3087323854851_fb2ba6bd8496bf4ba3542f0fd798679b"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.5,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 1527,
+                    "duration" : 89,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 591.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : -0.5,
+                      "default-width" : 1280.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 91,
+                    "_type" : "IMFile",
+                    "src" : 22,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "z3087323855188_46dd85536ff52961edddb0d4324648bd"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.5,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 1616,
+                    "duration" : 82,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 591.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : -0.5,
+                      "default-width" : 1280.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 92,
+                    "_type" : "IMFile",
+                    "src" : 21,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 135,
+                    "attributes" : {
+                      "ident" : "z3087323854851_fb2ba6bd8496bf4ba3542f0fd798679b"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.5,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 1698,
+                    "duration" : 15,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 591.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : -0.5,
+                      "default-width" : 1280.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 93,
+                    "_type" : "IMFile",
+                    "src" : 23,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "z3087323868021_cb2a7d7932e426570ab8b7492d34db77"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 1713,
+                    "duration" : 62,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 540.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 720.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 94,
+                    "_type" : "IMFile",
+                    "src" : 23,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 125,
+                    "attributes" : {
+                      "ident" : "z3087323868021_cb2a7d7932e426570ab8b7492d34db77"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 1775,
+                    "duration" : 25,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 540.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 720.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 95,
+                    "_type" : "IMFile",
+                    "src" : 24,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "z3087323868272_7192d81dd1ff966d024ab8e7845a908a"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.8,
+                      "scale1" : 0.8,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 1800,
+                    "duration" : 105,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 1024.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 96,
+                    "_type" : "IMFile",
+                    "src" : 25,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "z3087323872274_48a80def23ab4e58a59d9ded1709fdba"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 1905,
+                    "duration" : 67,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 97,
+                    "_type" : "IMFile",
+                    "src" : 25,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 134,
+                    "attributes" : {
+                      "ident" : "z3087323872274_48a80def23ab4e58a59d9ded1709fdba"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 1972,
+                    "duration" : 16,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 98,
+                    "_type" : "IMFile",
+                    "src" : 26,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "z3087323874141_c091f08595426878619207e8c9a0b0e6"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.8,
+                      "scale1" : 0.8,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0,
+                      "quiz" : {
+                        "type" : "string",
+                        "keyframes" : [
+                          {
+                            "endTime" : 40,
+                            "time" : 40,
+                            "value" : "<Quiz id=\"1040\" name=\"Quiz 2\"><Options feedback=\"1\" graded=\"1\"/><Questions><MultipleChoice id=\"102\" text=\"Default Question Text\" collapsed=\"0\" feedback=\"0\" fb_correct=\"\" fb_correct_action=\"\" fb_correct_jumptime_ms=\"0\" fb_correct_url=\"\" fb_correct_marker=\"\" fb_correct_marker_time=\"0\" fb_wrong=\"\" fb_wrong_action=\"\" fb_wrong_jumptime_ms=\"0\" fb_wrong_url=\"\" fb_wrong_marker=\"\" fb_wrong_marker_time=\"0\"><Answers><Answer id=\"2\" text=\"Default Answer Text\" iscorrect=\"1\"/></Answers></MultipleChoice></Questions></Quiz>",
+                            "duration" : 0
+                          }
+                        ]
+                      }
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 1996,
+                    "duration" : 70,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 1024.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 99,
+                    "_type" : "IMFile",
+                    "src" : 26,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 127,
+                    "attributes" : {
+                      "ident" : "z3087323874141_c091f08595426878619207e8c9a0b0e6"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.8,
+                      "scale1" : 0.8,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 2066,
+                    "duration" : 23,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 1024.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 100,
+                    "_type" : "IMFile",
+                    "src" : 27,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "z3087323876173_17738f3726f315be3a454aaa74d02445"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 2089,
+                    "duration" : 69,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 600.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 600.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 101,
+                    "_type" : "IMFile",
+                    "src" : 28,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "z3087323881982_dee7e4316ff1431b18868a781cf930ca"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.8,
+                      "scale1" : 0.8,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 2159,
+                    "duration" : 81,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 1024.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 102,
+                    "_type" : "IMFile",
+                    "src" : 27,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 125,
+                    "attributes" : {
+                      "ident" : "z3087323876173_17738f3726f315be3a454aaa74d02445"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 2240,
+                    "duration" : 25,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 600.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 600.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 103,
+                    "_type" : "IMFile",
+                    "src" : 28,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 118,
+                    "attributes" : {
+                      "ident" : "z3087323881982_dee7e4316ff1431b18868a781cf930ca"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.8,
+                      "scale1" : 0.8,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 2265,
+                    "duration" : 32,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 1024.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 104,
+                    "_type" : "IMFile",
+                    "src" : 30,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "z3087323890861_36f0698f33cc6462fe8bd9c62469bf79"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 2297,
+                    "duration" : 35,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 105,
+                    "_type" : "IMFile",
+                    "src" : 30,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 107,
+                    "attributes" : {
+                      "ident" : "z3087323890861_36f0698f33cc6462fe8bd9c62469bf79"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 2332,
+                    "duration" : 43,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 106,
+                    "_type" : "IMFile",
+                    "src" : 31,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "z3087323891612_3de9c66060fd23a6639eff0987bf73f1"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 2375,
+                    "duration" : 57,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 107,
+                    "_type" : "IMFile",
+                    "src" : 32,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "z3087323897751_09b454de4b8916983acb58ec5af43e81"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 2432,
+                    "duration" : 51,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 108,
+                    "_type" : "IMFile",
+                    "src" : 38,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 102,
+                    "attributes" : {
+                      "ident" : "z3087323915856_2109d474b056335d799c4c0e3d7b5cb6"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 2483,
+                    "duration" : 48,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 109,
+                    "_type" : "IMFile",
+                    "src" : 39,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "z3087323920497_fec50316879366ba068f74678ab23608"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 2531,
+                    "duration" : 45,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 110,
+                    "_type" : "IMFile",
+                    "src" : 39,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 112,
+                    "attributes" : {
+                      "ident" : "z3087323920497_fec50316879366ba068f74678ab23608"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 2576,
+                    "duration" : 38,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 111,
+                    "_type" : "IMFile",
+                    "src" : 40,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "z3087323925652_f75e9a25a51e7091674aa61a39fd4054"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 2614,
+                    "duration" : 44,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 112,
+                    "_type" : "IMFile",
+                    "src" : 40,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 119,
+                    "attributes" : {
+                      "ident" : "z3087323925652_f75e9a25a51e7091674aa61a39fd4054"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 2658,
+                    "duration" : 31,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 113,
+                    "_type" : "IMFile",
+                    "src" : 32,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 117,
+                    "attributes" : {
+                      "ident" : "z3087323897751_09b454de4b8916983acb58ec5af43e81"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 2689,
+                    "duration" : 33,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 114,
+                    "_type" : "IMFile",
+                    "src" : 33,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 2,
+                    "attributes" : {
+                      "ident" : "z3087323899262_ee02af8af6a1f17575c5d3bf1795023c"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 2722,
+                    "duration" : 46,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 115,
+                    "_type" : "IMFile",
+                    "src" : 33,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 121,
+                    "attributes" : {
+                      "ident" : "z3087323899262_ee02af8af6a1f17575c5d3bf1795023c"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 2778,
+                    "duration" : 29,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 116,
+                    "_type" : "IMFile",
+                    "src" : 34,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 2,
+                    "attributes" : {
+                      "ident" : "z3087323904897_925f599f008078f5199a4e445f022fea"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 2807,
+                    "duration" : 43,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  }
+                ]
+              },
+              {
+                "trackIndex" : 2,
+                "medias" : [
+                ]
+              },
+              {
+                "trackIndex" : 3,
+                "medias" : [
+                ]
+              },
+              {
+                "trackIndex" : 4,
+                "medias" : [
+                  {
+                    "id" : 117,
+                    "_type" : "IMFile",
+                    "src" : 43,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "z3087323936460_72236869079a747e3e6bdf8ba3f9589c"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.8,
+                      "scale1" : 0.8,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 5367,
+                    "duration" : 105,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 1024.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 118,
+                    "_type" : "IMFile",
+                    "src" : 44,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "z3087323942044_e3240ba9c155fb03ab6ba9c2073745ed"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 5472,
+                    "duration" : 40,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 119,
+                    "_type" : "IMFile",
+                    "src" : 44,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 124,
+                    "attributes" : {
+                      "ident" : "z3087323942044_e3240ba9c155fb03ab6ba9c2073745ed"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 5529,
+                    "duration" : 26,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 120,
+                    "_type" : "IMFile",
+                    "src" : 43,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 142,
+                    "attributes" : {
+                      "ident" : "z3087323936460_72236869079a747e3e6bdf8ba3f9589c"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.8,
+                      "scale1" : 0.8,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 5555,
+                    "duration" : 1,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 1024.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 121,
+                    "_type" : "IMFile",
+                    "src" : 46,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "z3087323948177_11e967f48edb6e66aacfbb2d447453fe"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 5557,
+                    "duration" : 39,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 122,
+                    "_type" : "IMFile",
+                    "src" : 46,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 110,
+                    "attributes" : {
+                      "ident" : "z3087323948177_11e967f48edb6e66aacfbb2d447453fe"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 5596,
+                    "duration" : 40,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 123,
+                    "_type" : "IMFile",
+                    "src" : 47,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "z3087323950934_ec3fafbe8477e6cf679a3e1bab1f4628"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.8,
+                      "scale1" : 0.8,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 5636,
+                    "duration" : 62,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 1024.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 124,
+                    "_type" : "IMFile",
+                    "src" : 48,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "z3087323951104_03e1cfd83f5caab02c67ed67502e09d4"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 5698,
+                    "duration" : 56,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 125,
+                    "_type" : "IMFile",
+                    "src" : 48,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 127,
+                    "attributes" : {
+                      "ident" : "z3087323951104_03e1cfd83f5caab02c67ed67502e09d4"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 5754,
+                    "duration" : 23,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 126,
+                    "_type" : "IMFile",
+                    "src" : 49,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 2,
+                    "attributes" : {
+                      "ident" : "z3087323954504_5e3d167fedd4259431a59555f36f54fc"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 5791,
+                    "duration" : 21,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 127,
+                    "_type" : "IMFile",
+                    "src" : 49,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 110,
+                    "attributes" : {
+                      "ident" : "z3087323954504_5e3d167fedd4259431a59555f36f54fc"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 5812,
+                    "duration" : 40,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 128,
+                    "_type" : "IMFile",
+                    "src" : 34,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 129,
+                    "attributes" : {
+                      "ident" : "z3087323904897_925f599f008078f5199a4e445f022fea"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 6845,
+                    "duration" : 21,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 129,
+                    "_type" : "IMFile",
+                    "src" : 35,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "z3087323905623_374eb679984279a147176b888cd12355"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 6866,
+                    "duration" : 53,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 130,
+                    "_type" : "IMFile",
+                    "src" : 35,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 118,
+                    "attributes" : {
+                      "ident" : "z3087323905623_374eb679984279a147176b888cd12355"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 6919,
+                    "duration" : 32,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 131,
+                    "_type" : "IMFile",
+                    "src" : 37,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "z3087323913322_fd02cebc66c06b8cbe75daec54c69787"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 6951,
+                    "duration" : 42,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 132,
+                    "_type" : "IMFile",
+                    "src" : 37,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 113,
+                    "attributes" : {
+                      "ident" : "z3087323913322_fd02cebc66c06b8cbe75daec54c69787"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 6993,
+                    "duration" : 37,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 133,
+                    "_type" : "IMFile",
+                    "src" : 38,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "z3087323915856_2109d474b056335d799c4c0e3d7b5cb6"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.6,
+                      "scale1" : 0.6,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 7030,
+                    "duration" : 27,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 576.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  }
+                ]
+              },
+              {
+                "trackIndex" : 5,
+                "medias" : [
+                  {
+                    "id" : 134,
+                    "_type" : "IMFile",
+                    "src" : 41,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "z3087323928094_ead7f251e1ea57add67a16e45f6202ed"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.8,
+                      "scale1" : 0.8,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 5201,
+                    "duration" : 57,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 1024.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 135,
+                    "_type" : "IMFile",
+                    "src" : 42,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 0,
+                    "attributes" : {
+                      "ident" : "z3087323934644_ceea2914a3b25d9422f48047d3495ace"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.8,
+                      "scale1" : 0.8,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 5258,
+                    "duration" : 63,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 1024.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 136,
+                    "_type" : "IMFile",
+                    "src" : 41,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 132,
+                    "attributes" : {
+                      "ident" : "z3087323928094_ead7f251e1ea57add67a16e45f6202ed"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.8,
+                      "scale1" : 0.8,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 5321,
+                    "duration" : 18,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 1024.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 137,
+                    "_type" : "IMFile",
+                    "src" : 42,
+                    "trackNumber" : 0,
+                    "trimStartSum" : 121,
+                    "attributes" : {
+                      "ident" : "z3087323934644_ceea2914a3b25d9422f48047d3495ace"
+                    },
+                    "parameters" : {
+                      "translation0" : -42.0,
+                      "translation1" : -114.0,
+                      "scale0" : 0.8,
+                      "scale1" : 0.8,
+                      "sourceCrop0" : 0.0,
+                      "sourceCrop1" : 0.0,
+                      "sourceCrop2" : 0.0,
+                      "sourceCrop3" : 0.0,
+                      "geometryCrop0" : 0.0,
+                      "geometryCrop1" : 0.0,
+                      "geometryCrop2" : 0.0,
+                      "geometryCrop3" : 0.0
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 5339,
+                    "duration" : 29,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 1,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false,
+                      "default-height" : 768.0,
+                      "default-translation0" : 0.0,
+                      "default-translation1" : 0.0,
+                      "default-width" : 1024.0
+                    },
+                    "animationTracks" : {
+
+                    }
+                  }
+                ]
+              },
+              {
+                "trackIndex" : 6,
+                "medias" : [
+                  {
+                    "id" : 138,
+                    "_type" : "AMFile",
+                    "src" : 1,
+                    "trackNumber" : 0,
+                    "attributes" : {
+                      "ident" : "yt1s.com - 热门旋律 DJ旋律版  支先生  夜的钢琴曲5  Nhạc Nên Hot Tiktok Douyin 抖音",
+                      "gain" : 1.0,
+                      "mixToMono" : false
+                    },
+                      "channelNumber" : "0,1",
+                    "effects" : [
+
+                    ],
+                    "start" : 3,
+                    "duration" : 5133,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 5133,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  }
+                ]
+              },
+              {
+                "trackIndex" : 7,
+                "medias" : [
+                ]
+              },
+              {
+                "trackIndex" : 8,
+                "medias" : [
+                ]
+              }            ]
+          }
+        }
+      ]
+    },
+    "trackAttributes" : [
+      {
+        "ident" : "",
+        "audioMuted" : false,
+        "videoHidden" : false,
+        "magnetic" : false,
+        "matte" : 0,
+        "solo" : false,
+        "metadata" : {
+          "IsLocked" : "False",
+          "WinTrackHeight" : "56"
+        }
+      },
+      {
+        "ident" : "",
+        "audioMuted" : false,
+        "videoHidden" : false,
+        "magnetic" : false,
+        "matte" : 0,
+        "solo" : false,
+        "metadata" : {
+          "IsLocked" : "False",
+          "WinTrackHeight" : "56"
+        }
+      },
+      {
+        "ident" : "",
+        "audioMuted" : false,
+        "videoHidden" : false,
+        "magnetic" : false,
+        "matte" : 0,
+        "solo" : false,
+        "metadata" : {
+          "IsLocked" : "False",
+          "WinTrackHeight" : "56"
+        }
+      },
+      {
+        "ident" : "",
+        "audioMuted" : false,
+        "videoHidden" : false,
+        "magnetic" : false,
+        "matte" : 0,
+        "solo" : false,
+        "metadata" : {
+          "IsLocked" : "False",
+          "WinTrackHeight" : "56"
+        }
+      },
+      {
+        "ident" : "",
+        "audioMuted" : false,
+        "videoHidden" : false,
+        "magnetic" : false,
+        "matte" : 0,
+        "solo" : false,
+        "metadata" : {
+          "IsLocked" : "False",
+          "WinTrackHeight" : "56"
+        }
+      },
+      {
+        "ident" : "",
+        "audioMuted" : false,
+        "videoHidden" : false,
+        "magnetic" : false,
+        "matte" : 0,
+        "solo" : false,
+        "metadata" : {
+          "IsLocked" : "False",
+          "WinTrackHeight" : "56"
+        }
+      },
+      {
+        "ident" : "",
+        "audioMuted" : false,
+        "videoHidden" : false,
+        "magnetic" : false,
+        "matte" : 0,
+        "solo" : false,
+        "metadata" : {
+          "IsLocked" : "False",
+          "WinTrackHeight" : "56"
+        }
+      },
+      {
+        "ident" : "",
+        "audioMuted" : false,
+        "videoHidden" : false,
+        "magnetic" : false,
+        "matte" : 0,
+        "solo" : false,
+        "metadata" : {
+          "IsLocked" : "False",
+          "WinTrackHeight" : "56"
+        }
+      },
+      {
+        "ident" : "",
+        "audioMuted" : false,
+        "videoHidden" : false,
+        "magnetic" : false,
+        "matte" : 0,
+        "solo" : false,
+        "metadata" : {
+          "IsLocked" : "False",
+          "WinTrackHeight" : "56"
+        }
+      }
+    ],
+    "parameters" : {
+      "quiz" : {
+        "type" : "string",
+        "keyframes" : [
+          {
+            "endTime" : 183,
+            "time" : 183,
+            "value" : "<Quiz id=\"1126\" name=\"Quiz 3\"><Options feedback=\"1\" graded=\"1\"/><Questions><MultipleChoice id=\"103\" text=\"Default Question Text\" collapsed=\"0\" feedback=\"0\" fb_correct=\"\" fb_correct_action=\"\" fb_correct_jumptime_ms=\"0\" fb_correct_url=\"\" fb_correct_marker=\"\" fb_correct_marker_time=\"0\" fb_wrong=\"\" fb_wrong_action=\"\" fb_wrong_jumptime_ms=\"0\" fb_wrong_url=\"\" fb_wrong_marker=\"\" fb_wrong_marker_time=\"0\"><Answers><Answer id=\"3\" text=\"Default Answer Text\" iscorrect=\"1\"/></Answers></MultipleChoice></Questions></Quiz>",
+            "duration" : 0
+          },
+          {
+            "endTime" : 2635,
+            "time" : 2635,
+            "value" : "<Quiz id=\"1001\" name=\"Quiz 1\"><Options feedback=\"1\" graded=\"1\"/><Questions><MultipleChoice id=\"101\" text=\"Default Question Text\" collapsed=\"0\" feedback=\"0\" fb_correct=\"\" fb_correct_action=\"\" fb_correct_jumptime_ms=\"0\" fb_correct_url=\"\" fb_correct_marker=\"\" fb_correct_marker_time=\"0\" fb_wrong=\"\" fb_wrong_action=\"\" fb_wrong_jumptime_ms=\"0\" fb_wrong_url=\"\" fb_wrong_marker=\"\" fb_wrong_marker_time=\"0\"><Answers><Answer id=\"1\" text=\"Default Answer Text\" iscorrect=\"1\"/></Answers></MultipleChoice></Questions></Quiz>",
+            "duration" : 0
+          }
+        ]
+      }
+    },
+    "captionAttributes" : {
+      "enabled" : true,
+      "fontName" : "Arial",
+      "fontSize" : 45,
+      "backgroundColor" : [ 0, 0, 0, 191],
+      "foregroundColor" : [ 255, 255, 255, 255],
+      "lang" : "en",
+      "alignment" : 0,
+      "defaultFontSize" : true,
+      "opacity" : 0.5,
+      "backgroundEnabled" : true,
+      "backgroundOnlyAroundText" : true
+    },
+    "gain" : 1.0,
+    "legacyAttenuateAudioMix" : true,
+    "backgroundColor" : [ 0, 0, 0, 255]
+  },
+  "metadata" : {
+    "AutoSaveFile" : "C:\\Users\\ADMIN\\AppData\\Local\\TechSmith\\Camtasia Studio\\20.0\\Auto-Saves\\Camtasia_My studen1f780bf6.autosave.tscproj",
+    "CanvasZoom" : 60,
+    "Date" : "2022-01-06 09:18:05 pm",
+    "Fit" : 0,
+    "IsAutoSave" : false,
+    "Language" : "ENU",
+    "ProfileName" : "MP4 with Smart Player (up to 1080p)",
+    "ProjectDimensionsChanged" : "1",
+    "Title" : "Camtasia_My studen",
+    "audioNarrationNotes" : "",
+    "calloutStyle" : "Basic"
+  }
+}
