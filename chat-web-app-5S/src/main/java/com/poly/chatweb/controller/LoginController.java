@@ -35,9 +35,9 @@ public class LoginController extends HttpServlet {
 		}
 		User user = (User) request.getSession().getAttribute("user");
 		if (user != null) {
-			response.sendRedirect(url+"/chat");
+			response.sendRedirect(url+"/index");
 		} else {
-			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/login.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/ChatGroup/sign-in.jsp");
 			rd.forward(request, response);
 		}
 	}
@@ -52,12 +52,13 @@ public class LoginController extends HttpServlet {
 		if (user != null) {
 			HttpSession httpSession = request.getSession();
 			httpSession.setAttribute("user", user);
-			destPage = "/chat";
+			destPage = "/index";
+			
 		}
 		String url  = request.getContextPath();
-		System.out.println(url);
+//		System.out.println(url);
 		System.out.println(user);
-		
+//		System.out.println("url: "+url+destPage);
 		response.sendRedirect(url+destPage);
 	}
 

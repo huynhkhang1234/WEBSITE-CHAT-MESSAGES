@@ -35,17 +35,17 @@
 											<i class="material-icons">whatshot</i>
 										</button>
 									</div>
-									<p>Hoặc bắt đầu với email của bạn:</p>
-									<form>
+									<!--  <p>Hoặc bắt đầu với email của bạn:</p> -->
+									<form action="<c:url value="/login" />" method="POST">
 										<div class="form-group">
-											<input type="email" id="inputEmail" class="form-control" placeholder="Email Address" required>
+											<input type="text" name="username" id="inputUsername" class="form-control" placeholder="Tài khoản" required>
 											<button class="btn icon"><i class="material-icons">person_outline</i></button>
 										</div>
 										<div class="form-group">
-											<input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+											<input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
 											<button class="btn icon"><i class="material-icons">lock_outline</i></button>
 										</div>
-										<button type="submit" class="btn button" formaction="index.html">Đăng nhập</button>
+										<button type="submit" class="btn button">Đăng nhập</button>
 										<div class="callout">
 											<span>Bạn không có tài khoản? <a href="sign-up.html">Tạo tài khoản</a></span>
 										</div>

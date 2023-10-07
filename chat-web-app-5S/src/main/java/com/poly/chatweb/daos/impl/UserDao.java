@@ -24,7 +24,7 @@ public class UserDao extends GenericDao<User> implements UserDaoInterface {
 
 	@Override
 	public User findByUserNameAndPassword(String userName, String password) {
-		StringBuilder sql = new StringBuilder("select username, gender, avatar");
+		StringBuilder sql = new StringBuilder("select username, gender, avatar, is_admin");
 		sql.append(" from users where username=? and password=?");
 		List<User> users = query(sql.toString(), new UserMapper(), userName, password);
 		return users.isEmpty() ? null : users.get(0);
