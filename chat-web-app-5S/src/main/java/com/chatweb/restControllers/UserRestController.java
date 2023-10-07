@@ -7,6 +7,7 @@ import java.io.InputStream;
 import java.io.PrintWriter;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -84,8 +85,10 @@ public class UserRestController extends HttpServlet {
 			writer.println("Username already exist!");
 			return;
 		}
-		Boolean gender= Boolean.valueOf(request.getParameter("gender"));	
+		Boolean gender= Boolean.valueOf(request.getParameter("gender"));
 		Part avarta = request.getPart("avarta");
 		userServiceInterface.saveUser(true, username, password, gender, avarta);
+		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/login.jsp");
+		rd.forward(request, response);
 	}
 }

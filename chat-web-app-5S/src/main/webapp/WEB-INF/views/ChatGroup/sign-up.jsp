@@ -38,11 +38,18 @@
 								</div>
 								<p>Hoặc bắt đầu với email của bạn:</p>
 								
-								<form class="signup">
+								<form class="signup" action="<c:url value="/users-rest-controller" />" method="POST"  enctype="multipart/form-data">
+								<div class="form-group">
+											<input type="file" name="avarta" id="inputName" class="form-control"
+												placeholder="Chọn avatar">
+											<button class="btn icon"><i
+													class="material-icons">person_outline</i></button>
+										</div>
 									<div class="form-parent">
+									
 										<div class="form-group">
-											<input type="text" id="inputName" class="form-control"
-												placeholder="Tên tài khoản" required>
+											<input type="text" id="inputName" name="username" class="form-control"
+												placeholder="Tên tài khoản"  required>
 											<button class="btn icon"><i
 													class="material-icons">person_outline</i></button>
 										</div>
@@ -53,7 +60,7 @@
 										</div>
 									</div>
 									<div class="form-group">
-										<input type="password" id="inputPassword" class="form-control"
+										<input type="password" id="inputPassword" name="password" class="form-control"
 											placeholder="Mật khẩu" required>
 										<button class="btn icon"><i class="material-icons">lock_outline</i></button>
 									</div>
@@ -64,13 +71,13 @@
 									</div>
 									<div class="form-group">
 										<select class="form-control" id="selectBoxGender" name="gender" required>
-											<option value="nam">Nam</option>
-											<option value="nu">Nữ</option>
+											<option value="true">Nam</option>
+											<option value="false">Nữ</option>
 											<option value="khac">Khác</option>
 										</select>
 										<button class="btn icon"><i class="material-icons">view_list</i></button>
 									</div>
-									<button type="submit" class="btn button" formaction="">Đăng ký</button>
+									<button type="submit" class="btn button" >Đăng ký</button>
 									<div class="callout">
 										<span>Bạn đã có tài khoản? <a href="sign-in.html">Đăng nhập</a></span>
 									</div>

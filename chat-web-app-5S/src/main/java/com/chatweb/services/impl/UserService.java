@@ -65,8 +65,8 @@ public class UserService implements UserServiceInterface {
 			System.out.println(privateDir.getPath());
 			//đường dẫn ảnh tạo ra khi đăng kí với tên
 			System.out.println("toi muon kiem tra hinh anh:" + FileServiceAbstract.rootLocation.toString() + "/" + username);
-			File privateDir = new File(FileServiceAbstract.rootLocation.toString() + "/" + username);
-			privateDir.mkdir();
+//			File privateDir = new File(FileServiceAbstract.rootLocation.toString() + "/" + username);
+//			privateDir.mkdir();
 			//tên thư mục gốc.
 			String origin = avatar.getSubmittedFileName();
 			String fileName = "";
