@@ -341,7 +341,7 @@
 													<p>Cập nhật chi tiết hồ sơ của bạn</p>
 												</div> <i class="material-icons">keyboard_arrow_right</i>
 											</a>
-											<div class="collapse" id="collapseOne"
+											<div class="collapse show" id="collapseOne"
 												aria-labelledby="headingOne"
 												data-parent="#accordionSettings">
 												<div class="content">
