@@ -31,6 +31,7 @@ public class test extends HttpServlet {
 			request.setAttribute("friends", friends);
 			request.setAttribute("user", currentUser);	
 			System.out.println("tesst thu no ben kia nha anh em");
+			System.out.println("ADMIN?: "+currentUser.isAdmin());
 	      RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/ChatGroup/index2.jsp");
 			rd.forward(request, response);
 	    }

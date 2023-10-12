@@ -156,7 +156,7 @@ function setGroup(element) {
 				+ '</div>'
 				+ '<div class="invite-user">'
 				+ '<span class="total-invite-user">' + numberMember + ' paticipants</span>'
-				+ '<span data-id="add-user" onclick="toggleModal(this, true); searchMemberByKeyword(``);" class="invite toggle-btn">Invite</span>'
+				+ '<span data-id="add-user" onclick="toggleModal(this, true); searchMemberByKeyword(``);" class="invite toggle-btn">Mời</span>'
 				+ '</div>'
 				+ '<div class="setting toggle-btn" data-id="manage-user" onclick="toggleModal(this, true);  fetchUser();">'
 				+ '<i class="fa fa-cog"></i>'
@@ -396,7 +396,7 @@ function deleteMember(ele) {
 			numberMember -= 1;
 
 			let inviteNumber = document.querySelector(".total-invite-user");
-			if (inviteNumber) inviteNumber.innerHTML = numberMember + " paticipants";
+			if (inviteNumber) inviteNumber.innerHTML = numberMember + " thành viên";
 			//thêm group vào trang.
 			toggleAllModal();
 		})
@@ -439,7 +439,7 @@ function chatGroup(ele) {
 	//resetChat();
 	//ele.classList.add("active");
 	fetchGroup();
-	listFiles = [];
+	listFiles = [];	
 }
 
 function addUserChange(e) {

@@ -16,7 +16,16 @@
     --offlineStatus: #ff6565;
     --conversationBody: #b1b6ff;
 }
+.modal-box-title{	
+	margin-left: 63px;
+}
+ #search {
+	width: 0px;	
+}
 
+#searchGroup{
+	width: 0px;
+}
 .user-contact{
 	display: flex;
 	background: #fff;
@@ -158,8 +167,8 @@ img {
 
 .modal-box {
 	position: absolute;
-	left: 50%;
-	top: 50%;
+	left: 60%;
+	top: 55%;
 	transform: translate(-50%, -50%);
 	width: 30rem;
 	background: var(--txtColorSecond);
@@ -588,8 +597,4 @@ img {
         display: none;
         border-radius: 1rem;
     }
-}
-
-::-webkit-scrollbar {
-	width: 0px !important;
 }

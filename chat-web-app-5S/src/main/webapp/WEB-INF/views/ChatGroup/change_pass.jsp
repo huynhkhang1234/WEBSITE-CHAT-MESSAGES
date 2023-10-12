@@ -55,13 +55,13 @@
 		<!-- Bootstrap core JavaScript
 		================================================== -->
 		<!-- Placed at the end of the document so the pages load faster -->
-		<script type="text/javascript"
+		<%--<script type="text/javascript"
 		 src="<c:url value="/static/dist/js/jquery-3.3.1.slim.min.js" />" charset="utf-8" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script>window.jQuery || document.write('<script src="<c:url value="/static/dist/js/vendor/jquery-slim.min.js"><\/script>')</script>
 		<script	type="text/javascript"
-		 src="<c:url value="/static/dist/js/jquery-3.3.1.slim.min.js" />"></script>
-		<script 
-		src="<c:url value="static/dist/js/bootstrap.min.js" />" ></script>
+		 src="<c:url value="/static/dist/js/jquery-3.3.1.slim.min.js" />"></script>--%>
+		 <script 
+		src="<c:url value="/static/dist/js/bootstrap.min.js" />" ></script>  
 	</body>
 
 </html>

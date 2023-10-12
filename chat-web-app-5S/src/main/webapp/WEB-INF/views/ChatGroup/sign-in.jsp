@@ -6,7 +6,7 @@
 
 <head>
 		<meta charset="utf-8">
-		<title>Sign In â Swipe</title>
+		<title>Poly chat</title>
 		<meta name="description" content="#">		
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<!-- Bootstrap core CSS -->
@@ -35,17 +35,17 @@
 											<i class="material-icons">whatshot</i>
 										</button>
 									</div>
-									<p>Hoặc bắt đầu với email của bạn:</p>
-									<form>
+									<!--  <p>Hoặc bắt đầu với email của bạn:</p> -->
+									<form action="<c:url value="/login" />" method="POST">
 										<div class="form-group">
-											<input type="email" id="inputEmail" class="form-control" placeholder="Email Address" required>
+											<input type="text" name="username" id="inputUsername" class="form-control" placeholder="Tài khoản" required>
 											<button class="btn icon"><i class="material-icons">person_outline</i></button>
 										</div>
 										<div class="form-group">
-											<input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+											<input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
 											<button class="btn icon"><i class="material-icons">lock_outline</i></button>
 										</div>
-										<button type="submit" class="btn button" formaction="index.html">Đăng nhập</button>
+										<button type="submit" class="btn button">Đăng nhập</button>
 										<div class="callout">
 											<span>Bạn không có tài khoản? <a href="sign-up.html">Tạo tài khoản</a></span>
 										</div>
@@ -62,10 +62,10 @@
 						<div class="col-md-12">
 							<div class="preference">
 								<h2>Xin chào bạn!</h2>
-								<p>Hãy bắt đầu đăng ký ngay để tham gia và không bỏ lỡ những thông tin thú vị từ bạn bè nhé!.</p>
-								<a href="sign-up.html" class="btn button">Đăng ký</a> <br> <br>
-								<a href="forgotPassword.html" class="btn button">Quên mật khẩu</a> <br> <br>
-								<a href="change_pass.html" class="btn button">Đổi mật khẩu</a>
+								<p>Hãy bắt đầu đăng ký ngay để tham gia và không bỏ lỡ những thông tin thú vị từ bạn bè nhé!.</p>								
+								<a class="btn button"  href="<c:url value="/users/register" />">Đăng ký</a> <br> <br>
+								<a  href="<c:url value="/users/forpass"/>" class="btn button">Quên mật khẩu</a> <br> <br>
+								<a  href="<c:url value="/users/changepass"/>" class="btn button">Đổi mật khẩu</a> <br> <br>
 							</div>
 						</div>
 					</div>
