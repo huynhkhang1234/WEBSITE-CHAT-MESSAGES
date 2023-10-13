@@ -1,6 +1,7 @@
 package com.poly.chatweb.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -24,10 +25,14 @@ public class LoginController extends HttpServlet {
 	public LoginController() {
 		super();
 	}
-
+	int checkLogin = 0;
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String url  = request.getContextPath();
+		
+		
+		request.setAttribute("annotationLG", checkLogin);
 		if (FileServiceAbstract.rootURL.isEmpty() || FileServiceAbstract.rootURL.contains("localhost")) {
 			
 			FileServiceAbstract.rootURL = url.replaceAll("login", "files/");
@@ -47,18 +52,24 @@ public class LoginController extends HttpServlet {
 		
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
+		
 		User user = userService.findUser(username, password);
 		String destPage = "/login";
+		
 		if (user != null) {
 			HttpSession httpSession = request.getSession();
 			httpSession.setAttribute("user", user);
 			destPage = "/index";
 			
+			checkLogin = 1;
+			httpSession.setAttribute("checkLG", checkLogin);
+		}else {
+			checkLogin = 2;
 		}
 		String url  = request.getContextPath();
-//		System.out.println(url);
-		System.out.println(user);
-//		System.out.println("url: "+url+destPage);
+        
+//        System.out.println("checkLogin: "+checkLogin);
+        request.setAttribute("annotationLG", checkLogin);
 		response.sendRedirect(url+destPage);
 	}
 
