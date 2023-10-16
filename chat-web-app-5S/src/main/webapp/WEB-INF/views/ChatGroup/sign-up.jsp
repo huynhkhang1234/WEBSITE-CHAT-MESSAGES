@@ -88,9 +88,11 @@
 						<div class="preference">
 							<h2>Chào mừng bạn</h2>
 							<p>Đăng nhập ngay để không bỏ lỡ những điều thú vị.</p>
-							<a href="sign-in.html" class="btn button">Đăng nhập</a> <br><br>
-							<a href="change_pass.html" class="btn button">Đổi mật khẩu</a> <br><br>
-							<a href="forgotPassword.html" class="btn button">Quên mật khẩu</a> 
+							
+							
+							<a  href="<c:url value="/users/login"/>" class="btn button">Đăng nhập</a> <br> <br>
+							<a  href="<c:url value="/users/changepass"/>" class="btn button">Đổi mật khẩu</a> <br> <br>
+							<a class="btn button"  href="<c:url value="/users/forpass" />">Quên mật khẩu</a>
 						</div>
 					</div>
 				</div>
