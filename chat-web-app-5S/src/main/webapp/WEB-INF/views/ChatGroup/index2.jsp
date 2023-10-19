@@ -10,24 +10,53 @@
 <meta name="description" content="#">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<!-- Bootstrap core CSS -->
-<link href="<c:url value="/static/dist/css/lib/bootstrap.min.css" />"
-	type="text/css" rel="stylesheet">
-<!-- Swipe core CSS -->
-<link href="<c:url value="/static/dist/css/swipe.min.css" />"
-	type="text/css" rel="stylesheet">
-<!-- Favicon -->
-<link href="<c:url value="/static/dist/img/favicon.png" />"
-	type="image/png" rel="icon">
-<link rel="stylesheet"
-	href="<c:url value="/static/dist/css/Styles.css" />">
-<link
-	href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-	rel="stylesheet">
-<link rel="stylesheet" href="<c:url value="/static/css/chat.css" />">
+		<!-- File JavaScript riêng -->
+  		 <script type="text/javascript" src="<c:url value="/static/js/ShowAnnotation.js" />" charset="utf-8"></script>
+		<!-- Bootstrap core CSS -->
+		<link href="<c:url value="/static/dist/css/lib/bootstrap.min.css" />"
+			type="text/css" rel="stylesheet">
+		<!-- Swipe core CSS -->
+		<link href="<c:url value="/static/dist/css/swipe.min.css" />"
+			type="text/css" rel="stylesheet">
+		<!-- Favicon -->
+		<link href="<c:url value="/static/dist/img/favicon.png" />"
+			type="image/png" rel="icon">
+		<link rel="stylesheet"
+			href="<c:url value="/static/dist/css/Styles.css" />">
+		<link
+			href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+			rel="stylesheet">
+		<link rel="stylesheet" href="<c:url value="/static/css/chat.css" />">
+
+		<!-- Bao gồm thư viện SweetAlert2 -->
+	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@9">
+	    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+	    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	
+	    
 </head>
 
 <body style="font-family: 'Times New Roman', Times, serif">
+
+	   <% 
+	    Object annotationLG = request.getAttribute("annotationLG");
+	   %>
+	
+    <script>
+ 	var annotationLGValue = '<%= annotationLG %>';
+      
+       	if(annotationLGValue==1){
+       		showAnnotation('Đăng nhập thành công', 'Chào mừng bạn đến chơiii', 1);
+       		console.log('Print: '+data);
+       	}else if(annotationLGValue==2){
+       		showAnnotation('Đăng nhập thất bại', 'Vui lòng kiểm tra lại thông tin', 0);
+       		console.log('Print: '+data);
+       	}else{
+       		console.log('Không cần thông báo');
+       		console.log('Print: '+data);
+       	}
+    </script>
+    
 	<main>
 		<div class="layout">
 			<!-- Start of Navigation -->

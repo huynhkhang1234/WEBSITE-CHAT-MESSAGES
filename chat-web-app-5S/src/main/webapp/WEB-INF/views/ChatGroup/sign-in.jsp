@@ -1,20 +1,52 @@
 <%@page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+		
 		<meta charset="utf-8">
-		<title>Poly chat</title>
+		<title>Sign In â Swipe</title>
 		<meta name="description" content="#">		
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- File JavaScript riêng -->
+  		<script type="text/javascript" src="<c:url value="/static/js/ShowAnnotation.js" />" charset="utf-8"></script>
 		<!-- Bootstrap core CSS -->
 		<link href="<c:url value="/static/dist/css/lib/bootstrap.min.css" />" type="text/css" rel="stylesheet">
 		<link href="<c:url value="/static/dist/css/swipe.min.css" />" type="text/css" rel="stylesheet">
-		<link href="<c:url value="/static/dist/img/favicon.png" />" type="image/png" rel="icon">					
+		<link href="<c:url value="/static/dist/img/favicon.png" />" type="image/png" rel="icon">		
+		
+		<!-- Bao gồm thư viện SweetAlert2 -->
+	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@9">
+	    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+	    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	
+	   
 	</head>
-	<body class="start" style="font-family: 'Times New Roman', Times, serif">
+	<body class="start" style="font-family: 'Times New Roman', Times, serif">	
+	
+	 <% 
+	    Object annotationLG = request.getAttribute("annotationLG");
+	   %>
+	
+    <script>
+ 	var annotationLGValue = '<%= annotationLG %>';
+      
+       	if(annotationLGValue==1){
+       		showAnnotation('Đăng nhập thành công', 'Chào mừng bạn đến chơiii', 1);
+       		console.log('Print: '+data);
+       	}else if(annotationLGValue==2){
+       		showAnnotation('Đăng nhập thất bại', 'Vui lòng kiểm tra lại thông tin', 0);
+       		console.log('Print: '+data);
+       	}else{
+       		console.log('Không cần thông báo');
+       		console.log('Print: '+data);
+       	}
+    </script>
+    
 		<main>
 			<div class="layout">
 				<!-- Start of Sign In -->
@@ -36,7 +68,7 @@
 										</button>
 									</div>
 									<!--  <p>Hoặc bắt đầu với email của bạn:</p> -->
-									<form action="<c:url value="/login" />" method="POST">
+									<form action="<c:url value="/login" />" method="POST" id="loginForm"> 
 										<div class="form-group">
 											<input type="text" name="username" id="inputUsername" class="form-control" placeholder="Tài khoản" required>
 											<button class="btn icon"><i class="material-icons">person_outline</i></button>
@@ -62,10 +94,10 @@
 						<div class="col-md-12">
 							<div class="preference">
 								<h2>Xin chào bạn!</h2>
-								<p>Hãy bắt đầu đăng ký ngay để tham gia và không bỏ lỡ những thông tin thú vị từ bạn bè nhé!.</p>								
-								<a class="btn button"  href="<c:url value="/users/register" />">Đăng ký</a> <br> <br>
-								<a  href="<c:url value="/users/forpass"/>" class="btn button">Quên mật khẩu</a> <br> <br>
-								<a  href="<c:url value="/users/changepass"/>" class="btn button">Đổi mật khẩu</a> <br> <br>
+								<p>Hãy bắt đầu đăng ký ngay để tham gia và không bỏ lỡ những thông tin thú vị từ bạn bè nhé!.</p>
+								<a href="sign-up.html" class="btn button">Đăng ký</a> <br> <br>
+								<a href="forgotPassword.html" class="btn button">Quên mật khẩu</a> <br> <br>
+								<a href="change_pass.html" class="btn button">Đổi mật khẩu</a>
 							</div>
 						</div>
 					</div>
