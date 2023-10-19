@@ -156,7 +156,7 @@ function setGroup(element) {
 				+ '</div>'
 				+ '<div class="invite-user">'
 				+ '<span class="total-invite-user">' + numberMember + ' paticipants</span>'
-				+ '<span data-id="add-user" onclick="toggleModal(this, true); searchMemberByKeyword(``);" class="invite toggle-btn">Invite</span>'
+				+ '<span data-id="add-user" onclick="toggleModal(this, true); searchMemberByKeyword(``);" class="invite toggle-btn">Mời</span>'
 				+ '</div>'
 				+ '<div class="setting toggle-btn" data-id="manage-user" onclick="toggleModal(this, true);  fetchUser();">'
 				+ '<i class="fa fa-cog"></i>'
@@ -248,10 +248,10 @@ function createGroup(e) {
 			
 			let imgSrc = ' src="http://' + window.location.host + '/files/group-' + data.id + '/' + data.avatar + '"';
 			//let imgSrc = 'src="/chat-web-app/static/images/anh2.jpg"';
-			let appendUser = '<a id="group-' + data.id + '"' +
+			let appendUser = '<a  data-id="' + data.id + '"  data-number="' + numberMember + '" data-name="' + data.name + '"  onclick="setGroup(this)"' +
 			    'class="filterDiscussions all unread single active" ' +
 			    'data-toggle="list" role="tab"> '+
-			    '<img class="avatar-md" id="img-group-' + data.id + '" ' +
+			    '<img class="avatar-md" id="img-group-' + data.id + '"  ' +
 			     'src="http://localhost:8080/chat-web-app/static/data/khang/anh1.jpg" ' +
 			    'data-toggle="tooltip" data-placement="top" title="Janette" ' +
 			    'alt="avatar"> ' +
@@ -261,12 +261,15 @@ function createGroup(e) {
 			    '<div class="new bg-yellow"> ' +
 			    '<span>+7</span> ' +
 			    '</div> ' +
-			    '<div class="data" ' + data.id + '" data-number="' + numberMember + '" data-name="' + data.name + '" onclick="setGroup(this);" > ' +
+			    '<div class="data-id"> ' +
 			    '<h5>' + data.name + '</h5> ' +
 			    '<p>Mới tạo nhóm</p> ' +
 			    '</div> ' +
 			    '<button data-id="' + data.id + '" onclick="deleteGroup(this)">Xóa</button>' +
 			    '</a>';
+			//	if (isAdmin) {
+				//	appendUser += '<div class="group-delete border" data-id="' + data.id + '" onclick="deleteGroup(this)">Delete</div>';
+				//}
 				
 			document.querySelector("#discussionsChats").innerHTML += appendUser;
 			document.querySelector(".txt-group-name").value = "";
@@ -393,7 +396,7 @@ function deleteMember(ele) {
 			numberMember -= 1;
 
 			let inviteNumber = document.querySelector(".total-invite-user");
-			if (inviteNumber) inviteNumber.innerHTML = numberMember + " paticipants";
+			if (inviteNumber) inviteNumber.innerHTML = numberMember + " thành viên";
 			//thêm group vào trang.
 			toggleAllModal();
 		})
@@ -436,7 +439,7 @@ function chatGroup(ele) {
 	//resetChat();
 	//ele.classList.add("active");
 	fetchGroup();
-	listFiles = [];
+	listFiles = [];	
 }
 
 function addUserChange(e) {

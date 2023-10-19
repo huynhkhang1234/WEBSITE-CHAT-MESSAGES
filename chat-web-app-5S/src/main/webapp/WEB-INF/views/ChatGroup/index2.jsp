@@ -42,24 +42,26 @@
 							</button>
 							<a style="cursor: pointer;" id="members"
 								onclick="toggleSidebar(this.id)" data-toggle="tab"
-								class="show active "><i onclick="chatOne(this)" class="material-icons clickdouble">account_circle</i></a>
-							<a style="cursor: pointer;" id="discussions"
+								class="show active "><i onclick="chatOne(this)"
+								class="material-icons clickdouble">account_circle</i></a> <a
+								style="cursor: pointer;" id="discussions"
 								onclick="toggleSidebar(this.id)" data-toggle="tab" class="show"><i
-								class="material-icons clickdouble" onclick="chatGroup(this)" >chat_bubble_outline</i></a> <a
-								style="cursor: pointer;" id="notifications"
+								class="material-icons clickdouble" onclick="chatGroup(this)">chat_bubble_outline</i></a>
+							<a style="cursor: pointer;" id="notifications"
 								onclick="toggleSidebar(this.id)" data-toggle="tab"
 								class="f-grow1 show"><i class="material-icons clickdouble">notifications_none</i></a>
 							<button class="btn create " data-toggle="modal"
 								data-target="#AddGroupModal">
-								<a  data-id="add-group" data-toggle="tab" onclick="toggleModal(this, true)"><i class="material-icons">group_add</i></a>
+								<a data-id="add-group" data-toggle="tab"
+									onclick="toggleModal(this, true)"><i class="material-icons">group_add</i></a>
 							</button>
 							<input type="checkbox" id="darkModeToggle" hidden=""> <label
 								for="darkModeToggle"><i class="material-icons">brightness_2</i></label>
-							<a href="#settings" onclick="toggleSidebar()" data-toggle="tab"><i
-								class="material-icons">settings</i></a>
-							<button class="btn power" onclick="visitPage();">
+							<a id="setting" onclick="toggleSidebar(this.id)"
+								data-toggle="tab"><i class="material-icons">settings</i></a>
+							<a href="<c:url value="/users/logout"/>" class="btn power" onclick="visitPage();">
 								<i class="material-icons">power_settings_new</i>
-							</button>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -75,14 +77,11 @@
 									<form class="form-inline position-relative">
 										<input type="text" class="form-control" id="people"
 											placeholder="Tìm kiếm..." onkeyup="searchUser(this)">
-										<button type="button" class="btn btn-link loop">
-											<i class="material-icons">search</i>
+										<button id="search" type="button" class="btn btn-link loop">
+											<i style="position: absolute; left: 20px; top: 1px;"
+												class="material-icons">search</i>
 										</button>
-									</form>
-									<button class="btn create" data-toggle="modal"
-										data-target="#exampleModalCenter">
-										<i class="material-icons">person_add</i>
-									</button>
+									</form>									
 								</div>
 								<div class="list-group sort">
 									<button class="btn filterMembersBtn active show"
@@ -105,8 +104,7 @@
 												<img id="img-${friend.username}" class="avatar-md"
 												src="<c:url value="/static/data/${friend.username}/${friend.avatar}" />"
 												data-toggle="tooltip" data-placement="top" title="Janette"
-												alt="avatar">
-												<%-- <div class="status" id="status-${friend.username}"
+												alt="avatar"> <%-- <div class="status" id="status-${friend.username}"
 													class="user-img-dot">
 													<i class="material-icons online">fiber_manual_record</i>
 												</div> --%>
@@ -128,14 +126,15 @@
 							<div id="discussionsModal" class="tab-pane fade ">
 								<div class="search">
 									<form class="form-inline position-relative">
-										<input type="text" class="form-control" id="people" placeholder="Tìm kiếm..." onkeyup="searchUser(this)">
-										<button type="button" class="btn btn-link loop">
+										<input type="text" class="form-control" id="people"
+											placeholder="Tìm kiếm..." onkeyup="searchUser(this)">
+										<button id="searchGroup" type="button" class="btn btn-link loop">
 											<i class="material-icons">search</i>
 										</button>
 									</form>
 									<button class="btn create" data-toggle="modal"
-										data-target="#startnewchat">
-										<i class="material-icons">create</i>
+										data-target="#exampleModalCenter">
+										<i data-id="add-group" onclick="toggleModal(this, true)" class="material-icons">person_add</i>
 									</button>
 								</div>
 								<div class="list-group sort">
@@ -148,11 +147,11 @@
 								</div>
 								<div class="discussions">
 									<h1 class="name">Discussions</h1>
-									
+
 									</span>
 									<div class="list-group" id="discussionsChats" role="tablist">
-									<!-- thẻ chứa nhóm -->
-									<!-- Nội dung đoạn chat  -->																
+										<!-- thẻ chứa nhóm -->
+										<!-- Nội dung đoạn chat  -->
 									</div>
 								</div>
 							</div>
@@ -226,7 +225,7 @@
 							<!-- End of Notifications -->
 							<!-- Start of Notifications Settings -->
 							<div class="category">
-								<a href="#" class="title collapsed" id="headingThree"
+								<!-- <a href="#" class="title collapsed" id="headingThree"
 									data-toggle="collapse" data-target="#collapseThree"
 									aria-expanded="true" aria-controls="collapseThree"> <i
 									class="material-icons md-30 online">notifications_none</i>
@@ -234,7 +233,7 @@
 										<h5>Thông báo</h5>
 										<p>Bật hoặc tắt thông báo</p>
 									</div> <i class="material-icons">keyboard_arrow_right</i>
-								</a>
+								</a> -->
 								<div class="collapse" id="collapseThree"
 									aria-labelledby="headingThree" data-parent="#accordionSettings">
 									<div class="content no-layer">
@@ -303,7 +302,7 @@
 							</div>
 							<!-- End of Notifications Settings -->
 							<!-- Start of Settings -->
-							<div class="tab-pane fade" id="settings">
+							<div class="tab-pane fade " id="settings">
 								<div class="settings">
 									<div class="profile">
 										<img class="avatar-xl"
@@ -341,7 +340,7 @@
 													<p>Cập nhật chi tiết hồ sơ của bạn</p>
 												</div> <i class="material-icons">keyboard_arrow_right</i>
 											</a>
-											<div class="collapse" id="collapseOne"
+											<div class="collapse show" id="collapseOne"
 												aria-labelledby="headingOne"
 												data-parent="#accordionSettings">
 												<div class="content">
@@ -698,89 +697,91 @@
 			</div>
 			<!-- End of Sidebar -->
 			<!-- Start of Create Chat -->
-			
+
 			<!-- End of Create Chat -->
 
 
 
 
-<!-- ---------------------------------------------- -->
+			<!-- ---------------------------------------------- -->
 			<div class="main">
+		
 				<div class="tab-content" id="nav-tabContent">
 					<!-- Start of Babble -->
-					<div style="background: #dadada;" class="babble tab-pane fade active show" 
-						role="tabpanel" aria-labelledby="list-chat-list">
+					<div border: 1px solid #a7a6a6;"
+						class="babble tab-pane fade active show" role="tabpanel"
+						aria-labelledby="list-chat-list">
 						<!-- Start of Chat -->
-							<!-- code phần bỏ vô nhắn tin -->											
-							<span id="receiver"></span>					
+						<!-- code phần bỏ vô nhắn tin -->
+						<span id="receiver"></span>
 						<!-- code phần khi click thêm nhóm -->
-			<div class="modal-box border " id="add-group">
-				<div class="modal-box-head">
-					<div class="modal-box-title">
-						Add Group
-					</div>
-			 <div class="modal-box-close toggle-btn" data-id="add-group" onclick="toggleModal(this, false)">
-						<i class="fa fa-times"></i>
-					</div> 
-				</div>
-				<hr>
-				<form action="" onsubmit="return createGroup(event);">
-					<div class="modal-box-body">
-						<input type="text" class="txt-input txt-group-name" placeholder="Group Name...">
-					</div>		
-					<button type="submit" class="btn">Create Group</button>		
-				</form>
-			</div>
-			
-			<div class="modal-box border" id="add-user">
-				<div class="modal-box-head">
-					<div class="modal-box-title">
-						Add Member
-					</div>
-					<div class="modal-box-close toggle-btn" data-id="add-user" onclick="toggleModal(this, false)">
-						<i class="fa fa-times"></i>
-					</div>
-				</div>
-				<hr>
-				<form action="" onsubmit="return addMember(event);">
-					<div class="modal-box-body add-member-body">
-						<input type="text" class="txt-input txt-group-name" placeholder="Name of member..." onkeyup="searchMemberByKeyword(this)">
-						
-						<div class="list-user">
-							<ul>
-							</ul>
+						<div class="modal-box border " id="add-group">
+							<div class="modal-box-head">
+								<div class="modal-box-title">Add Group</div>
+								<div class="modal-box-close toggle-btn" data-id="add-group"
+									onclick="toggleModal(this, false)">
+									<i class="fa fa-times"></i>
+								</div>
+							</div>
+							<hr>
+							<form action="" onsubmit="return createGroup(event);">
+								<div class="modal-box-body">
+									<input type="text" class="txt-input txt-group-name"
+										placeholder="Group Name...">
+								</div>
+								<button type="submit" class="btn">Create Group</button>
+							</form>
 						</div>
-					</div>		
-					<button type="submit" class="btn">Add Members</button>		
-				</form>
-			</div>
-			
-			<div class="modal-box border" id="manage-user">
-				<div class="modal-box-head">
-					<div class="modal-box-title">
-						All Member Of Group
-					</div>
-					<div class="modal-box-close toggle-btn" data-id="manage-user" onclick="toggleModal(this, false)">
-						<i class="fa fa-times"></i>
-					</div>
-				</div>
-				<hr>
-				<div class="modal-box-body manage-member-body">
-					<div class="list-user">
-						<ul>
-						</ul>
-					</div>
-				</div>	
-			</div>
-					
+
+						<div class="modal-box border" id="add-user">
+							<div class="modal-box-head">
+								<div class="modal-box-title">Danh sách</div>
+								<div class="modal-box-close toggle-btn" data-id="add-user"
+									onclick="toggleModal(this, false)">
+									<i class="fa fa-times"></i>
+								</div>
+							</div>
+							<hr>
+							<form action="" onsubmit="return addMember(event);">
+								<div class="modal-box-body add-member-body">
+									<input type="text" class="txt-input txt-group-name"
+										placeholder="Name of member..."
+										onkeyup="searchMemberByKeyword(this)">
+
+									<div class="list-user">
+										<ul>
+										</ul>
+									</div>
+								</div>
+								<button style="color: blue; font-size: 20px" type="submit" class="btn">Thêm thành viên</button>
+							</form>
+						</div>
+
+						<div class="modal-box border" id="manage-user">
+							<div class="modal-box-head">
+								<div class="modal-box-title">All Member Of Group</div>
+								<div class="modal-box-close toggle-btn" data-id="manage-user"
+									onclick="toggleModal(this, false)">
+									<i class="fa fa-times"></i>
+								</div>
+							</div>
+							<hr>
+							<div class="modal-box-body manage-member-body">
+								<div class="list-user">
+									<ul>
+									</ul>
+								</div>
+							</div>
+						</div>
+
 						<!-- End of Chat -->
-						
-						
-						
-						
-						
-						
-						
+
+
+
+
+
+
+
 						<!--MODAL ADD GROUP-->
 						<div class="modal fade" id="AddGroupModal" tabindex="-1"
 							role="dialog" aria-hidden="true">
@@ -1249,8 +1250,9 @@
 			var member = document.getElementById('membersModal');
 			var dis = document.getElementById('discussionsModal');
 			var notifications = document.getElementById('notificationModal');
+			var setting = document.getElementById('settings');
 			if (id === 'members') {
-				if (sidebar.classList.contains("active")) {
+				if (members.classList.contains("active")) {
 					// Nếu có class "active", thực hiện xử lý tương ứng
 					sidebar.classList.toggle("active");
 				}
@@ -1263,12 +1265,18 @@
 					notifications.classList.remove("active");
 					notifications.classList.remove("show");
 				}
+				if (setting != null) {
+					setting.classList.remove("active");
+					setting.classList.remove("show");
+				}
+
 				member.classList.add("active");
 				member.classList.add("show");
 
 			}
+
 			if (id === 'discussions') {
-				if (sidebar.classList.contains("active")) {
+				if (discussions.classList.contains("active")) {
 					// Nếu có class "active", thực hiện xử lý tương ứng
 					sidebar.classList.toggle("active");
 				}
@@ -1279,6 +1287,10 @@
 				if (notifications != null) {
 					notifications.classList.remove("active");
 					notifications.classList.remove("show");
+				}
+				if (setting != null) {
+					setting.classList.remove("active");
+					setting.classList.remove("show");
 				}
 				dis.classList.add("active");
 				dis.classList.add("show");
@@ -1286,7 +1298,7 @@
 			}
 
 			if (id === 'notifications') {
-				if (sidebar.classList.contains("active")) {
+				if (notifications.classList.contains("active")) {
 					// Nếu có class "active", thực hiện xử lý tương ứng
 					sidebar.classList.toggle("active");
 				}
@@ -1299,8 +1311,34 @@
 					dis.classList.remove("show");
 				}
 
+				if (setting != null) {
+					setting.classList.remove("active");
+					setting.classList.remove("show");
+				}
 				notifications.classList.add("active");
 				notifications.classList.add("show");
+			}
+
+			if (id === 'setting') {
+				if (setting.classList.contains("active")) {
+					// Nếu có class "active", thực hiện xử lý tương ứng
+					sidebar.classList.toggle("active");
+				}
+				if (member != null) {
+					member.classList.remove("active");
+					member.classList.remove("show");
+				}
+				if (dis != null) {
+					dis.classList.remove("active");
+					dis.classList.remove("show");
+				}
+				if (notifications != null) {
+					notifications.classList.remove("active");
+					notifications.classList.remove("show");
+				}
+
+				setting.classList.add("active");
+				setting.classList.add("show");
 			}
 
 		}
@@ -1319,7 +1357,7 @@
 		}
 
 		function visitPage() {
-			// Thực hiện hành động khi nút power được nhấn
+			
 		}
 
 		var modal = document.getElementById('myModal');

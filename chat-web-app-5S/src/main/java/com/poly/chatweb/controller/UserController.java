@@ -48,12 +48,22 @@ public class UserController extends HttpServlet {
 			request.setAttribute("btnSubmit", btnSubmit);
 			request.setAttribute("btnGoBack", btnGoBack);
 
-			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/user-form.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/ChatGroup/sign-up.jsp");
 			rd.forward(request, response);
 		} else if (status.equals("/logout")) {
 			request.getSession().invalidate();
 			response.sendRedirect(url+"/login");
-		} else {
+		} else if(status.equals("/forpass")){
+			request.getSession().invalidate();			
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/ChatGroup/forgotPassword.jsp");
+			rd.forward(request, response);
+		}
+		else if(status.equals("/changepass")){
+			request.getSession().invalidate();			
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/ChatGroup/change_pass.jsp");
+			rd.forward(request, response);
+		}
+		else {
 			response.sendRedirect(url+"/login");
 		}
 	}

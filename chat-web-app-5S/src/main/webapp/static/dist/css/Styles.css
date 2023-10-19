@@ -4,12 +4,11 @@
 /* Mặc định cho chế độ sáng */
 :root {
     --background-color: white;
-    --text-color: black;
+    --text-color: linear-gradient(to right, #333399, #ff00cc);
 }
 
-
 body {
-    background-color: var(--background-color);
+    background:url(https://cdn.wallpapersafari.com/13/6/Mpsg2b.jpg);
     color: var(--text-color);
 }
 /* Định dạng nền và màu chữ cho giao diện Dark Mode */
@@ -48,6 +47,24 @@ body {
 .dark-mode .sidebar{
     background-color: #333333;
 }
+.dark-mode  .user-contact{
+	 background-color: #333333;
+}
+
+.dark-mode  .user-name{
+	 color: #fff;
+}
+.dark-mode  .form-send-message{
+	 background: #ccc;
+}
+.dark-mode  .txt-input{
+	 background: #ccc;
+	 color: black;
+}
+.dark-mode  .message-text{
+	 background: #444141;	 
+}
+
  .dark-mode .contacts > .name{
     color: #ffffff;
 }
