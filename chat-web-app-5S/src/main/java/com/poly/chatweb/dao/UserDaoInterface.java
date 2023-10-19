@@ -16,4 +16,10 @@ public interface UserDaoInterface extends GenericDaoInterface<User> {
 	List<User> findUsersByConversationId(Long id);
 
 	List<User> findFriendsNotInConversation(String userName, String keyword, Long conversationId);
+
+	List<User> findAllUser();
+	
+	User findUserByUsername(String username);
+	
+	void changeActive(String username, boolean status);
 }

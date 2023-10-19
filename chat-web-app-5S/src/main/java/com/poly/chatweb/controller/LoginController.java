@@ -26,11 +26,14 @@ public class LoginController extends HttpServlet {
 		super();
 	}
 	int checkLogin = 0;
+//	0 la khong co gi
+//	1 thanh cong
+//	2 that bai
+//	3 thanh cong nhung tk bi khoa
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String url  = request.getContextPath();
-		
 		
 		request.setAttribute("annotationLG", checkLogin);
 		if (FileServiceAbstract.rootURL.isEmpty() || FileServiceAbstract.rootURL.contains("localhost")) {
@@ -57,12 +60,16 @@ public class LoginController extends HttpServlet {
 		String destPage = "/login";
 		
 		if (user != null) {
-			HttpSession httpSession = request.getSession();
-			httpSession.setAttribute("user", user);
-			destPage = "/index";
-			
-			checkLogin = 1;
-			httpSession.setAttribute("checkLG", checkLogin);
+			if(user.getIs_active() == true) {
+				HttpSession httpSession = request.getSession();
+				httpSession.setAttribute("user", user);
+				destPage = "/index";
+				
+				checkLogin = 1;
+				httpSession.setAttribute("checkLG", checkLogin);
+			}else {
+				checkLogin = 3;
+			}
 		}else {
 			checkLogin = 2;
 		}

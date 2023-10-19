@@ -47,13 +47,11 @@
       
        	if(annotationLGValue==1){
        		showAnnotation('Đăng nhập thành công', 'Chào mừng bạn đến chơiii', 1);
-       		console.log('Print: '+data);
        	}else if(annotationLGValue==2){
-       		showAnnotation('Đăng nhập thất bại', 'Vui lòng kiểm tra lại thông tin', 0);
-       		console.log('Print: '+data);
+       		
        	}else{
        		console.log('Không cần thông báo');
-       		console.log('Print: '+data);
+       		console.log('Print nothing ');
        	}
     </script>
     

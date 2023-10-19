@@ -17,4 +17,10 @@ public interface UserServiceInterface {
 	public List<User> findFriendsByKeyWord(String username, String keyword);
 
 	public List<User> getFriendsNotInConversation(String userName, String keyword, Long conversationId);
+
+	public List<User> getAllUser();
+	
+	public User findUserByUsername(String username);
+	
+	public void changeActive(String username, boolean status);
 }

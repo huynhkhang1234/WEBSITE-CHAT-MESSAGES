@@ -1,5 +1,5 @@
 package com.poly.chatweb.map.impl;
-
+	
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -17,6 +17,7 @@ public class UserMapper implements RowMapperInterface<User> {
 			user.setAvatar(resultSet.getString("avatar").trim());
 			try {
 				user.setAdmin(resultSet.getBoolean("is_admin"));
+				user.setIs_active(resultSet.getBoolean("is_active"));
 			} catch (SQLException ex) {
 				return user;
 			}

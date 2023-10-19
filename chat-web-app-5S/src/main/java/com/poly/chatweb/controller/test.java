@@ -35,6 +35,7 @@ public class test extends HttpServlet {
 			request.setAttribute("user", currentUser);	
 //			System.out.println("tesst thu no ben kia nha anh em");
 			System.out.println("ADMIN?: "+currentUser.isAdmin());
+			System.out.println("Is Active?: "+currentUser.getIs_active());
 	      RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/ChatGroup/index2.jsp");
 			rd.forward(request, response);
 	    }

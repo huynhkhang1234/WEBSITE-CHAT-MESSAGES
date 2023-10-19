@@ -36,14 +36,16 @@
  	var annotationLGValue = '<%= annotationLG %>';
       
        	if(annotationLGValue==1){
-       		showAnnotation('Đăng nhập thành công', 'Chào mừng bạn đến chơiii', 1);
-       		console.log('Print: '+data);
+       		
        	}else if(annotationLGValue==2){
-       		showAnnotation('Đăng nhập thất bại', 'Vui lòng kiểm tra lại thông tin', 0);
-       		console.log('Print: '+data);
+       		showAnnotation('Đăng nhập thất bại', 'Vui lòng kiểm tra lại thông tin bạn đã nhập', 0);
+       		console.log('Print: dung khi dang nhap sai thong tin');
+       	}else if(annotationLGValue==3){
+       		showAnnotation('Đăng nhập thất bại', 'Rất tiếc. Tài khoản của bạn đã bị khóa', 0);
+       		console.log('Print: dung khi dang nhap dung nhung tk bi khoa');
        	}else{
        		console.log('Không cần thông báo');
-       		console.log('Print: '+data);
+       		console.log('Print: nothing');
        	}
     </script>
     
@@ -70,11 +72,11 @@
 									<!--  <p>Hoặc bắt đầu với email của bạn:</p> -->
 									<form action="<c:url value="/login" />" method="POST" id="loginForm"> 
 										<div class="form-group">
-											<input type="text" name="username" id="inputUsername" class="form-control" placeholder="Tài khoản" required>
+											<input type="text" name="username" value="" class="form-control" placeholder="Tài khoản" required>
 											<button class="btn icon"><i class="material-icons">person_outline</i></button>
 										</div>
 										<div class="form-group">
-											<input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+											<input type="password" name="password"  value="" class="form-control" placeholder="Password" required>
 											<button class="btn icon"><i class="material-icons">lock_outline</i></button>
 										</div>
 										<button type="submit" class="btn button">Đăng nhập</button>

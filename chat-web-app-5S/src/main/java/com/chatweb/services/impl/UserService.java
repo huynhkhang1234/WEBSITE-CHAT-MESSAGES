@@ -103,4 +103,22 @@ public class UserService implements UserServiceInterface {
 		List<User> friends = userDaoInterface.findFriendsNotInConversation(userName, keyword, conversationId);
 		return friends;
 	}
+
+	@Override
+	public List<User> getAllUser() {
+		List<User> listU = userDaoInterface.findAllUser();
+		return listU;
+	}
+
+	@Override
+	public User findUserByUsername(String username) {
+		User user = userDaoInterface.findUserByUsername(username);
+		return user;
+	}
+
+	@Override
+	public void changeActive(String username, boolean status) {
+		userDaoInterface.changeActive(username, status);
+		
+	}
 }
