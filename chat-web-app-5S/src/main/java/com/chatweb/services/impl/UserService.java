@@ -3,6 +3,8 @@ package com.chatweb.services.impl;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.List;
 
@@ -43,21 +45,41 @@ public class UserService implements UserServiceInterface {
 
 	@Override
 	public void saveUser(Boolean isRegister, String username, String password, boolean gender, Part avatar) {
+		  long timestamp = System.currentTimeMillis(); 
+		
 		System.out.println("Kiểm tra ảnh có tồn tại trong thư mục hay ko");
 		System.out.println("avatar bên đây" +avatar);		 
 		try {
+			Path projectDirectory = Paths.get(System.getProperty("user.dir"));
+			// Lấy thư mục cha của projectDirectory
+			Path adminDirectory = projectDirectory.getParent();
+			// In ra thư mục adminDirectory
+
+
+			String relativePath = "D:/CongoTY5S_Group/code/WEBSITE-CHAT-MESSAGES/chat-web-app-5S/src/main/webapp/static/data/"
+					+ username;
+			File privateDir = new File(relativePath);
+			if (!privateDir.exists()) {
+				privateDir.mkdirs();
+			}
+			System.out.println("userservice 65: "+privateDir.getPath());
 			//đường dẫn ảnh tạo ra khi đăng kí với tên
 			System.out.println("toi muon kiem tra hinh anh:" + FileServiceAbstract.rootLocation.toString() + "/" + username);
-			File privateDir = new File(FileServiceAbstract.rootLocation.toString() + "/" + username);
-			privateDir.mkdir();
+//			File privateDir = new File(FileServiceAbstract.rootLocation.toString() + "/" + username);
+//			privateDir.mkdir();
 			//tên thư mục gốc.
 			String origin = avatar.getSubmittedFileName();
 			String fileName = "";
 			if (!origin.isEmpty()) {
+				System.out.println(" Không Emty luôn");
 				String tail = origin.substring(origin.lastIndexOf("."), origin.length());
 				fileName = username + tail;
+				System.out.println("FIle name nè: "+fileName);
 				avatar.write(privateDir.getAbsolutePath() + File.separator + fileName);
+				System.out.println("FIle name nè 1: "+fileName);
+
 			} else {
+				
 				System.out.println("origin"+origin);
 				System.out.println("FileService:"+FileServiceAbstract.rootLocation.toString());
 				File defaultAvatar = new File(FileServiceAbstract.rootLocation.toString() + "/default/user-male.jpg");
@@ -72,14 +94,17 @@ public class UserService implements UserServiceInterface {
 				System.out.println("file name:" +fileName);
 			}
 			//tạo user mới.
+			System.out.println("tới 94 nè em");
 			User userEntity = new User(username, password, gender, fileName);
 			userDaoInterface.saveUser(isRegister, userEntity);
+			System.out.println("Tới rồi nha e");
 		} catch (IOException ex) {
 			System.out.println(ex.getMessage());
 			ex.printStackTrace();
 		}
 
 	}
+
 
 	@Override
 	public User findUser(String username, String password) {
@@ -102,5 +127,21 @@ public class UserService implements UserServiceInterface {
 	public List<User> getFriendsNotInConversation(String userName, String keyword, Long conversationId) {
 		List<User> friends = userDaoInterface.findFriendsNotInConversation(userName, keyword, conversationId);
 		return friends;
+	}
+
+	@Override
+	public boolean usernameIsExit(String username) {
+		User user = userDaoInterface.findByUsername(username);
+		if (user == null) {
+			return false;
+		}
+		return true;
+	}
+
+	@Override
+	public void updatePassword(String username, String newPassword) {
+		// TODO Auto-generated method stub
+		userDaoInterface.updatePassword(username, newPassword);
+		
 	}
 }

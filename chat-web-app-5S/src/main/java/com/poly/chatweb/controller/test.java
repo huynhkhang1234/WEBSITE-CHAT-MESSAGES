@@ -26,12 +26,14 @@ public class test extends HttpServlet {
 
 	 protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	        // Đoạn mã xử lý ở đây, ví dụ: chuyển hướng trang
-		 User currentUser = (User) request.getSession().getAttribute("user");
+		 User currentUser = (User) request.getSession().getAttribute("user");		 
 			List<User> friends = userService.findFriends(currentUser.getUsername());
 			request.setAttribute("friends", friends);
 			request.setAttribute("user", currentUser);	
-			System.out.println("tesst thu no ben kia nha anh em");
-			System.out.println("ADMIN?: "+currentUser.isAdmin());
+			System.out.println("tesst thu no ben kia nha anh em");			
+			//System.out.println("ADMIN?: "+currentUser.isAdmin());
+			
+			request.setAttribute("currentUser", currentUser);
 	      RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/ChatGroup/index2.jsp");
 			rd.forward(request, response);
 	    }

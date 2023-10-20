@@ -27,6 +27,7 @@ public class LoginController extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		  response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 		String url  = request.getContextPath();
 		if (FileServiceAbstract.rootURL.isEmpty() || FileServiceAbstract.rootURL.contains("localhost")) {
 			
@@ -44,7 +45,7 @@ public class LoginController extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
+		  response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		User user = userService.findUser(username, password);
@@ -52,13 +53,12 @@ public class LoginController extends HttpServlet {
 		if (user != null) {
 			HttpSession httpSession = request.getSession();
 			httpSession.setAttribute("user", user);
+			System.out.println("set session thành công");
 			destPage = "/index";
 			
 		}
-		String url  = request.getContextPath();
-//		System.out.println(url);
-		System.out.println(user);
-//		System.out.println("url: "+url+destPage);
+	
+		String url  = request.getContextPath();				
 		response.sendRedirect(url+destPage);
 	}
 

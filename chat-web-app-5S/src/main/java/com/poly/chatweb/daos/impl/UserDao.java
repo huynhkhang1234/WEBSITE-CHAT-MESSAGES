@@ -48,9 +48,10 @@ public class UserDao extends GenericDao<User> implements UserDaoInterface {
 		String password = user.getPassword();
 		Boolean gender = user.isGender();
 		String avatar = user.getAvatar();
-		StringBuilder sql = new StringBuilder("insert into users values(?,?,?,?)");
+		
+		StringBuilder sql = new StringBuilder("insert into users values(?,?,?,?,?)");
 		if (isRegister) {
-			save(sql.toString(), username, password, gender, avatar);
+			save(sql.toString(), username, password, gender, avatar,true);
 		} else {
 			sql = new StringBuilder("update users set password=?, gender=?, avatar=? where username=?");
 			save(sql.toString(), password, gender, avatar, username);
@@ -99,6 +100,22 @@ public class UserDao extends GenericDao<User> implements UserDaoInterface {
 		String param = "%" + keyword + "%";
 		List<User> users = query(sql.toString(), new UserMapper(), userName, param, conversationId);
 		return users;
+	}
+
+	@Override
+	public User findByUsername(String username) {
+		StringBuilder sql = new StringBuilder("select username, gender, avatar");
+		sql.append(" from users where username=?");
+		List<User> users = query(sql.toString(), new UserMapper(), username);
+		return users.isEmpty() ? null : users.get(0);
+	}
+
+	@Override
+	public void updatePassword(String username, String newPassword) {
+		// TODO Auto-generated method stub
+		StringBuilder sql = new StringBuilder("UPDATE users SET password = ? WHERE username = ?");
+		save(sql.toString(), newPassword, username);
+		
 	}
 
 }

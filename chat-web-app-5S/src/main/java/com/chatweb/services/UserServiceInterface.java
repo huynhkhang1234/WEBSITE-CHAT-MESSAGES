@@ -17,4 +17,8 @@ public interface UserServiceInterface {
 	public List<User> findFriendsByKeyWord(String username, String keyword);
 
 	public List<User> getFriendsNotInConversation(String userName, String keyword, Long conversationId);
+
+	public boolean usernameIsExit(String username);
+	
+	void updatePassword(String username, String newPassword);
 }

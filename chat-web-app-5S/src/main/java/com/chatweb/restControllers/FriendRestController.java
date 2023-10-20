@@ -25,6 +25,7 @@ public class FriendRestController extends HttpServlet {
 	//tìm bạn với nội dung message , ko có trả về any.
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		  response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 		String sender = request.getParameter("sender");
 		String receiver = request.getParameter("receiver");
 

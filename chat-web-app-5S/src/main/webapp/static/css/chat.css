@@ -423,6 +423,7 @@ img {
 }
 
 .list-messages-contain {
+	background:#fed2d2;
     padding: 0rem 1.5rem;
     height: 523px;
     overflow-y: auto;

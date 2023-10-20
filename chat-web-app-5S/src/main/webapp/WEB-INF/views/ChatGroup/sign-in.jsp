@@ -24,6 +24,9 @@
 							<div class="col-md-12">
 								<div class="content">
 									<h1>Đăng nhập</h1>
+									<label class="btn btn-image" for="attach"> test
+									<i class="fa fa-file"></i></label>
+									
 									<div class="third-party">
 										<button class="btn item bg-blue">
 											<i class="material-icons">pages</i>
@@ -62,8 +65,7 @@
 						<div class="col-md-12">
 							<div class="preference">
 								<h2>Xin chào bạn!</h2>
-								<p>Hãy bắt đầu đăng ký ngay để tham gia và không bỏ lỡ những thông tin thú vị từ bạn bè nhé!.</p>								
-								<a class="btn button"  href="<c:url value="/users/register" />">Đăng ký</a> <br> <br>
+								<p>Hãy bắt đầu đăng ký ngay để tham gia và không bỏ lỡ những thông tin thú vị từ bạn bè nhé!.</p>																
 								<a  href="<c:url value="/users/forpass"/>" class="btn button">Quên mật khẩu</a> <br> <br>
 								<a  href="<c:url value="/users/changepass"/>" class="btn button">Đổi mật khẩu</a> <br> <br>
 							</div>
