@@ -13,8 +13,36 @@
 		<link href="<c:url value="/static/dist/css/lib/bootstrap.min.css" />" type="text/css" rel="stylesheet">
 		<link href="<c:url value="/static/dist/css/swipe.min.css" />" type="text/css" rel="stylesheet">
 		<link href="<c:url value="/static/dist/img/favicon.png" />" type="image/png" rel="icon">					
+		<!-- File JavaScript riêng -->
+  		<script type="text/javascript" src="<c:url value="/static/js/ShowAnnotation.js" />" charset="utf-8"></script>
+  		<!-- Bao gồm thư viện SweetAlert2 -->
+	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@9">
+	    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+	    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>	
 	</head>
 	<body class="start" style="font-family: 'Times New Roman', Times, serif">
+	
+	 <% 
+	    Object annotationLG = request.getAttribute("annotationLG");
+	   %>
+	
+    <script>
+ 	var annotationLGValue = '<%= annotationLG %>';
+      
+       	if(annotationLGValue==1){
+       		
+       	}else if(annotationLGValue==2){
+       		showAnnotation('Đăng nhập thất bại', 'Vui lòng kiểm tra lại thông tin bạn đã nhập', 0);
+       		console.log('Print: dung khi dang nhap sai thong tin');
+       	}else if(annotationLGValue==3){
+       		showAnnotation('Đăng nhập thất bại', 'Rất tiếc. Tài khoản của bạn đã bị khóa', 0);
+       		console.log('Print: dung khi dang nhap dung nhung tk bi khoa');
+       	}else{
+       		console.log('Không cần thông báo');
+       		console.log('Print: nothing');
+       	}
+    </script>
+    
 		<main>
 			<div class="layout">
 				<!-- Start of Sign In -->

@@ -24,11 +24,17 @@ public class LoginController extends HttpServlet {
 	public LoginController() {
 		super();
 	}
-
+	int checkLogin = 0;
+//	0 la khong co gi
+//	1 thanh cong
+//	2 that bai
+//	3 thanh cong nhung tk bi khoa
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		  response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 		String url  = request.getContextPath();
+		response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+		request.setAttribute("annotationLG", checkLogin);
 		if (FileServiceAbstract.rootURL.isEmpty() || FileServiceAbstract.rootURL.contains("localhost")) {
 			
 			FileServiceAbstract.rootURL = url.replaceAll("login", "files/");
@@ -45,20 +51,31 @@ public class LoginController extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		  response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+		response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
+		
 		User user = userService.findUser(username, password);
 		String destPage = "/login";
+		
 		if (user != null) {
-			HttpSession httpSession = request.getSession();
-			httpSession.setAttribute("user", user);
-			System.out.println("set session thành công");
-			destPage = "/index";
-			
+			if(user.getIs_active() == true) {
+				HttpSession httpSession = request.getSession();
+				httpSession.setAttribute("user", user);
+				destPage = "/index";
+				
+				checkLogin = 1;
+				httpSession.setAttribute("checkLG", checkLogin);
+			}else {
+				checkLogin = 3;
+			}
+		}else {
+			checkLogin = 2;
 		}
-	
-		String url  = request.getContextPath();				
+		String url  = request.getContextPath();
+		System.out.println("checkLogin: "+checkLogin);
+//        System.out.println("checkLogin: "+checkLogin);
+        request.setAttribute("annotationLG", checkLogin);
 		response.sendRedirect(url+destPage);
 	}
 

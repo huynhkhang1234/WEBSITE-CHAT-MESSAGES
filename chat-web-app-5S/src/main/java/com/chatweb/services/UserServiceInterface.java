@@ -21,4 +21,10 @@ public interface UserServiceInterface {
 	public boolean usernameIsExit(String username);
 	
 	void updatePassword(String username, String newPassword);
+	
+	public List<User> getAllUser();
+	
+	public User findUserByUsername(String username);
+	
+	public void changeActive(String username, boolean status);
 }

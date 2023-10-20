@@ -31,10 +31,34 @@ response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 	rel="stylesheet">
 	
 <link rel="stylesheet" href="<c:url value="/static/css/chat.css" />">
+
+<!-- File JavaScript riêng -->
+  		<script type="text/javascript" src="<c:url value="/static/js/ShowAnnotation.js" />" charset="utf-8"></script>
+  		<!-- Bao gồm thư viện SweetAlert2 -->
+	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@9">
+	    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+	    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body style="font-family: 'Times New Roman', Times, serif">
 
+	 <% 
+	    Object annotationLG = request.getAttribute("annotationLG");
+	   %>
+	
+    <script>
+ 	var annotationLGValue = '<%= annotationLG %>';
+      
+       	if(annotationLGValue==1){
+       		showAnnotation('Đăng nhập thành công', 'Chào mừng bạn đến chơiii', 1);
+       	}else if(annotationLGValue==2){
+       		
+       	}else{
+       		console.log('Không cần thông báo');
+       		console.log('Print nothing ');
+       	}
+    </script>
+    
 	<main>
 		<div class="layout">
 			<!-- Start of Navigation -->

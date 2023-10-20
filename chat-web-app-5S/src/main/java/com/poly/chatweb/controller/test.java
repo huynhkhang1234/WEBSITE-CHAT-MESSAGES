@@ -19,13 +19,16 @@ import com.poly.chatweb.models.User;
 public class test extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-
+	
 	private UserServiceInterface userService = UserService.getInstance();
 	private FriendDao friendDao = new FriendDao();
 
 
 	 protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	        // Đoạn mã xử lý ở đây, ví dụ: chuyển hướng trang
+		 int checkLogin = (int) request.getSession().getAttribute("checkLG");
+		 request.setAttribute("annotationLG", checkLogin);
+		 
 		 User currentUser = (User) request.getSession().getAttribute("user");		 
 			List<User> friends = userService.findFriends(currentUser.getUsername());
 			request.setAttribute("friends", friends);
