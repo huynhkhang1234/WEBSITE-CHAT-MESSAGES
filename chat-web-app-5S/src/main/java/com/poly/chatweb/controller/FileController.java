@@ -25,6 +25,7 @@ public class FileController extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		  response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 		String requestedFile = request.getPathInfo();
 		if (requestedFile == null) {
 			response.sendError(HttpServletResponse.SC_NOT_FOUND);

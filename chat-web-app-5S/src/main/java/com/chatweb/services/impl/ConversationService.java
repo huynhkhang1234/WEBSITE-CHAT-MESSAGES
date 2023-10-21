@@ -64,7 +64,8 @@ public class ConversationService implements ConversationServiceInterface {
 		ConversationDTO conversationDTO = new ConversationDTO();
 		conversationDTO.setId(conversation.getId());
 		conversationDTO.setName(conversation.getName());
-		conversationDTO.setAvatar(conversation.getAvatar().trim());
+		conversationDTO.setAvatar(conversation.getAvatar());
+		conversationDTO.setIsActive(conversation.getIsActive());
 		return conversationDTO;
 	}
 
@@ -151,6 +152,7 @@ public class ConversationService implements ConversationServiceInterface {
 				avatar.write(privateDir.getAbsolutePath() + File.separator + fileName);
 			}
 			Conversation conversation = new Conversation(id, name, fileName);
+			
 			conversationDaoInterface.saveConversation(conversation, null);
 		} catch (IOException ex) {
 		}
@@ -180,4 +182,17 @@ public class ConversationService implements ConversationServiceInterface {
 				.map(conversation -> convertToConversationDTO(conversation)).collect(Collectors.toList());
 		return conversationDTOs;
 	}
+
+	@Override
+	public void updateGroup(Long id) {
+		conversationDaoInterface.updateGroup(id);
+		
+	}
+
+	@Override
+	public String findIsActive(String id) {	
+		return conversationDaoInterface.findIsActive(id) ;
+	}
+
+	
 }

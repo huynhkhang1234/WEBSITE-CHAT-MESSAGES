@@ -27,6 +27,7 @@ public class ChatRestController extends HttpServlet {
 	//lấy thông tin từ tin nhắn và load lại giao diện.
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		  response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 		String sender = request.getParameter("sender");
 		String receiver = request.getParameter("receiver");
 		System.out.println("sender:" + sender);

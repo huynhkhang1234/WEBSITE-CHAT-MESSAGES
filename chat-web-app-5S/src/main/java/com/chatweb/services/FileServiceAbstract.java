@@ -14,6 +14,7 @@ public abstract class FileServiceAbstract {
 	public static String rootLocationShowImage = "http://localhost:8080/chat-web-app/static";
 	
 	public static String rootURL = "";	
+
 	public static String toTagHtml(String type, String username, String message) {
 		//giữ liệu hiện thị đường dẫn trên image khi chat.
 		String tag = "";
@@ -27,7 +28,7 @@ public abstract class FileServiceAbstract {
 			//System.out.println("Hình ảnh :" +url);
 			tag = "<img src=\"" + url + "\" alt=\"\">";
 			//tag = "<img src=\"" +"/chat-web-app/static/images/anh2.png" + "\" alt=\"\">";
-			//tag = "<img src=\"" +"http://localhost:8080/chat-web-app/static/images/anh2.jpg" + "\" alt=\"\">";
+			//tag = "<img src=\"" +"/chat-web-app/static/images/anh2.jpg" + "\" alt=\"\">";
 		}
 		else {
 			tag = "<a href="+url+">"+message+"</a>";

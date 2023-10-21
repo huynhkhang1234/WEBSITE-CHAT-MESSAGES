@@ -26,4 +26,8 @@ public interface ConversationServiceInterface {
 	void deleteUserFromConversation(Long conversationId, String username);
 
 	public List<ConversationDTO> getConversationsOfUserByKeyword(String username, String keyword);
+	
+	void updateGroup(Long id);
+	
+	String findIsActive(String id);
 }

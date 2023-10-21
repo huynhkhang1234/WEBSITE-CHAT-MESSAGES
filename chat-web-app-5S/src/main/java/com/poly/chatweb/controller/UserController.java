@@ -27,6 +27,7 @@ public class UserController extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		  response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 		String url = request.getContextPath();
 		String status = request.getPathInfo();
 		if (status.equals("/register") || status.equals("/update")) {
@@ -70,6 +71,7 @@ public class UserController extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		  response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 		String url = request.getContextPath();
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");

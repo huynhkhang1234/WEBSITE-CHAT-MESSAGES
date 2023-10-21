@@ -60,7 +60,7 @@ public class ConversationDao extends GenericDao<Conversation> implements Convers
 	@Override
 	public List<Conversation> findAllConversationsByUsername(String username) {
 		StringBuilder sql = new StringBuilder();
-		sql.append("select c.id, c.name, c.avatar");
+		sql.append("select c.id, c.name, c.avatar,c.isActive");
 		sql.append(" from conversations c join conversations_users cu");
 		sql.append(" on c.id = cu.conversations_id");
 		sql.append(" where cu.username = ?");
@@ -112,6 +112,36 @@ public class ConversationDao extends GenericDao<Conversation> implements Convers
 		String param = "%" + keyword + "%";
 		List<Conversation> conversations = query(sql.toString(), new ConversationMapper(), param, username);
 		return conversations;
+	}
+
+	@Override
+	public void updateGroup(Long id) {		
+		StringBuilder sql = new StringBuilder();
+		sql.append("select * from conversations where id = ?");		
+		List<Conversation> conversations = query(sql.toString(), new ConversationMapper(),id);		
+		System.out.println(conversations.get(0).getIsActive());
+		String isActive = conversations.get(0).getIsActive();		
+		StringBuilder sql2 = new StringBuilder();						
+		if(isActive.startsWith("0")) {
+			sql2.append("UPDATE conversations SET isActive = 1 WHERE id = ?");
+			save(sql2.toString(),id);	
+		}else {
+			sql2.append("UPDATE conversations SET isActive = 0 WHERE id = ?");
+			save(sql2.toString(),id);	
+		}		
+		System.out.println("ok");
+	}
+
+	@Override
+	public String findIsActive(String id) {
+		System.out.println(id);
+		StringBuilder sql = new StringBuilder();
+		sql.append("select * from conversations where id = ?");
+			
+		List<Conversation> conversations = query(sql.toString(), new ConversationMapper(), id);
+		System.out.println(conversations.get(0).getIsActive());
+		return conversations.get(0).getIsActive();
+		//return "";
 	}
 
 }

@@ -29,6 +29,7 @@ public class ChatController extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		  response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 		User currentUser = (User) request.getSession().getAttribute("user");
 		List<User> friends = userService.findFriends(currentUser.getUsername());
 		request.setAttribute("friends", friends);
@@ -40,7 +41,7 @@ public class ChatController extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
+		  response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 		String sender = request.getParameter("sender");
 		String receiver = request.getParameter("receiver");
 		boolean status = Boolean.parseBoolean(request.getParameter("status"));

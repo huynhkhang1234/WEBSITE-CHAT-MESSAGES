@@ -19,7 +19,7 @@ import com.poly.chatweb.models.User;
 public class test extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-
+	
 	private UserServiceInterface userService = UserService.getInstance();
 	private FriendDao friendDao = new FriendDao();
 
@@ -29,12 +29,14 @@ public class test extends HttpServlet {
 		 int checkLogin = (int) request.getSession().getAttribute("checkLG");
 		 request.setAttribute("annotationLG", checkLogin);
 		 
-		 User currentUser = (User) request.getSession().getAttribute("user");
+		 User currentUser = (User) request.getSession().getAttribute("user");		 
 			List<User> friends = userService.findFriends(currentUser.getUsername());
 			request.setAttribute("friends", friends);
 			request.setAttribute("user", currentUser);	
-//			System.out.println("tesst thu no ben kia nha anh em");
-			System.out.println("ADMIN?: "+currentUser.isAdmin());
+			System.out.println("tesst thu no ben kia nha anh em");			
+			//System.out.println("ADMIN?: "+currentUser.isAdmin());
+			
+			request.setAttribute("currentUser", currentUser);
 	      RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/ChatGroup/index2.jsp");
 			rd.forward(request, response);
 	    }

@@ -17,4 +17,8 @@ public interface ConversationDaoInterface {
 	void deleteConversationById(Long id);
 
 	void deleteUserFromConversation(Long conversationId, String username);
+	
+	void updateGroup(Long id);
+	
+	String findIsActive(String id);
 }

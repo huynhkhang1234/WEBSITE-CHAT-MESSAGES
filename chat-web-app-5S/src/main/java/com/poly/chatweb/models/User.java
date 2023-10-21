@@ -7,7 +7,7 @@ public class User {
 	private String avatar;
 	private boolean isOnline;
 	private boolean isAdmin;
-
+	private boolean is_active;
 	public User() {
 
 	}
@@ -66,5 +66,15 @@ public class User {
 	public void setOnline(boolean isOnline) {
 		this.isOnline = isOnline;
 	}
+
+	public boolean getIs_active() {
+		return is_active;
+	}
+
+	public void setIs_active(boolean is_active) {
+		this.is_active = is_active;
+	}
+	
+	
 
 }
