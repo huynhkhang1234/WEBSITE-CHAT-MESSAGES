@@ -725,6 +725,8 @@ response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 								<div class="modal-box-body add-member-body">
 									<input style="background: yellow;" type="text"
 										class="txt-input txt-group-name"
+										id="searchMember"
+										onclick="searchMemberByKeyword(this)"
 										placeholder="Name of member..."
 										onkeyup="searchMemberByKeyword(this)">
 

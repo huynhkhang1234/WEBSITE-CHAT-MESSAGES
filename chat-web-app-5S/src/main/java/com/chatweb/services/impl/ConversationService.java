@@ -1,5 +1,6 @@
 package com.chatweb.services.impl;
 
+import java.io.Console;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -66,6 +67,7 @@ public class ConversationService implements ConversationServiceInterface {
 		conversationDTO.setName(conversation.getName());
 		conversationDTO.setAvatar(conversation.getAvatar());
 		conversationDTO.setIsActive(conversation.getIsActive());
+		conversationDTO.setHideGroup(conversation.isHideGroup());
 		return conversationDTO;
 	}
 
@@ -73,6 +75,7 @@ public class ConversationService implements ConversationServiceInterface {
 		Conversation conversation = new Conversation();
 		conversation.setId(conversationDTO.getId());
 		conversation.setName(conversationDTO.getName());
+		conversation.setHideGroup(conversationDTO.isHideGroup());
 		if (conversationDTO.getAvatar() != null && !conversationDTO.getAvatar().isEmpty()) {
 			conversation.setAvatar(conversationDTO.getAvatar().trim());
 		}
@@ -119,8 +122,10 @@ public class ConversationService implements ConversationServiceInterface {
 	@Override
 	public List<ConversationDTO> getAllConversationsByUsername(String username) {
 		List<Conversation> conversations = conversationDaoInterface.findAllConversationsByUsername(username);
+		System.out.println("122" + conversations.get(1).isHideGroup());
 		List<ConversationDTO> conversationDTOs = conversations.stream()
 				.map(conversation -> convertToConversationDTO(conversation)).collect(Collectors.toList());
+		System.out.println("125" + conversationDTOs.get(1).isHideGroup());
 		return conversationDTOs;
 	}
 
@@ -151,8 +156,7 @@ public class ConversationService implements ConversationServiceInterface {
 				System.err.println("file: " + fileName);
 				avatar.write(privateDir.getAbsolutePath() + File.separator + fileName);
 			}
-			Conversation conversation = new Conversation(id, name, fileName);
-			
+			Conversation conversation = new Conversation(id, name, fileName, "1", false);
 			conversationDaoInterface.saveConversation(conversation, null);
 		} catch (IOException ex) {
 		}
@@ -186,13 +190,21 @@ public class ConversationService implements ConversationServiceInterface {
 	@Override
 	public void updateGroup(Long id) {
 		conversationDaoInterface.updateGroup(id);
-		
+
 	}
 
 	@Override
-	public String findIsActive(String id) {	
-		return conversationDaoInterface.findIsActive(id) ;
+	public String findIsActive(String id) {
+		return conversationDaoInterface.findIsActive(id);
 	}
 
-	
+	@Override
+	public void hideGroup(ConversationDTO conversationDTO) {
+		conversationDTO.setHideGroup(!conversationDTO.isHideGroup());
+		System.out.println("203" + conversationDTO.isHideGroup());
+		Conversation conversation = convertToConversation(conversationDTO);
+		System.out.println("204 service - " + conversation.isHideGroup());
+		conversationDaoInterface.saveConversation(conversation, null);
+	}
+
 }

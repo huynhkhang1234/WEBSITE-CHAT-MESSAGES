@@ -55,8 +55,7 @@
 				<hr>
 				<form action="" onsubmit="return addMember(event);">
 					<div class="modal-box-body add-member-body">
-						<input type="text" class="txt-input txt-group-name" placeholder="Name of member..." onkeyup="searchMemberByKeyword(this)">
-						
+						<input type="text" id="searchMember" class="txt-input txt-group-name" placeholder="Name of member..." onclick="searchMemberByKeyword(this)" onkeyup="searchMemberByKeyword(this)">
 						<div class="list-user">
 							<ul>
 							</ul>
@@ -134,6 +133,6 @@
 
 
 	<script type="text/javascript"
-		src="<c:url value="/static/js/chatbox.js" />" charset="utf-8"></script>
+		src="<c:url value="/static/js/chatbox.js?v3" />" charset="utf-8"></script>
 </body>
 </html> 

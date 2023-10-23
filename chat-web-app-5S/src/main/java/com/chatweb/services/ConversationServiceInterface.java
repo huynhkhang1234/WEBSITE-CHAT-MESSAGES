@@ -10,7 +10,9 @@ import com.poly.chatweb.dto.UserDTO;
 
 public interface ConversationServiceInterface {
 	public void saveConversation(ConversationDTO conversationDTO);
-
+	
+	public void hideGroup(ConversationDTO conversationDTO);
+	
 	public List<ConversationDTO> getAllConversationsByUsername(String username);
 
 	public List<UserDTO> getAllUsersByConversationId(Long id);

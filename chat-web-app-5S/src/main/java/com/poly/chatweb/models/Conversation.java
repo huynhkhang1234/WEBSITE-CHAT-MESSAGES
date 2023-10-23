@@ -5,23 +5,31 @@ public class Conversation {
 	private String name;
 	private String avatar;
 	private String isActive;
+	private boolean hideGroup;
+
 	public Conversation() {
+		super();
 	}
-	public Conversation(Long id, String name, String avatar) {
+
+
+	public Conversation(Long id, String name, String avatar, String isActive, boolean hideGroup) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.avatar = avatar;
-		
+		this.isActive = isActive;
+		this.hideGroup = hideGroup;
 	}
 
-//	public Conversation(Long id, String name, String avatar, String isActive) {
-//		super();
-//		this.id = id;
-//		this.name = name;
-//		this.avatar = avatar;
-//		this.isActive = isActive;
-//	}
+
+	public boolean isHideGroup() {
+		return hideGroup;
+	}
+
+
+	public void setHideGroup(boolean hideGroup) {
+		this.hideGroup = hideGroup;
+	}
 
 
 	public Long getId() {
