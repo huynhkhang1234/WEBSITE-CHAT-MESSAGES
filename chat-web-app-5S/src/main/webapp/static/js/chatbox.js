@@ -157,41 +157,12 @@ function setGroup(element) {
 					if (isActive != null) {
 						console.log(data2)
 					}
-					let actice = '';					
+					let actice = '';
 					if (isAdmin) {
 						if (data2 == 1) {
-						active = '<form class="form-send-message" onsubmit="return sendMessage(event)">' +
-							'<ul class="list-file"></ul> ' +
-							'<a class="btn btn-image" id="likeButton"> <i onclick="toggleLike(groupId)" class="fa fa-bell" aria-hidden="true"></i></a>' +
-							'<input type="text" id="message" class="txt-input" placeholder="Type message...">' +
-							'<label class="btn btn-image" for="attach"><i class="fa fa-file"></i></label>' +
-							'<input type="file" multiple id="attach">' +
-							'<label class="btn btn-image" for="image"><i class="fa fa-file-image-o"></i></label>' +
-							'<input type="file" accept="image/*" multiple id="image">' +
-							'<button type="submit" class="btn btn-send">' +
-							'<i class="fa fa-paper-plane"></i>' +
-							'</button>' +
-							'</form>';
-							}else{
-									active = '<form class="form-send-message" onsubmit="return sendMessage(event)">' +
-							'<ul class="list-file"></ul> ' +
-							'<a class="btn btn-image" id="likeButton"> <i onclick="toggleLike(groupId)" class="fa fa-bell-slash-o" aria-hidden="true"></i></a>' +
-							'<input type="text" id="message" class="txt-input" placeholder="Type message...">' +
-							'<label class="btn btn-image" for="attach"><i class="fa fa-file"></i></label>' +
-							'<input type="file" multiple id="attach">' +
-							'<label class="btn btn-image" for="image"><i class="fa fa-file-image-o"></i></label>' +
-							'<input type="file" accept="image/*" multiple id="image">' +
-							'<button type="submit" class="btn btn-send">' +
-							'<i class="fa fa-paper-plane"></i>' +
-							'</button>' +
-							'</form>';
-							}
-																			
-
-					} else {
-						if (data2 == 1) {
 							active = '<form class="form-send-message" onsubmit="return sendMessage(event)">' +
-								'<ul class="list-file"></ul> ' +							
+								'<ul class="list-file"></ul> ' +
+								'<a class="btn btn-image" id="likeButton"> <i onclick="toggleLike(groupId)" class="fa fa-bell" aria-hidden="true"></i></a>' +
 								'<input type="text" id="message" class="txt-input" placeholder="Type message...">' +
 								'<label class="btn btn-image" for="attach"><i class="fa fa-file"></i></label>' +
 								'<input type="file" multiple id="attach">' +
@@ -202,7 +173,36 @@ function setGroup(element) {
 								'</button>' +
 								'</form>';
 						} else {
-							active = '';							
+							active = '<form class="form-send-message" onsubmit="return sendMessage(event)">' +
+								'<ul class="list-file"></ul> ' +
+								'<a class="btn btn-image" id="likeButton"> <i onclick="toggleLike(groupId)" class="fa fa-bell-slash-o" aria-hidden="true"></i></a>' +
+								'<input type="text" id="message" class="txt-input" placeholder="Type message...">' +
+								'<label class="btn btn-image" for="attach"><i class="fa fa-file"></i></label>' +
+								'<input type="file" multiple id="attach">' +
+								'<label class="btn btn-image" for="image"><i class="fa fa-file-image-o"></i></label>' +
+								'<input type="file" accept="image/*" multiple id="image">' +
+								'<button type="submit" class="btn btn-send">' +
+								'<i class="fa fa-paper-plane"></i>' +
+								'</button>' +
+								'</form>';
+						}
+
+
+					} else {
+						if (data2 == 1) {
+							active = '<form class="form-send-message" onsubmit="return sendMessage(event)">' +
+								'<ul class="list-file"></ul> ' +
+								'<input type="text" id="message" class="txt-input" placeholder="Type message...">' +
+								'<label class="btn btn-image" for="attach"><i class="fa fa-file"></i></label>' +
+								'<input type="file" multiple id="attach">' +
+								'<label class="btn btn-image" for="image"><i class="fa fa-file-image-o"></i></label>' +
+								'<input type="file" accept="image/*" multiple id="image">' +
+								'<button type="submit" class="btn btn-send">' +
+								'<i class="fa fa-paper-plane"></i>' +
+								'</button>' +
+								'</form>';
+						} else {
+							active = '';
 						}
 
 					}
@@ -315,7 +315,7 @@ function createGroup(e) {
 			let appendDelete = '';
 			//console.log(isAdmin)
 			if (isAdmin) {
-				appendDelete = '<button style="width: 300px;background: rebeccapurple;color: #fff;"  data-id="' + data.id + '" onclick="deleteGroup(this)">Xóa</button>';
+				appendDelete = '<button style="width: 300px;background: rebeccapurple;color: #fff;border-radius: 22px;border: none;height: 37px; "  data-id="' + data.id + '" onclick="deleteGroup(this)">Xóa</button>';
 			} else {
 				appendDelete = '';
 			}
@@ -345,6 +345,12 @@ function createGroup(e) {
 			document.querySelector("#discussionsChats").innerHTML += appendUser;
 			document.querySelector(".txt-group-name").value = "";
 		});
+	Swal.fire({
+		icon: 'success',
+		title: 'Tạo nhóm thành công',
+		text: '',
+		timer: 2000
+	})
 }
 //add người vào nhóm
 function addMember(e) {
@@ -436,7 +442,6 @@ function fetchUser() {
 }
 
 function deleteGroup(ele) {
-	alert('Xóa nhóm thành công');
 	document.getElementById('receiver').innerHTML = "";
 	let grpId = ele.getAttribute('data-id');
 
@@ -449,36 +454,51 @@ function deleteGroup(ele) {
 		.then(function(data) {
 			let groupNumber = document.getElementById("group-" + grpId);
 			if (groupNumber) groupNumber.outerHTML = "";
+			Swal.fire({
+				icon: 'success',
+				title: 'Xóa nhóm thành công',
+				text: '',
+				timer: 2000
+			})
 
 		})
 		.catch(ex => console.log(ex));
 }
 
-function toggleLike(id) {	
+function toggleLike(id) {
 	if (likeButton) {
 		if (liked) {
 
-			alert('chat dc')
-			
 			likeButton.innerHTML = '<i onclick="toggleLike(groupId)" class="fa fa-bell" aria-hidden="true"></i>';
 			liked = false;
+			Swal.fire({
+				icon: 'success',
+				title: 'Cấm chat thành công',
+				text: 'Thông báo hệ thống',
+				timer: 2000
+			})
 		} else {
-
-			alert('ko chat')
+			
 			likeButton.innerHTML = '<i onclick="toggleLike(groupId)" class="fa fa-bell-slash-o" aria-hidden="true"></i>';
 			liked = true;
+			Swal.fire({
+				icon: 'success',
+				title: 'Mở khóa chat thành công',
+				text: 'Thông báo hệ thống',
+				timer: 2000
+			})
 		}
 	}
-	
+
 	fetch("http://" + window.location.host + "/chat-web-app/update-conversations-rest-controller?conversationId=" + id, {
 		method: 'post'
 	})
 		.then(function(data) {
-			
+
 			return data.json();
 		})
 		.then(function(data) {
-			
+
 		})
 		.catch(ex => console.log(ex));
 }
@@ -681,7 +701,7 @@ function fetchGroup() {
 				//let imgSrc = ' src="http://' + window.location.host + '/files/group-' + data.id + '/' + data.avatar + '"';
 				let imgSrc = 'src="/chat-web-app/static/images/anh2.jpg"';
 				if (isAdmin) {
-					appendDelete = '<button style="width: 300px;background: rebeccapurple;color: #fff;" data-id="' + data.id + '" onclick="deleteGroup(this)">Xóa</button>';
+					appendDelete = '<button style="width: 300px;background: rebeccapurple;color: #fff;border-radius: 22px;border: none;height: 37px; "  data-id="' + data.id + '" onclick="deleteGroup(this)">Xóa</button>';
 				} else {
 					appendDelete = '';
 				}

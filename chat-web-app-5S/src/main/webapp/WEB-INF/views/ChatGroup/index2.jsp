@@ -4,7 +4,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <%
-
 response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 %>
 
@@ -29,36 +28,39 @@ response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 <link
 	href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
 	rel="stylesheet">
-	
+
 <link rel="stylesheet" href="<c:url value="/static/css/chat.css" />">
 
 <!-- File JavaScript riêng -->
-  		<script type="text/javascript" src="<c:url value="/static/js/ShowAnnotation.js" />" charset="utf-8"></script>
-  		<!-- Bao gồm thư viện SweetAlert2 -->
-	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@9">
-	    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-	    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript"
+	src="<c:url value="/static/js/ShowAnnotation.js" />" charset="utf-8"></script>
+<!-- Bao gồm thư viện SweetAlert2 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@9">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body style="font-family: 'Times New Roman', Times, serif">
 
-	 <% 
-	    Object annotationLG = request.getAttribute("annotationLG");
-	   %>
-	
-    <script>
- 	var annotationLGValue = '<%= annotationLG %>';
-      
-       	if(annotationLGValue==1){
-       		showAnnotation('Đăng nhập thành công', 'Chào mừng bạn đến chơiii', 1);
-       	}else if(annotationLGValue==2){
-       		
-       	}else{
-       		console.log('Không cần thông báo');
-       		console.log('Print nothing ');
-       	}
-    </script>
-    
+	<%
+	Object annotationLG = request.getAttribute("annotationLG");
+	%>
+
+	<script>
+ 	var annotationLGValue = '<%=annotationLG%>
+		';
+
+		if (annotationLGValue == 1) {
+			showAnnotation('Đăng nhập thành công', 'Chào mừng bạn đến chơiii',
+					1);
+		} else if (annotationLGValue == 2) {
+
+		} else {
+			console.log('Không cần thông báo');
+			console.log('Print nothing ');
+		}
+	</script>
+
 	<main>
 		<div class="layout">
 			<!-- Start of Navigation -->
@@ -78,14 +80,13 @@ response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 								style="cursor: pointer;" id="discussions"
 								onclick="toggleSidebar(this.id)" data-toggle="tab" class="show"><i
 								class="material-icons clickdouble" onclick="chatGroup(this)">chat_bubble_outline</i></a>
-								<c:if test="${currentUser.isAdmin()}">
-							<a href="<c:url value="/users/register"/>" style="cursor: pointer;" id="notifications"
-								onclick="toggleSidebar(this.id)" data-toggle="tab"
-								class="f-grow1 show">
-								<i class="material-icons">group_add</i>
-								</a>	
-								</c:if>
-							
+							<c:if test="${currentUser.isAdmin()}">
+								<a href="<c:url value="/users/register"/>"
+									style="cursor: pointer;" class="f-grow1 show"> <i
+									class="material-icons">group_add</i>
+								</a>
+							</c:if>
+
 							<input type="checkbox" id="darkModeToggle" hidden=""> <label
 								for="darkModeToggle"><i class="material-icons">brightness_2</i></label>
 							<a id="setting" onclick="toggleSidebar(this.id)"
@@ -153,7 +154,7 @@ response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 								</div>
 							</div>
 							<!-- End of Contacts -->
-							<!-- Start of Discussions -->							
+							<!-- Start of Discussions -->
 							<div id="discussionsModal" class="tab-pane fade ">
 								<div class="search">
 									<form class="form-inline position-relative">
@@ -161,7 +162,7 @@ response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 											placeholder="Tìm kiếm..." onkeyup="searchUser(this)">
 										<button id="searchGroup" type="button"
 											class="btn btn-link loop">
-											<i class="material-icons">search</i>
+											<i style="margin-top: -13px" class="material-icons">search</i>
 										</button>
 									</form>
 									<c:if test="${currentUser.isAdmin()}">
@@ -193,7 +194,7 @@ response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 							</div>
 							<!-- End of Discussions -->
 							<!-- Start of Notifications -->
-						
+
 							<!-- End of Notifications -->
 							<!-- Start of Notifications Settings -->
 							<div class="category">
@@ -312,7 +313,7 @@ response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 													<p>Cập nhật chi tiết hồ sơ của bạn</p>
 												</div> <i class="material-icons">keyboard_arrow_right</i>
 											</a>
-											<div class="collapse show" id="collapseOne"
+											<div class="collapse" id="collapseOne"
 												aria-labelledby="headingOne"
 												data-parent="#accordionSettings">
 												<div class="content">
@@ -356,10 +357,15 @@ response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 																class="form-control" id="location"
 																placeholder="Nhập địa chỉ của bạn" required>
 														</div>
-														<button class="btn btn-link w-100">Xóa tài khoản</button>
+
 														<button type="submit" class="btn button w-100">Áp
 															dụng</button>
 													</form>
+
+													<a href="<c:url value="/userManager"/>">
+														<button class="btn btn-link w-100">Danh sách cấm
+															tài khoản</button>
+													</a>
 												</div>
 											</div>
 										</div>
@@ -407,10 +413,9 @@ response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 										<div class="category">
 											<a href="#" class="title collapsed" id="headingThree"
 												data-toggle="collapse" data-target="#collapseThree"
-												aria-expanded="true" aria-controls="collapseThree">
-												 <i
+												aria-expanded="true" aria-controls="collapseThree"> <i
 												class="material-icons md-30 online">notifications_none</i>
-												
+
 												<div class="data">
 													<h5>Thông báo</h5>
 													<p>Bật hoặc tắt thông báo</p>
@@ -573,16 +578,15 @@ response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 										<!-- End of Language -->
 										<!-- Start of Privacy & Safety -->
 										<div class="category">
-											<a href="<c:url value="/users/changepass"/>" class="title collapsed" id="headingSeven"
-												data-toggle="collapse" data-target="#collapseSeven"
-												aria-expanded="true" aria-controls="collapseSeven"> <i
+											<a href="<c:url value="/users/changepass"/>"
+												class="title collapsed" id="headingSeven"> <i
 												class="material-icons md-30 online">lock_outline</i>
 												<div class="data">
-												
+
 													<h5>Đổi mật khẩu</h5>
 													<p>Kiểm soát cài đặt quyền riêng tư của bạn</p>
-											
-												
+
+
 												</div> <i class="material-icons">keyboard_arrow_right</i>
 											</a>
 											<div class="collapse" id="collapseSeven"
@@ -681,8 +685,7 @@ response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 
 
 			<!-- ---------------------------------------------- -->
-			<div class="main">
-
+			<div class="main" >
 				<div class="tab-content" id="nav-tabContent">
 					<!-- Start of Babble -->
 					<div border: 1px solid
@@ -691,7 +694,12 @@ response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 						role="tabpanel" aria-labelledby="list-chat-list">
 						<!-- Start of Chat -->
 						<!-- code phần bỏ vô nhắn tin -->
-						<span id="receiver"></span>
+						<span style="position: relative;" id="receiver"> 
+						<img class="logo" alt=""
+							style="width: 540px;position: absolute;top: 280px;left: 200px"
+							src="https://static.ybox.vn/2020/10/3/1602043205273-1595067112781-Logo5SGroup_2004.png"
+							width="700px">
+						</span>
 						<!-- code phần khi click thêm nhóm -->
 						<div class="modal-box border " id="add-group">
 							<div class="modal-box-head">
@@ -1193,8 +1201,8 @@ response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
 		crossorigin="anonymous"></script>
 	<script>
-	   var isAdmin = ${currentUser.isAdmin()};	 
-	   
+		var isAdmin = ${currentUser.isAdmin()};
+
 		window.jQuery
 				|| document
 						.write('<script src="dist/js/vendor/jquery-slim.min.js"><\/script>')
@@ -1361,9 +1369,7 @@ response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 				modal.style.display = 'none';
 			}
 		}
-		 var liked = false;
-		
-	  
+		var liked = false;
 	</script>
 	<script src="<c:url value="/static/dist/js/vendor/popper.min.js"/>"></script>
 	<%-- <script src="<c:url value="/static/dist/js/swipe.min.js" />"></script> --%>
