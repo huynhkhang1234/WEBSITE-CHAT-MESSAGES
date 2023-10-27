@@ -18,7 +18,7 @@
 		<!-- Bao gồm thư viện SweetAlert2 -->
 	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@9">
 	    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-	    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>	    
 	</head>
 	<body class="start" style="font-family: 'Times New Roman', Times, serif">
 	

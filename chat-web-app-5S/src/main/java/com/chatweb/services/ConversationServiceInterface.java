@@ -30,4 +30,6 @@ public interface ConversationServiceInterface {
 	void updateGroup(Long id);
 	
 	String findIsActive(String id);
+
+	 void hideGroup(ConversationDTO conversationDTO1);
 }

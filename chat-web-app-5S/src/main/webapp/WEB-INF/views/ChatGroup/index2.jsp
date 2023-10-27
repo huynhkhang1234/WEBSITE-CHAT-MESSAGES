@@ -114,15 +114,7 @@ response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 												class="material-icons">search</i>
 										</button>
 									</form>
-								</div>
-								<div class="list-group sort">
-									<button class="btn filterMembersBtn active show"
-										data-toggle="list" data-filter="all">Tất cả</button>
-									<button class="btn filterMembersBtn" data-toggle="list"
-										data-filter="online">Online</button>
-									<button class="btn filterMembersBtn" data-toggle="list"
-										data-filter="offline">Offline</button>
-								</div>
+								</div>								
 								<div class="contacts">
 									<h1 class="name">Liên hệ</h1>
 									<p id="username" style="display: none">${user.username}</p>
@@ -173,17 +165,9 @@ response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 										</button>
 									</c:if>
 
-								</div>
-								<div class="list-group sort">
-									<button class="btn filterDiscussionsBtn active show"
-										data-toggle="list" data-filter="all">Tất cả</button>
-									<button class="btn filterDiscussionsBtn" data-toggle="list"
-										data-filter="read">Đọc</button>
-									<button class="btn filterDiscussionsBtn" data-toggle="list"
-										data-filter="unread">Chưa đọc</button>
-								</div>
+								</div>								
 								<div class="discussions">
-									<h1 class="name">Discussions</h1>
+									<h1 class="name">Trò chuyện</h1>
 
 									</span>
 									<div class="list-group" id="discussionsChats" role="tablist">
@@ -703,7 +687,7 @@ response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 						<!-- code phần khi click thêm nhóm -->
 						<div class="modal-box border " id="add-group">
 							<div class="modal-box-head">
-								<div class="modal-box-title">Add Group</div>
+								<div class="modal-box-title">Thêm thành viên</div>
 								<div class="modal-box-close toggle-btn" data-id="add-group"
 									onclick="toggleModal(this, false)">
 									<i class="fa fa-times"></i>
@@ -713,10 +697,10 @@ response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 							<form action="" onsubmit="return createGroup(event);">
 								<div class="modal-box-body">
 									<input type="text" class="txt-input txt-group-name"
-										placeholder="Group Name...">
+										placeholder="Tên nhóm...">
 								</div>
-								<button style="color: blue" type="submit" class="btn">Create
-									Group</button>
+								<button style="color: blue" type="submit" class="btn">
+									Tạo nhóm</button>
 							</form>
 						</div>
 
@@ -731,9 +715,11 @@ response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 							<hr>
 							<form action="" onsubmit="return addMember(event);">
 								<div class="modal-box-body add-member-body">
-									<input style="background: yellow;" type="text"
+									<input style="background: #cccccc;" type="text"
 										class="txt-input txt-group-name"
-										placeholder="Name of member..."
+										id="searchMember"
+										onclick="searchMemberByKeyword(this)"
+										placeholder="Tên thành viên..."
 										onkeyup="searchMemberByKeyword(this)">
 
 									<div class="list-user">
@@ -748,7 +734,7 @@ response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 
 						<div class="modal-box border" id="manage-user">
 							<div class="modal-box-head">
-								<div class="modal-box-title">All Member Of Group</div>
+								<div class="modal-box-title">Tất cả thành viên</div>
 								<div class="modal-box-close toggle-btn" data-id="manage-user"
 									onclick="toggleModal(this, false)">
 									<i class="fa fa-times"></i>

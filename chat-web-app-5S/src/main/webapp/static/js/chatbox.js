@@ -221,7 +221,7 @@ function setGroup(element) {
 						+ '</div>'
 						+ '</div>'
 						+ '<div class="invite-user">'
-						+ '<span class="total-invite-user">' + numberMember + ' paticipants</span>'
+						+ '<span class="total-invite-user">' + numberMember + ' thành viên</span>'
 						+ '<span data-id="add-user" onclick="toggleModal(this, true); searchMemberByKeyword(``);" class="invite toggle-btn">Mời</span>'
 						+ '</div>'
 						+ '<div class="setting toggle-btn" data-id="manage-user" onclick="toggleModal(this, true);  fetchUser();">'
@@ -315,11 +315,11 @@ function createGroup(e) {
 			let appendDelete = '';
 			//console.log(isAdmin)
 			if (isAdmin) {
-				appendDelete = '<button style="width: 300px;background: rebeccapurple;color: #fff;border-radius: 22px;border: none;height: 37px; "  data-id="' + data.id + '" onclick="deleteGroup(this)">Xóa</button>';
+				appendDelete = '<div   style="display: flex;align-items: center;justify-content: center;margin-top: -10px;"> <button style="width: 260px;background: #d93d3d;color: #fff;border-radius: 34px;border: none;height: 30px;margin-right: 6px;" data-id="' + data.id + '" onclick="deleteGroup(this)">Xoá</button>' +
+					'</br> <button style="width: 260px;background: rebeccapurple;color: #fff;border-radius: 34px;border: none;height: 30px;"  data-id="' + data.id + '" onclick="hideGroup(this)">Bỏ ẩn</button> </div>';
 			} else {
 				appendDelete = '';
 			}
-
 			let appendUser = '<span id="group-' + data.id + '" >' +
 				'<a  data-id="' + data.id + '"  data-number="' + numberMember + '" data-name="' + data.name + '"  onclick="setGroup(this)"' +
 				'class="filterDiscussions all unread single active" ' +
@@ -340,17 +340,9 @@ function createGroup(e) {
 				'</div> ' +
 				'</a>' + appendDelete
 				+ '</span>';
-
-
 			document.querySelector("#discussionsChats").innerHTML += appendUser;
 			document.querySelector(".txt-group-name").value = "";
 		});
-	Swal.fire({
-		icon: 'success',
-		title: 'Tạo nhóm thành công',
-		text: '',
-		timer: 2000
-	})
 }
 //add người vào nhóm
 function addMember(e) {
@@ -371,6 +363,7 @@ function addMember(e) {
 		user.avatar = null;
 		//thêm vào object.
 		object.users.push(user);
+
 	});
 
 
@@ -390,11 +383,17 @@ function addMember(e) {
 			numberMember += parseInt(listUserAdd.length);
 			listUserAdd = [];
 			let inviteNumber = document.querySelector(".total-invite-user");
-			if (inviteNumber) inviteNumber.innerHTML = numberMember + " paticipants";
+			if (inviteNumber) inviteNumber.innerHTML = numberMember + " thành viên";
 			//set vào
+			var button = document.getElementById("searchMember");
+
+			// Gọi phương thức click trên đối tượng button
+			console.log("Sắp click");
+			button.click();
 			document.getElementById("group-" + groupId).querySelector(".user-contain").setAttribute("data-number", numberMember);
 			// thêm vào lạ group.			
 		});
+
 }
 //tìm kiếm user và thông tin message add vào group lại
 function fetchUser() {
@@ -442,6 +441,7 @@ function fetchUser() {
 }
 
 function deleteGroup(ele) {
+
 	document.getElementById('receiver').innerHTML = "";
 	let grpId = ele.getAttribute('data-id');
 
@@ -457,10 +457,22 @@ function deleteGroup(ele) {
 			Swal.fire({
 				icon: 'success',
 				title: 'Xóa nhóm thành công',
-				text: '',
+				text: 'Thông báo hệ thống',
 				timer: 2000
 			})
 
+		})
+		.catch(ex => console.log(ex));
+}
+function hideGroup(ele) {
+	
+	let grpId = ele.getAttribute('data-id');	
+	fetch("http://" + window.location.host + "/chat-web-app/conversations-rest-controller?conversationId=" + grpId, {
+		method: 'put'
+	})
+		.then(function(data) {
+			alert("Cập nhật thành công");
+			fetchGroup();
 		})
 		.catch(ex => console.log(ex));
 }
@@ -473,17 +485,17 @@ function toggleLike(id) {
 			liked = false;
 			Swal.fire({
 				icon: 'success',
-				title: 'Cấm chat thành công',
+				title: 'Mở khóa chat thành công',
 				text: 'Thông báo hệ thống',
 				timer: 2000
 			})
 		} else {
-			
+
 			likeButton.innerHTML = '<i onclick="toggleLike(groupId)" class="fa fa-bell-slash-o" aria-hidden="true"></i>';
 			liked = true;
 			Swal.fire({
 				icon: 'success',
-				title: 'Mở khóa chat thành công',
+				title: 'Khóa chat thành công',
 				text: 'Thông báo hệ thống',
 				timer: 2000
 			})
@@ -689,46 +701,54 @@ function fetchGroup() {
 			return data.json();
 		})
 		.then(data => {
-
 			document.querySelector("#discussionsChats").innerHTML = "";
 			document.querySelector("#receiver").innerHTML = "";
 			data.forEach(function(data) {
+				console.log('du lieu kk' + data.hideGroup);
 				let numberMember = data.users ? data.users.length : 0;
 
-				let findObject = data.users.find(element => element.username == username);
-				let isAdmin = findObject.admin;
-
+				//		let findObject = data.users.find(element => element.username == username);
+				//	let isAdmin = findObject.admin;
 				//let imgSrc = ' src="http://' + window.location.host + '/files/group-' + data.id + '/' + data.avatar + '"';
 				let imgSrc = 'src="/chat-web-app/static/images/anh2.jpg"';
-				if (isAdmin) {
-					appendDelete = '<button style="width: 300px;background: rebeccapurple;color: #fff;border-radius: 22px;border: none;height: 37px; "  data-id="' + data.id + '" onclick="deleteGroup(this)">Xóa</button>';
+				if (isAdmin && data.hideGroup) {
+					appendDelete = '<div   style="display: flex;align-items: center;justify-content: center;margin-top: -10px;"> <button style="width: 260px;background: #d93d3d;color: #fff;border-radius: 34px;border: none;height: 30px;margin-right: 6px;" data-id="' + data.id + '" onclick="deleteGroup(this)">Xoá</button>' +
+						'</br> <button style="width: 260px;background: rebeccapurple;color: #fff;border-radius: 34px;border: none;height: 30px;"  data-id="' + data.id + '" onclick="hideGroup(this)">Bỏ ẩn</button> </div>';
+				} else if (isAdmin && !data.hideGroup) {
+					appendDelete = '<div style="display: flex;align-items: center;justify-content: center;margin-top: -10px;"> <button style="width: 260px;background: #d93d3d;color: #fff;border-radius: 34px;border: none;height: 30px;margin-right: 6px;" data-id="' + data.id + '" onclick="deleteGroup(this)">Xoá</button>' +
+						'</br> <button style="width: 260px;background: rebeccapurple;color: #fff;border-radius: 34px;border: none;height: 30px;"  data-id="' + data.id + '" onclick="hideGroup(this)">Ẩn</button> </div>';
 				} else {
 					appendDelete = '';
 				}
+				if (data.hideGroup && !isAdmin) {
+					let appendUser = '';
+					document.querySelector("#discussionsChats").innerHTML += appendUser;
 
-				let appendUser = '<span id="group-' + data.id + '" >' +
-					'<a  data-id="' + data.id + '"  data-number="' + numberMember + '" data-name="' + data.name + '"  onclick="setGroup(this)"' +
-					'class="filterDiscussions all unread single active" ' +
-					'data-toggle="list" role="tab"> ' +
-					'<img class="avatar-md" id="img-group-' + data.id + '"  ' +
-					'src="http://localhost:8080/chat-web-app/static/images/anhNhom.jpg" ' +
-					'data-toggle="tooltip" data-placement="top" title="Janette" ' +
-					'alt="avatar"> ' +
-					'<div class="status"> ' +
-					'<i class="material-icons online">fiber_manual_record</i> ' +
-					'</div> ' +
-					'<div class="new bg-yellow"> ' +
-					'<span>+7</span> ' +
-					'</div> ' +
-					'<div class="data-id"> ' +
-					'<h5>' + data.name + '</h5> ' +
-					'<p>Mới tạo nhóm</p> ' +
-					'</div> ' +
-					'</a>' + appendDelete
-					+ '</span>';
+				} else {
+					let appendUser = '<span id="group-' + data.id + '" >' +
+						'<a  data-id="' + data.id + '"  data-number="' + numberMember + '" data-name="' + data.name + '"  onclick="setGroup(this)"' +
+						'class="filterDiscussions all unread single active" ' +
+						'data-toggle="list" role="tab"> ' +
+						'<img class="avatar-md" id="img-group-' + data.id + '"  ' +
+						'src="http://localhost:8080/chat-web-app/static/images/anhNhom.jpg" ' +
+						'data-toggle="tooltip" data-placement="top" title="Janette" ' +
+						'alt="avatar"> ' +
+						'<div class="status"> ' +
+						'<i class="material-icons online">fiber_manual_record</i> ' +
+						'</div> ' +
+						'<div class="new bg-yellow"> ' +
+						'<span>+7</span> ' +
+						'</div> ' +
+						'<div class="data-id"> ' +
+						'<h5>' + data.name + '</h5> ' +
+						'<p>Mới tạo nhóm</p> ' +
+						'</div> ' +
+						'</a>' + appendDelete
+						+ '</span>';
 
 
-				document.querySelector("#discussionsChats").innerHTML += appendUser;
+					document.querySelector("#discussionsChats").innerHTML += appendUser;
+				}
 			});
 		}).catch(ex => {
 			console.log(ex);
@@ -923,7 +943,7 @@ function buildMessageToJson(message, type) {//kiểm tra kiểu tin nhắn hay h
 	};
 }
 //hàm gửi và đồng thời load lại thông tin.
-function setMessage(msg) {
+function setMessage(msg) {	
 	//console.log('msg là gì:' + msg);
 	if (msg.message != '[P]open' && msg.message != '[P]close') {
 		var currentChat = document.getElementById('chat').innerHTML;
@@ -932,6 +952,7 @@ function setMessage(msg) {
 		if (msg.receiver != null) {
 			newChatMsg = customLoadMessage(msg.username, msg.message);
 		} else {
+			
 			newChatMsg = customLoadMessageGroup(msg.username, msg.groupId, msg.message, msg.avatar);
 		}
 		document.getElementById('chat').innerHTML = currentChat
@@ -1116,7 +1137,7 @@ function searchMemberByKeyword(ele) {
 					+ '<div class="user-contain">'
 					+ '<div class="user-img">'
 					+ '<img '
-					+ ' src="/chat-web-app/static/images/anh12.jpg"'
+					+ ' src="http://' + window.location.host + '/chat-web-app/static/data/' + data.username + '/' + data.avatar + '"'
 					+ 'alt="Image of user">'
 					+ '</div>'
 					+ '<div class="user-info">'
@@ -1168,7 +1189,7 @@ function searchGroupByKeyword(value) {
 					'<h5>' + data.name + '</h5> ' +
 					'<p>Mới tạo nhóm</p> ' +
 					'</div> ' +
-					'<button style="width: 300px;background: rebeccapurple;color: #fff;" data-id="' + data.id + '" onclick="deleteGroup(this)">Xóa</button>' +
+					'<button style="width: 300px;background: rebeccapurple;color: #fff;" data-id="' + data.id + '" onclick="deleteGroup(this)">Xoá</button>' +
 					'</a>';
 				//	if (isAdmin) {
 				//	appendUser += '<div class="group-delete border" data-id="' + data.id + '" onclick="deleteGroup(this)">Delete</div>';

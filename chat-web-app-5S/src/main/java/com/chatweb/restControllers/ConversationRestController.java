@@ -114,7 +114,7 @@ public class ConversationRestController extends HttpServlet {
 		printWriter.print(json);
 		printWriter.flush();
 	}
-
+	
 	@Override
 	protected void doDelete(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -140,5 +140,17 @@ public class ConversationRestController extends HttpServlet {
 		PrintWriter printWriter = response.getWriter();
 		printWriter.print(json);
 		printWriter.flush();
+	}
+	@Override
+	protected void doPut(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		String conversationId = request.getParameter("conversationId");
+
+		Long id = Long.parseLong(conversationId);
+		System.out.println("184");
+		// Thực hiện cập nhật trạng thái conversation theo conversationId ở đây
+		// Cập nhật trạng thái trong cơ sở dữ liệu hoặc bất kỳ hoạt động nào bạn cần
+		ConversationDTO conversationDTO1 = conversationServiceInterface.getConversationById(id);
+		conversationServiceInterface.hideGroup(conversationDTO1);
 	}
 }

@@ -95,9 +95,9 @@
 						<div class="preference">
 							<h2>Chào mừng bạn</h2>
 							<p>Đăng nhập ngay để không bỏ lỡ những điều thú vị.</p>
-							<a href="sign-in.html" class="btn button">Đăng nhập</a> <br><br>
+							<!-- <a href="sign-in.html" class="btn button">Đăng nhập</a> <br><br> -->
 							<a href="change_pass.html" class="btn button">Đổi mật khẩu</a> <br><br>
-							<a href="forgotPassword.html" class="btn button">Quên mật khẩu</a> 
+							<!-- <a href="forgotPassword.html" class="btn button">Quên mật khẩu</a>  -->
 						</div>
 					</div>
 				</div>

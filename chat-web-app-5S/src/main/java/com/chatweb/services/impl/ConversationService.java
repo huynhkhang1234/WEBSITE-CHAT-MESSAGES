@@ -65,6 +65,8 @@ public class ConversationService implements ConversationServiceInterface {
 		conversationDTO.setId(conversation.getId());
 		conversationDTO.setName(conversation.getName());
 		conversationDTO.setAvatar(conversation.getAvatar());
+		conversationDTO.setHideGroup(conversation.isHideGroup());
+
 		conversationDTO.setIsActive(conversation.getIsActive());
 		return conversationDTO;
 	}
@@ -73,6 +75,7 @@ public class ConversationService implements ConversationServiceInterface {
 		Conversation conversation = new Conversation();
 		conversation.setId(conversationDTO.getId());
 		conversation.setName(conversationDTO.getName());
+		conversation.setHideGroup(conversationDTO.isHideGroup());
 		if (conversationDTO.getAvatar() != null && !conversationDTO.getAvatar().isEmpty()) {
 			conversation.setAvatar(conversationDTO.getAvatar().trim());
 		}
@@ -151,7 +154,7 @@ public class ConversationService implements ConversationServiceInterface {
 				System.err.println("file: " + fileName);
 				avatar.write(privateDir.getAbsolutePath() + File.separator + fileName);
 			}
-			Conversation conversation = new Conversation(id, name, fileName);
+			Conversation conversation = new Conversation(id, name, fileName,false);
 			
 			conversationDaoInterface.saveConversation(conversation, null);
 		} catch (IOException ex) {
@@ -193,6 +196,13 @@ public class ConversationService implements ConversationServiceInterface {
 	public String findIsActive(String id) {	
 		return conversationDaoInterface.findIsActive(id) ;
 	}
-
+	@Override
+	public void hideGroup(ConversationDTO conversationDTO) {
+		conversationDTO.setHideGroup(!conversationDTO.isHideGroup());
+		System.out.println("203" + conversationDTO.isHideGroup());
+		Conversation conversation = convertToConversation(conversationDTO);
+		System.out.println("204 service - " + conversation.isHideGroup());
+		conversationDaoInterface.saveConversation(conversation, null);
+	}
 	
 }

@@ -33,13 +33,9 @@
 										<div class="form-group">										
 											<input type="text" name="username" class="form-control" placeholder="Nhập tài khoản" value="${sessionScope.user.username}" required>
 											<button class="btn icon"><i class="material-icons">mail_outline</i></button>
-										</div>
-										<div class="form-group">
-											<input type="password" name="pass"  class="form-control" value="${sessionScope.user.password}"  placeholder="Nhập mật khẩu hiện tại" required>
-											<button class="btn icon"><i class="material-icons">lock_outline</i></button>
-										</div>
+										</div>										
                                         <div class="form-group">
-											<input type="password" name="passnew" class="form-control" placeholder="Nhập mật khẩu mới" required>
+											<input  name="passnew" class="form-control" placeholder="Nhập mật khẩu mới" required value="">
 											<button class="btn icon"><i class="material-icons">lock_outline</i></button>
 										</div>
                                         <div class="form-group">

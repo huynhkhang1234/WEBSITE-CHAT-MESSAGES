@@ -45,14 +45,15 @@ public class ConversationDao extends GenericDao<Conversation> implements Convers
 			StringBuilder sql = new StringBuilder();
 			sql.append("update conversations");
 			if (!conversation.getAvatar().isEmpty()) {
-				sql.append(" set name=?,avatar=?");
+				System.out.println("dao 48 - "+conversation.isHideGroup());
+				sql.append(" set name=?,avatar=?,hideGroup=?");
 				sql.append(" where id=?");
 				conversation.setAvatar(conversation.getAvatar().replaceAll(" ", ""));
-				save(sql.toString(), conversation.getName(), conversation.getAvatar(), conversation.getId());
+				save(sql.toString(), conversation.getName(), conversation.getAvatar(),conversation.isHideGroup(), conversation.getId());
 			} else {
-				sql.append(" set name=?");
+				sql.append(" set name=?, hideGroup=?");
 				sql.append(" where id=?");
-				save(sql.toString(), conversation.getName(), conversation.getId());
+				save(sql.toString(), conversation.getName(),conversation.isHideGroup(), conversation.getId());
 			}
 		}
 	}
@@ -60,18 +61,19 @@ public class ConversationDao extends GenericDao<Conversation> implements Convers
 	@Override
 	public List<Conversation> findAllConversationsByUsername(String username) {
 		StringBuilder sql = new StringBuilder();
-		sql.append("select c.id, c.name, c.avatar,c.isActive");
+		sql.append("select c.id, c.name, c.avatar,c.isActive,c.hideGroup");
 		sql.append(" from conversations c join conversations_users cu");
 		sql.append(" on c.id = cu.conversations_id");
 		sql.append(" where cu.username = ?");
 		List<Conversation> conversations = query(sql.toString(), new ConversationMapper(), username);
+		System.out.println("68 - "+conversations.size());
 		return conversations;
 	}
 
 	@Override
 	public Conversation findConversationById(Long id) {
 		StringBuilder sql = new StringBuilder();
-		sql.append("select c.id, c.name, c.avatar");
+		sql.append("select c.id, c.name, c.avatar, c.isActive , c.hideGroup");
 		sql.append(" from conversations c");
 		sql.append(" where c.id = ?");
 		List<Conversation> conversations = query(sql.toString(), new ConversationMapper(), id);
