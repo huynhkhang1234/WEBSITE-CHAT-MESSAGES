@@ -35,8 +35,7 @@
 									<button class="btn item bg-purple">
 										<i class="material-icons">whatshot</i>
 									</button>
-								</div>
-								<p>Hoặc bắt đầu với email của bạn:</p>
+								</div>								
 								
 								<form class="signup" action="<c:url value="/users-rest-controller" />" method="POST"  enctype="multipart/form-data">
 								<div class="form-group">
@@ -45,7 +44,7 @@
 											<button class="btn icon"><i
 													class="material-icons">person_outline</i></button>
 										</div>
-									<div class="form-parent">
+									
 									
 										<div class="form-group">
 											<input type="text" id="inputName" name="username" class="form-control"
@@ -53,12 +52,8 @@
 											<button class="btn icon"><i
 													class="material-icons">person_outline</i></button>
 										</div>
-										<div class="form-group">
-											<input type="email" id="inputEmail" class="form-control"
-												placeholder="Địa chỉ email" required>
-											<button class="btn icon"><i class="material-icons">mail_outline</i></button>
-										</div>
-									</div>
+										
+									
 									<div class="form-group">
 										<input type="password" id="inputPassword" name="password" class="form-control"
 											placeholder="Mật khẩu" required>

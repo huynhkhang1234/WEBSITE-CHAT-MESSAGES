@@ -2,10 +2,6 @@ package com.chatweb.services.impl;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
 import java.util.List;
 
 import javax.servlet.http.Part;
@@ -14,6 +10,7 @@ import com.chatweb.services.FileServiceAbstract;
 import com.chatweb.services.UserServiceInterface;
 import com.poly.chatweb.dao.UserDaoInterface;
 import com.poly.chatweb.daos.impl.UserDao;
+import com.poly.chatweb.models.Conversation;
 import com.poly.chatweb.models.User;
 
 public class UserService implements UserServiceInterface {
@@ -44,65 +41,30 @@ public class UserService implements UserServiceInterface {
 	}
 
 	@Override
-	public void saveUser(Boolean isRegister, String username, String password, boolean gender, Part avatar) {
-		  long timestamp = System.currentTimeMillis(); 
-		
-		System.out.println("Kiểm tra ảnh có tồn tại trong thư mục hay ko");
-		System.out.println("avatar bên đây" +avatar);		 
-		try {
-			Path projectDirectory = Paths.get(System.getProperty("user.dir"));
-			// Lấy thư mục cha của projectDirectory
-			Path adminDirectory = projectDirectory.getParent();
-			// In ra thư mục adminDirectory
-
-
-			String relativePath = "D:/CongoTY5S_Group/code/WEBSITE-CHAT-MESSAGES/chat-web-app-5S/src/main/webapp/static/data/"
-					+ username;
-			File privateDir = new File(relativePath);
-			if (!privateDir.exists()) {
-				privateDir.mkdirs();
-			}
-			System.out.println("userservice 65: "+privateDir.getPath());
-			//đường dẫn ảnh tạo ra khi đăng kí với tên
-			System.out.println("toi muon kiem tra hinh anh:" + FileServiceAbstract.rootLocation.toString() + "/" + username);
-//			File privateDir = new File(FileServiceAbstract.rootLocation.toString() + "/" + username);
-//			privateDir.mkdir();
-			//tên thư mục gốc.
-			String origin = avatar.getSubmittedFileName();
-			String fileName = "";
-			if (!origin.isEmpty()) {
-				System.out.println(" Không Emty luôn");
-				String tail = origin.substring(origin.lastIndexOf("."), origin.length());
-				fileName = username + tail;
-				System.out.println("FIle name nè: "+fileName);
-				avatar.write(privateDir.getAbsolutePath() + File.separator + fileName);
-				System.out.println("FIle name nè 1: "+fileName);
-
-			} else {
-				
-				System.out.println("origin"+origin);
-				System.out.println("FileService:"+FileServiceAbstract.rootLocation.toString());
-				File defaultAvatar = new File(FileServiceAbstract.rootLocation.toString() + "/default/user-male.jpg");
-				if (gender == false) {
-					defaultAvatar = new File(FileServiceAbstract.rootLocation.toString() + "/default/user-female.jpg");
-				}
-				fileName = username + ".jpg";
-				//đường dẫn ảnh tạo ra khi đăng kí với tên
-				File newFile = new File(privateDir.toString() + "/" + fileName);
-				System.out.println("Tạo thư mục:" +newFile);
-				Files.copy(defaultAvatar.toPath(), newFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
-				System.out.println("file name:" +fileName);
-			}
-			//tạo user mới.
-			System.out.println("tới 94 nè em");
-			User userEntity = new User(username, password, gender, fileName);
-			userDaoInterface.saveUser(isRegister, userEntity);
-			System.out.println("Tới rồi nha e");
-		} catch (IOException ex) {
-			System.out.println(ex.getMessage());
-			ex.printStackTrace();
-		}
-
+	public void saveUser(Boolean isRegister, String username, String password, boolean gender, Part avatar, boolean isAdmin, boolean isActive) {
+	    try {
+	        String origin = avatar.getSubmittedFileName();
+	        String fileName;
+	        if (origin != null && !origin.isEmpty()) {
+	            // Tạo tên tệp mới bằng cách nối username với tên gốc (bao gồm phần mở rộng)
+	            fileName = username + "-" + origin;
+	            // Lấy thư mục lưu trữ
+	            File privateDir = new File(FileServiceAbstract.rootLocation.toString() + "/" + username);
+	            privateDir.mkdir();
+	            // Lưu ảnh vào thư mục với tên mới
+	            avatar.write(privateDir.getAbsolutePath() + File.separator + fileName);
+	        } else {
+	            // Xử lý nếu không có tên tệp gốc
+	            System.out.println("Tên tệp gốc rỗng hoặc null.");
+	            return; // Thêm xử lý khác nếu cần thiết
+	        }
+	        // Tạo user mới
+	        User userEntity = new User(username, password, gender, fileName);
+	        userDaoInterface.saveUser(isRegister, userEntity);
+	    } catch (IOException ex) {
+	        System.out.println(ex.getMessage());
+	        ex.printStackTrace();
+	    }
 	}
 
 
@@ -162,4 +124,6 @@ public class UserService implements UserServiceInterface {
 		userDaoInterface.changeActive(username, status);
 		
 	}
+
+
 }

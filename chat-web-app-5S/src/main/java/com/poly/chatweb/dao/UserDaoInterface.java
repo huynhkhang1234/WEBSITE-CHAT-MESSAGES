@@ -2,6 +2,7 @@ package com.poly.chatweb.dao;
 
 import java.util.List;
 
+import com.poly.chatweb.models.Conversation;
 import com.poly.chatweb.models.User;
 
 public interface UserDaoInterface extends GenericDaoInterface<User> {
@@ -21,7 +22,7 @@ public interface UserDaoInterface extends GenericDaoInterface<User> {
 	
 	void updatePassword(String username, String newPassword);
 	
-	List<User> findAllUser();
+	List<User> findAllUser();	
 	
 	User findUserByUsername(String username);
 	

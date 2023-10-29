@@ -471,7 +471,14 @@ function hideGroup(ele) {
 		method: 'put'
 	})
 		.then(function(data) {
-			alert("Cập nhật thành công");
+		
+			Swal.fire({
+				icon: 'success',
+				title: 'Ẩn nhóm thành công',
+				text: 'Thông báo hệ thống',
+				timer: 2000
+			})
+			
 			fetchGroup();
 		})
 		.catch(ex => console.log(ex));

@@ -204,5 +204,31 @@ public class ConversationService implements ConversationServiceInterface {
 		System.out.println("204 service - " + conversation.isHideGroup());
 		conversationDaoInterface.saveConversation(conversation, null);
 	}
+
+	@Override
+	public List<Conversation> findAllGroup() {
+		List<Conversation> listU = conversationDaoInterface.findAllGroup();
+		return listU;
+	}
+
+	@Override
+	public Conversation findUserByUsername(String username) {
+		Conversation user = conversationDaoInterface.findUserByUsername(username);
+		return user;
+	}
+
+	@Override
+	public void changeActive(String username, String status) {
+		conversationDaoInterface.changeActive(username, status);
+		
+	}
+
+	@Override
+	public void chatBlock(String sql) {
+		 conversationDaoInterface.chatBlock(sql);
+		
+	}
+
+
 	
 }

@@ -4,7 +4,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import com.poly.chatweb.dao.UserDaoInterface;
+import com.poly.chatweb.map.impl.ConversationMapper;
 import com.poly.chatweb.map.impl.UserMapper;
+import com.poly.chatweb.models.Conversation;
 import com.poly.chatweb.models.User;
 
 public class UserDao extends GenericDao<User> implements UserDaoInterface {
@@ -124,6 +126,7 @@ public class UserDao extends GenericDao<User> implements UserDaoInterface {
 		List<User> users = query(sql.toString(), new UserMapper());
 		return users;
 	}
+	
 
 	@Override
 	public User findUserByUsername(String username) {
@@ -137,5 +140,6 @@ public class UserDao extends GenericDao<User> implements UserDaoInterface {
 	public void changeActive(String username, boolean status) {
 		StringBuilder sql = new StringBuilder("update users set is_active = ? where username = ?");
 		save(sql.toString(), status, username);
-	}
+	}	
+
 }

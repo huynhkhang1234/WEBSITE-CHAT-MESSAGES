@@ -28,72 +28,83 @@ public class UserController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		  response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
-		String url = request.getContextPath();
-		String status = request.getPathInfo();
-		if (status.equals("/register") || status.equals("/update")) {
-			String title = "Update User";
-			String description = "Update your information";
-			String btnSubmit = "Update";
-			String btnGoBack = "/chat";
-
-			if (status.equals("/register")) {
-				title = "Register User";
-				description = "Enter your information";
-				btnSubmit = "Register";
-				btnGoBack = "/login";
-			}
-
-			request.setAttribute("title", title);
-			request.setAttribute("description", description);
-			request.setAttribute("status", status);
-			request.setAttribute("btnSubmit", btnSubmit);
-			request.setAttribute("btnGoBack", btnGoBack);
-
+		   String url = request.getContextPath();
+		    String status = request.getPathInfo();		    
 			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/ChatGroup/sign-up.jsp");
-			rd.forward(request, response);
-		} else if (status.equals("/logout")) {
-			request.getSession().invalidate();
-			response.sendRedirect(url+"/login");
-		} else if(status.equals("/forpass")){
-			request.getSession().invalidate();			
-			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/ChatGroup/forgotPassword.jsp");
-			rd.forward(request, response);
-		}
-		else if(status.equals("/changepass")){
-			request.getSession().invalidate();			
-			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/ChatGroup/change_pass.jsp");
-			rd.forward(request, response);
-		}
-		else {
-			response.sendRedirect(url+"/login");
-		}
-	}
+		    if (status.equals("/register") || status.equals("/update")) {
+		        String title = "Update User";
+		        String description = "Update your information";
+		        String btnSubmit = "Update";
+		        String btnGoBack = "/chat";
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		  response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
-		String url = request.getContextPath();
-		String username = request.getParameter("username");
-		String password = request.getParameter("password");
-		String gender = request.getParameter("gender");
-		Part avatar = request.getPart("avatar");
+		        if (status.equals("/register")) {
+		            title = "Register User";
+		            description = "Enter your information";
+		            btnSubmit = "Register";
+		            btnGoBack = "/login";
+		        }
+		    
+		        request.setAttribute("title", title);
+		        request.setAttribute("description", description);
+		        request.setAttribute("status", status);
+		        request.setAttribute("btnSubmit", btnSubmit);
+		        request.setAttribute("btnGoBack", btnGoBack);
 
-		String path = request.getPathInfo();
-		if (path.endsWith("register")) {
-			System.out.println("chạy tới interface save");
-			System.out.println("url đăng kí:" + url);
-			System.out.println("user name:" + username);
-			System.out.println("pass word:" + password);
-			System.out.println("gender:" + gender);
-			System.out.println("avatar:" + avatar);
-			userService.saveUser(true, username, password, Boolean.valueOf(gender), avatar);
-			//response.sendRedirect(url+"/login");
-		} else if (path.endsWith("update")) {
-			userService.saveUser(false, username, password, Boolean.valueOf(gender), avatar);
-			response.sendRedirect(url+"/users/update");
-		} else {
-			
-			response.sendRedirect(url+"/chat");
+		        if (status.equals("/register")) {
+		            rd = request.getRequestDispatcher("/WEB-INF/views/ChatGroup/sign-up.jsp");
+		            rd.forward(request, response);
+		        } else if (status.equals("/update")) {
+		            rd = request.getRequestDispatcher("/WEB-INF/views/ChatGroup/user-form.jsp");
+		            rd.forward(request, response);
+		        }
+		    } else if (status.equals("/logout")) {
+		        request.getSession().invalidate();
+		        response.sendRedirect(url + "/login");
+		    } else if (status.equals("/forpass")) {
+		        request.getSession().invalidate();
+		        rd = request.getRequestDispatcher("/WEB-INF/views/ChatGroup/forgotPassword.jsp");
+		        rd.forward(request, response);
+		    } else if (status.equals("/changepass")) {
+		        request.getSession().invalidate();
+		        rd = request.getRequestDispatcher("/WEB-INF/views/ChatGroup/change_pass.jsp");
+		        rd.forward(request, response);
+		    } else {
+		        response.sendRedirect(url + "/login");
+		     
+		    }
+
+		  
 		}
-	}
-}
+		
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	    String url = request.getContextPath();
+	    String username = request.getParameter("username");
+	    String password = request.getParameter("password");
+	    String gender = request.getParameter("gender");
+	    boolean isMale = false;
+
+	    if (gender != null && gender.equals("true")) {
+	        isMale = true;
+	    }
+
+	    Part avatar = request.getPart("avatar");
+	    boolean isAdmin = true;
+	    boolean isActive = true;
+
+	    String path = request.getPathInfo();
+
+	    if (path.endsWith("register")) {
+	        userService.saveUser(true, username, password, Boolean.valueOf(gender), avatar, isAdmin, isActive);
+	        response.sendRedirect(url + "/login");
+	    } else if (path.endsWith("update")) {
+	        userService.saveUser(false, username, password, Boolean.valueOf(gender), avatar, isAdmin, isActive);
+	        // Đặt một thuộc tính trong request để thông báo rằng cập nhật thành công
+	        request.setAttribute("updateSuccess", true);
+
+	        // Chuyển hướng đến trang hiện tại (không cần đổi trang)
+	        RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/ChatGroup/user-form.jsp");
+	        rd.forward(request, response);
+	    } else {
+	        response.sendRedirect(url + "/chat");
+	    }
+	}}

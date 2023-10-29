@@ -70,13 +70,16 @@ response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 						<div class="nav nav-tab menu">
 							<button class="btn">
 								<img class="avatar-xl"
-									src="<c:url value="/static/data/${currentUser.username}/${currentUser.avatar}" />"
+									src="<c:url value='/static/${currentUser.username}/${currentUser.avatar}' />"
 									alt="avatar">
 							</button>
 							<a style="cursor: pointer;" id="members"
 								onclick="toggleSidebar(this.id)" data-toggle="tab"
 								class="show active "><i onclick="chatOne(this)"
-								class="material-icons clickdouble">account_circle</i></a> <a
+								class="material-icons clickdouble">account_circle</i>
+								</a>
+								
+								 <a
 								style="cursor: pointer;" id="discussions"
 								onclick="toggleSidebar(this.id)" data-toggle="tab" class="show"><i
 								class="material-icons clickdouble" onclick="chatGroup(this)">chat_bubble_outline</i></a>
@@ -114,7 +117,7 @@ response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 												class="material-icons">search</i>
 										</button>
 									</form>
-								</div>								
+								</div>
 								<div class="contacts">
 									<h1 class="name">Liên hệ</h1>
 									<p id="username" style="display: none">${user.username}</p>
@@ -165,7 +168,7 @@ response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 										</button>
 									</c:if>
 
-								</div>								
+								</div>
 								<div class="discussions">
 									<h1 class="name">Trò chuyện</h1>
 
@@ -263,10 +266,11 @@ response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 								<div class="settings">
 									<div class="profile">
 										<img class="avatar-xl"
-											src="<c:url value="/static/dist/img/avatars/avatar-male-1.jpg" />"
+											src="<c:url value='/static/${currentUser.username}/${currentUser.avatar}' />"
 											alt="avatar">
+
 										<h1>
-											<a href="#">Bảo Khang</a>
+											<a href="#"><c:out value="${currentUser.username}" /></a>
 										</h1>
 										<span>Đồng Tháp, Việt Nam</span>
 										<div class="stats">
@@ -301,54 +305,17 @@ response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 												aria-labelledby="headingOne"
 												data-parent="#accordionSettings">
 												<div class="content">
-													<div class="upload">
-														<div class="data">
-															<img class="avatar-xl"
-																src="dist/img/avatars/avatar-male-1.jpg" alt="image">
-															<label> <input type="file"> <span
-																class="btn button">Tải hình đại diện</span>
-															</label>
-														</div>
-														<p>Để có kết quả tốt nhất, hãy sử dụng hình ảnh có
-															kích thước tối thiểu 256px x 256px ở định dạng .jpg hoặc
-															.png!</p>
-													</div>
-													<form>
-														<div class="parent">
-															<div class="field">
-																<label for="firstName">Họ <span>*</span></label> <input
-																	type="text" class="form-control" id="firstName"
-																	placeholder="Họ" required>
-															</div>
-															<div class="field">
-																<label for="lastName">Tên<span>*</span></label> <input
-																	type="text" class="form-control" id="lastName"
-																	placeholder="Tên" required>
-															</div>
-														</div>
-														<div class="field">
-															<label for="email">Email <span>*</span></label> <input
-																type="email" class="form-control" id="email"
-																placeholder="Nhập địa chỉ email của bạn" required>
-														</div>
-														<div class="field">
-															<label for="password">Mật Khẩu</label> <input
-																type="password" class="form-control" id="password"
-																placeholder="Nhập mật khẩu mới" required>
-														</div>
-														<div class="field">
-															<label for="location">Đại chỉ</label> <input type="text"
-																class="form-control" id="location"
-																placeholder="Nhập địa chỉ của bạn" required>
-														</div>
-
-														<button type="submit" class="btn button w-100">Áp
-															dụng</button>
-													</form>
-
+													<a href="<c:url value="/users/update"/>" >
+														<button style="font-size: 18px" type="submit"
+															class="btn button w-100">Cập nhật tài khoản</button>
+													</a> 
 													<a href="<c:url value="/userManager"/>">
-														<button class="btn btn-link w-100">Danh sách cấm
-															tài khoản</button>
+														<button style="font-size: 18px" class="btn btn-link w-100">Danh
+															sách cấm tài khoản</button>
+													</a>
+													
+													<a href="<c:url value="/userManager/group"/>">
+														<button style="font-size: 18px" class="btn btn-link w-100">Danh sách cấm chat</button>
 													</a>
 												</div>
 											</div>
@@ -669,7 +636,7 @@ response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 
 
 			<!-- ---------------------------------------------- -->
-			<div class="main" >
+			<div class="main">
 				<div class="tab-content" id="nav-tabContent">
 					<!-- Start of Babble -->
 					<div border: 1px solid
@@ -678,9 +645,9 @@ response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 						role="tabpanel" aria-labelledby="list-chat-list">
 						<!-- Start of Chat -->
 						<!-- code phần bỏ vô nhắn tin -->
-						<span style="position: relative;" id="receiver"> 
-						<img class="logo" alt=""
-							style="width: 540px;position: absolute;top: 280px;left: 200px"
+						<span style="position: relative;" id="receiver"> <img
+							class="logo" alt=""
+							style="width: 540px; position: absolute; top: 280px; left: 200px"
 							src="https://static.ybox.vn/2020/10/3/1602043205273-1595067112781-Logo5SGroup_2004.png"
 							width="700px">
 						</span>
@@ -716,8 +683,7 @@ response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 							<form action="" onsubmit="return addMember(event);">
 								<div class="modal-box-body add-member-body">
 									<input style="background: #cccccc;" type="text"
-										class="txt-input txt-group-name"
-										id="searchMember"
+										class="txt-input txt-group-name" id="searchMember"
 										onclick="searchMemberByKeyword(this)"
 										placeholder="Tên thành viên..."
 										onkeyup="searchMemberByKeyword(this)">

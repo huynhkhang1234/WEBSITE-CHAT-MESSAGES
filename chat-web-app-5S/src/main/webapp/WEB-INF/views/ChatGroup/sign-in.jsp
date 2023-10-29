@@ -52,8 +52,8 @@
 							<div class="col-md-12">
 								<div class="content">
 									<h1>Đăng nhập</h1>
-									<label class="btn btn-image" for="attach"> test
-									<i class="fa fa-file"></i></label>
+									<!-- <label class="btn btn-image" for="attach"> 
+									<i class="fa fa-file"></i></label> -->
 									
 									<div class="third-party">
 										<button class="btn item bg-blue">

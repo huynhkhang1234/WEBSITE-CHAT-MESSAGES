@@ -21,4 +21,13 @@ public interface ConversationDaoInterface {
 	void updateGroup(Long id);
 	
 	String findIsActive(String id);
+	
+	List<Conversation> findAllGroup();	
+	
+	public Conversation findUserByUsername(String username);
+	
+	public void changeActive(String username, String status);
+	
+	public void chatBlock(String sql);
+		
 }

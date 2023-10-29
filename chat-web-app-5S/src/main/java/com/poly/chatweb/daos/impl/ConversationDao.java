@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.poly.chatweb.dao.ConversationDaoInterface;
 import com.poly.chatweb.map.impl.ConversationMapper;
+import com.poly.chatweb.map.impl.UserMapper;
 import com.poly.chatweb.models.Conversation;
 import com.poly.chatweb.models.User;
 
@@ -144,6 +145,36 @@ public class ConversationDao extends GenericDao<Conversation> implements Convers
 		System.out.println(conversations.get(0).getIsActive());
 		return conversations.get(0).getIsActive();
 		//return "";
+	}
+
+	@Override
+	public List<Conversation> findAllGroup() {
+		StringBuilder sql = new StringBuilder("select * from conversations");
+		List<Conversation> group = query(sql.toString(), new ConversationMapper());
+		return group;
+	}
+
+	@Override
+	public Conversation findUserByUsername(String username) {
+		System.out.println("username" + username);
+		StringBuilder sql = new StringBuilder("select *");
+		sql.append(" from conversations where name = ?");
+		List<Conversation> users = query(sql.toString(), new ConversationMapper(), username);
+		return users.isEmpty() ? null : users.get(0);
+	}
+
+	@Override
+	public void changeActive(String username, String status) {
+		StringBuilder sql = new StringBuilder("update conversations set isActive = ? where name like ?");
+		save(sql.toString(), status, username);
+		
+	}
+
+	@Override
+	public void chatBlock(String sql) {
+	
+		StringBuilder sql2 = new StringBuilder(sql);
+		save(sql2.toString());
 	}
 
 }

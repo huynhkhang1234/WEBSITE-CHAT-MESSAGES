@@ -71,6 +71,8 @@ public class UserRestController extends HttpServlet {
 		  response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
+		boolean isAdmin = Boolean.valueOf(request.getParameter("isAdmin"));
+	    boolean isActive = Boolean.valueOf(request.getParameter("isActive"));
 		//kiểm tra username đã tồn tại
 		if(userServiceInterface.usernameIsExit(username)==true) {
 			//status 400
@@ -85,7 +87,8 @@ public class UserRestController extends HttpServlet {
 		}
 		Boolean gender= Boolean.valueOf(request.getParameter("gender"));
 		Part avarta = request.getPart("avarta");
-		userServiceInterface.saveUser(true, username, password, gender, avarta);
+		userServiceInterface.saveUser(true, username, password, gender, avarta, isAdmin, isActive);
+
 		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/ChatGroup/sign-in.jsp");
 		rd.forward(request, response);
 	}

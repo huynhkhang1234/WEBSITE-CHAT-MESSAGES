@@ -7,6 +7,8 @@ import javax.servlet.http.Part;
 import com.poly.chatweb.dto.ConversationDTO;
 import com.poly.chatweb.dto.MessageDTO;
 import com.poly.chatweb.dto.UserDTO;
+import com.poly.chatweb.models.Conversation;
+import com.poly.chatweb.models.User;
 
 public interface ConversationServiceInterface {
 	public void saveConversation(ConversationDTO conversationDTO);
@@ -32,4 +34,13 @@ public interface ConversationServiceInterface {
 	String findIsActive(String id);
 
 	 void hideGroup(ConversationDTO conversationDTO1);
+	 
+	 List<Conversation> findAllGroup();	
+	 
+	 public Conversation findUserByUsername(String username);
+		
+	public void changeActive(String username, String status);
+	
+	public void chatBlock(String sql);
+	
 }

@@ -4,11 +4,12 @@ import java.util.List;
 
 import javax.servlet.http.Part;
 
+import com.poly.chatweb.models.Conversation;
 import com.poly.chatweb.models.User;
 
 public interface UserServiceInterface {
 
-	public void saveUser(Boolean isRegister, String username, String password, boolean gender, Part avatar);
+	public void saveUser(Boolean isRegister, String username, String password, boolean gender, Part avatar, boolean isAdmin, boolean isActive);
 
 	public User findUser(String username, String password);
 	
@@ -23,7 +24,7 @@ public interface UserServiceInterface {
 	void updatePassword(String username, String newPassword);
 	
 	public List<User> getAllUser();
-	
+		
 	public User findUserByUsername(String username);
 	
 	public void changeActive(String username, boolean status);
