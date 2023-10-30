@@ -16,59 +16,10 @@
     <script type="text/javascript" src="<c:url value="/static/js/ShowAnnotation.js" />" charset="utf-8"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
-       body {
-    font-family: 'Roboto', sans-serif;
-}
-
-
-        .container {
-            margin-top: 50px;
-        }
-
-        .custom-button {
-            background-color: #007BFF;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-right: 10px;
-        }
-
-        .custom-button:last-child {
-            margin-right: 0;
-        }
-
-        .back-button {
-            font-size: 18px;
-            text-decoration: none;
-            color: #007BFF;
-            margin-right: 10px;
-        }
-
-        .back-button i {
-            margin-right: 5px;
-        }
-
-        .page-title {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .table {
-            margin-top: 20px;
-        }
-
-        .table th, .table td {
-            text-align: center;
-        }
-
-/*         .lock-icon { */
-/* 	    color: red; /* Đổi màu chữ thành màu đỏ */  */
-/* } */
-/* 		.unlock-icon { */
-/*     color: green; /* Đổi màu chữ thành màu xanh lá cây */ */
-/* } */
+		       body {
+		    font-family: 'Roboto', sans-serif;
+		}
+      
 
     </style>
 </head>
