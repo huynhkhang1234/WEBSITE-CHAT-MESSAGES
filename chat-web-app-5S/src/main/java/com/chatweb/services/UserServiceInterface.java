@@ -28,4 +28,6 @@ public interface UserServiceInterface {
 	public User findUserByUsername(String username);
 	
 	public void changeActive(String username, boolean status);
+	
+	public void userBlock(String sql);
 }

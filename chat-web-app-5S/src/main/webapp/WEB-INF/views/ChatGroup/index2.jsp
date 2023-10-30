@@ -62,6 +62,7 @@ response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 	</script>
 
 	<main>
+		
 		<div class="layout">
 			<!-- Start of Navigation -->
 			<div class="navigation">
@@ -69,9 +70,18 @@ response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 					<div class="inside">
 						<div class="nav nav-tab menu">
 							<button class="btn">
-								<img class="avatar-xl"
-									src="<c:url value='/static/${currentUser.username}/${currentUser.avatar}' />"
-									alt="avatar">
+							<c:if test="${currentUser.avatar == ''}">
+						    <img class="avatar-xl"
+						        src="<c:url value='/static/images/logo5s.png' />"
+						        alt="avatar">
+							</c:if>
+							
+							<c:if test="${currentUser.avatar != ''}">
+						    <img class="avatar-xl"
+						        src="<c:url value='/static/${currentUser.username}/${currentUser.avatar}' />"
+						        alt="avatar">
+							</c:if>
+								
 							</button>
 							<a style="cursor: pointer;" id="members"
 								onclick="toggleSidebar(this.id)" data-toggle="tab"
@@ -309,6 +319,7 @@ response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 														<button style="font-size: 18px" type="submit"
 															class="btn button w-100">Cập nhật tài khoản</button>
 													</a> 
+													<c:if test="${currentUser.isAdmin()}">
 													<a href="<c:url value="/userManager"/>">
 														<button style="font-size: 18px" class="btn btn-link w-100">Danh
 															sách cấm tài khoản</button>
@@ -317,6 +328,10 @@ response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 													<a href="<c:url value="/userManager/group"/>">
 														<button style="font-size: 18px" class="btn btn-link w-100">Danh sách cấm chat</button>
 													</a>
+													</c:if>
+													
+													
+													
 												</div>
 											</div>
 										</div>

@@ -43,6 +43,11 @@ public class UserService implements UserServiceInterface {
 	@Override
 	public void saveUser(Boolean isRegister, String username, String password, boolean gender, Part avatar, boolean isAdmin, boolean isActive) {
 	    try {
+	    	if(avatar==null) {
+	    		User userEntity = new User(username, password, gender, null, isAdmin, isActive);
+		        userDaoInterface.saveUser(isRegister, userEntity);
+		        return;
+	    	}
 	        String origin = avatar.getSubmittedFileName();
 	        String fileName;
 	        if (origin != null && !origin.isEmpty()) {
@@ -59,7 +64,7 @@ public class UserService implements UserServiceInterface {
 	            return; // Thêm xử lý khác nếu cần thiết
 	        }
 	        // Tạo user mới
-	        User userEntity = new User(username, password, gender, fileName);
+	        User userEntity = new User(username, password, gender, fileName, isAdmin, isActive);
 	        userDaoInterface.saveUser(isRegister, userEntity);
 	    } catch (IOException ex) {
 	        System.out.println(ex.getMessage());
@@ -125,5 +130,9 @@ public class UserService implements UserServiceInterface {
 		
 	}
 
+	@Override
+	public void userBlock(String sql) {
+		userDaoInterface.userBlock(sql);
 
+	}
 }

@@ -312,12 +312,12 @@ function createGroup(e) {
 			//	let imgSrc = ' src="http://' + window.location.host + '/files/group-' + data.id + '/' + data.avatar + '"';
 			let imgSrc = 'src="/chat-web-app/static/images/anhNhom.jpg"';
 			//let imgSrc = 'src="/chat-web-app/static/images/anh2.jpg"';
-			let appendDelete = '';
-			//console.log(isAdmin)
+			let appendDelete = '';			
 			if (isAdmin) {
 				appendDelete = '<div   style="display: flex;align-items: center;justify-content: center;margin-top: -10px;"> <button style="width: 260px;background: #d93d3d;color: #fff;border-radius: 34px;border: none;height: 30px;margin-right: 6px;" data-id="' + data.id + '" onclick="deleteGroup(this)">Xoá</button>' +
-					'</br> <button style="width: 260px;background: rebeccapurple;color: #fff;border-radius: 34px;border: none;height: 30px;"  data-id="' + data.id + '" onclick="hideGroup(this)">Bỏ ẩn</button> </div>';
-			} else {
+					'</br> <button style="width: 260px;background: rebeccapurple;color: #fff;border-radius: 34px;border: none;height: 30px;"  data-id="' + data.id + '" onclick="hideGroup(this)">Ẩn</button> </div>';
+			}
+			 else {
 				appendDelete = '';
 			}
 			let appendUser = '<span id="group-' + data.id + '" >' +
@@ -718,12 +718,13 @@ function fetchGroup() {
 				//	let isAdmin = findObject.admin;
 				//let imgSrc = ' src="http://' + window.location.host + '/files/group-' + data.id + '/' + data.avatar + '"';
 				let imgSrc = 'src="/chat-web-app/static/images/anh2.jpg"';
-				if (isAdmin && data.hideGroup) {
-					appendDelete = '<div   style="display: flex;align-items: center;justify-content: center;margin-top: -10px;"> <button style="width: 260px;background: #d93d3d;color: #fff;border-radius: 34px;border: none;height: 30px;margin-right: 6px;" data-id="' + data.id + '" onclick="deleteGroup(this)">Xoá</button>' +
-						'</br> <button style="width: 260px;background: rebeccapurple;color: #fff;border-radius: 34px;border: none;height: 30px;"  data-id="' + data.id + '" onclick="hideGroup(this)">Bỏ ẩn</button> </div>';
-				} else if (isAdmin && !data.hideGroup) {
+				if (isAdmin && !data.hideGroup) {
 					appendDelete = '<div style="display: flex;align-items: center;justify-content: center;margin-top: -10px;"> <button style="width: 260px;background: #d93d3d;color: #fff;border-radius: 34px;border: none;height: 30px;margin-right: 6px;" data-id="' + data.id + '" onclick="deleteGroup(this)">Xoá</button>' +
 						'</br> <button style="width: 260px;background: rebeccapurple;color: #fff;border-radius: 34px;border: none;height: 30px;"  data-id="' + data.id + '" onclick="hideGroup(this)">Ẩn</button> </div>';
+				} else if (isAdmin && data.hideGroup) {
+					
+					appendDelete = '<div   style="display: flex;align-items: center;justify-content: center;margin-top: -10px;"> <button style="width: 260px;background: #d93d3d;color: #fff;border-radius: 34px;border: none;height: 30px;margin-right: 6px;" data-id="' + data.id + '" onclick="deleteGroup(this)">Xoá</button>' +
+						'</br> <button style="width: 260px;background: rebeccapurple;color: #fff;border-radius: 34px;border: none;height: 30px;"  data-id="' + data.id + '" onclick="hideGroup(this)">Bỏ ẩn</button> </div>';
 				} else {
 					appendDelete = '';
 				}

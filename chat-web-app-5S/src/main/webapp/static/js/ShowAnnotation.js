@@ -15,7 +15,6 @@ function showAnnotation(sub, cont, type) {
     Swal.fire({
         icon: type_text,
         title: sub,
-        text: cont,
-        timer: 2000
+        text: cont
     })
 }

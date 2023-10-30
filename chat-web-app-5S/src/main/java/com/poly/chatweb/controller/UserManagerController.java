@@ -25,6 +25,7 @@ public class UserManagerController extends HttpServlet {
 //	0: khong co gi
 //	1: khoa tai khoan
 //	2: mo khoa tai khoan
+//	3: khong the khoa chinh minh
 	int showAnno = 0;
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -53,7 +54,10 @@ public class UserManagerController extends HttpServlet {
 		}
 		
 		User user = userService.findUserByUsername(extractedUsername);
-		if(user!= null) {
+		User utemp = (User) request.getSession().getAttribute("user");
+		System.out.println("1: "+user.getUsername());
+		System.out.println("1: "+utemp.getUsername());
+		if((user!= null) && !(user.getUsername().equals(utemp.getUsername()))) {
 			if(user.getIs_active()) {
 				userService.changeActive(user.getUsername(), false);
 				showAnno=1;
@@ -64,7 +68,8 @@ public class UserManagerController extends HttpServlet {
 				System.out.println("Thay doi tu false -> true -----"+showAnno);
 			}
 		}else {
-			System.out.println("Khong tim thay user");
+			System.out.println("Khong hop le");
+			showAnno=3;
 		}
 		
 		System.out.println(username);

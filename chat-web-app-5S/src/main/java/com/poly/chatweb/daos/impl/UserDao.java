@@ -34,10 +34,9 @@ public class UserDao extends GenericDao<User> implements UserDaoInterface {
 
 	@Override
 	public List<User> findFriends(String userName) {
-		StringBuilder sql = new StringBuilder("select distinct u2.username, u2.avatar, u2.gender");
-		sql.append(" from users u1 join friends f on u1.username = f.receiver");
-		sql.append(" join users u2 on u2.username = f.sender");
-		sql.append(" where u1.username LIKE ?");
+		StringBuilder sql = new StringBuilder("select distinct u.username, u.avatar, u.gender");
+		sql.append(" from users u");
+		sql.append(" where u.username LIKE ?");
 		String param = "%" + userName + "%";
 		List<User> users = query(sql.toString(), new UserMapper(), param);
 		return users.stream().filter(u -> !u.getUsername().equals(userName)).collect(Collectors.toList());
@@ -49,14 +48,20 @@ public class UserDao extends GenericDao<User> implements UserDaoInterface {
 		String username = user.getUsername();
 		String password = user.getPassword();
 		Boolean gender = user.isGender();
+		Boolean isAdmin = user.isAdmin();
 		String avatar = user.getAvatar();
-		
-		StringBuilder sql = new StringBuilder("insert into users values(?,?,?,?,?)");
-		if (isRegister) {
-			save(sql.toString(), username, password, gender, avatar,true);
+		if (avatar==null) {
+			StringBuilder sql = new StringBuilder("insert into users values(?,?,?,?,?,?)");
+			System.out.println("55");
+			save(sql.toString(), username, password, gender,"", false, true);
 		} else {
-			sql = new StringBuilder("update users set password=?, gender=?, avatar=? where username=?");
-			save(sql.toString(), password, gender, avatar, username);
+			StringBuilder sql = new StringBuilder("insert into users values(?,?,?,?,?,?)");
+			if (isRegister) {
+				save(sql.toString(), username, password, gender, avatar, isAdmin, true);
+			} else {
+				sql = new StringBuilder("update users set password=?, gender=?, avatar=? where username=?");
+				save(sql.toString(), password, gender, avatar, username);
+			}
 		}
 	}
 
@@ -67,7 +72,6 @@ public class UserDao extends GenericDao<User> implements UserDaoInterface {
 		String param = "%" + keyWord + "%";
 		List<User> users = query(sql.toString(), new UserMapper(), userName, param);
 		return users;
-
 	}
 
 	@Override
@@ -86,13 +90,10 @@ public class UserDao extends GenericDao<User> implements UserDaoInterface {
 	@Override
 	public List<User> findFriendsNotInConversation(String userName, String keyword, Long conversationId) {
 		StringBuilder sql = new StringBuilder();
-		sql.append("select u2.username,u2.avatar,u2.gender");
-		sql.append(" from users u1 join friends f on u1.username = f.receiver ");
-		sql.append(" join users u2 on u2.username = f.sender");
-		sql.append(" where u1.username = ?");
-		sql.append(" and f.status = 1");
-		sql.append(" and u2.username like ?");
-		sql.append(" and u2.username not in (");
+		sql.append("select u1.username,u1.avatar,u1.gender");
+		sql.append(" from users u1");
+		sql.append(" where u1.username like ?");
+		sql.append(" and u1.username not in (");
 		sql.append(" select u.username");
 		sql.append(" from users u join conversations_users cu");
 		sql.append(" on u.username = cu.username");
@@ -100,7 +101,7 @@ public class UserDao extends GenericDao<User> implements UserDaoInterface {
 		sql.append(" on c.id = cu.conversations_id");
 		sql.append(" where c.id = ?)");
 		String param = "%" + keyword + "%";
-		List<User> users = query(sql.toString(), new UserMapper(), userName, param, conversationId);
+		List<User> users = query(sql.toString(), new UserMapper(), param, conversationId);
 		return users;
 	}
 
@@ -117,7 +118,7 @@ public class UserDao extends GenericDao<User> implements UserDaoInterface {
 		// TODO Auto-generated method stub
 		StringBuilder sql = new StringBuilder("UPDATE users SET password = ? WHERE username = ?");
 		save(sql.toString(), newPassword, username);
-		
+
 	}
 
 	@Override
@@ -126,7 +127,6 @@ public class UserDao extends GenericDao<User> implements UserDaoInterface {
 		List<User> users = query(sql.toString(), new UserMapper());
 		return users;
 	}
-	
 
 	@Override
 	public User findUserByUsername(String username) {
@@ -140,6 +140,13 @@ public class UserDao extends GenericDao<User> implements UserDaoInterface {
 	public void changeActive(String username, boolean status) {
 		StringBuilder sql = new StringBuilder("update users set is_active = ? where username = ?");
 		save(sql.toString(), status, username);
-	}	
+	}
+
+	@Override
+	public void userBlock(String sql) {
+
+		StringBuilder sql2 = new StringBuilder(sql);
+		save(sql2.toString());
+	}
 
 }
