@@ -121,5 +121,12 @@ public class UserDao extends GenericDao<User> implements UserDaoInterface {
 		StringBuilder sql = new StringBuilder("update users set is_active = ? where username = ?");
 		save(sql.toString(), status, username);
 	}
+	
+	@Override
+	public void userBlock(String sql) {
+	
+		StringBuilder sql2 = new StringBuilder(sql);
+		save(sql2.toString());
+	}
 
 }

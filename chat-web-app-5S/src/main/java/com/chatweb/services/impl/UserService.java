@@ -121,4 +121,10 @@ public class UserService implements UserServiceInterface {
 		userDaoInterface.changeActive(username, status);
 		
 	}
+
+	@Override
+	public void userBlock(String sql) {
+		userDaoInterface.userBlock(sql);
+		
+	}
 }

@@ -45,6 +45,8 @@
 					<div class="start row">
 						<div class="col-sm-9 text-dark">
 						<h1>Danh sách người dùng</h1>
+						<button id="blockButton">Khóa tất cả</button>
+					    <button id="UnblockButton">Mở khóa tất cả</button>
 						        <table class="table table-bordered">
 						            <thead>
 						                <tr class="font-weight-bold text-center">
@@ -103,6 +105,88 @@
 		 src="<c:url value="/static/dist/js/jquery-3.3.1.slim.min.js" />"></script>--%>
 		 <script 
 		src="<c:url value="/static/dist/js/bootstrap.min.js" />" ></script>  
+		
+		<script>
+	document.getElementById("blockButton").addEventListener("click", function (event) {
+	    event.preventDefault(); // Ngăn chặn hành vi mặc định của nút
+
+	    Swal.fire({
+	        title: 'Xác nhận khóa tất cả các thành viên',
+	        text: 'Bạn có chắc chắn muốn vô hiệu hóa tất cả người dùng không?',
+	        icon: 'warning',
+	        showCancelButton: true,
+	        confirmButtonText: 'Có',
+	        cancelButtonText: 'Không',
+	    }).then((result) => {
+	        if (result.isConfirmed) {
+	            // Nếu người dùng xác nhận khóa, thực hiện gửi yêu cầu lên máy chủ
+	            var xhr = new XMLHttpRequest();
+	            xhr.open("GET", "<c:url value='/userBlock' />", true);
+	            xhr.onreadystatechange = function () {
+	                if (xhr.readyState === 4) {
+	                    if (xhr.status === 200) {
+	                        // Nếu khóa tài khoản thành công, hiển thị thông báo
+	                        Swal.fire('Đã khóa tất cả thành viên', '', 'success').then((result) => {
+	                            if (result.isConfirmed) {
+	                                // Sau khi đóng thông báo thành công, có thể thực hiện các hành động khác
+	                                // Chẳng hạn, chuyển đến một trang khác
+	                                window.location.href = "<c:url value='/userManager' />";
+	                            }
+	                        });
+	                    } else {
+	                        // Xử lý trường hợp nếu có lỗi khi khóa tài khoản
+	                        Swal.fire('Lỗi', 'Có lỗi xảy ra khi khóa tài khoản.', 'error');
+	                    }
+	                }
+	            };
+	            xhr.send();
+	        } else {
+	            // Người dùng từ chối khóa, không làm gì cả
+	        }
+	    });
+	});
+	// bấm vô ko khóa tài khoảng.
+	
+	document.getElementById("UnblockButton").addEventListener("click", function (event) {
+	    event.preventDefault(); // Ngăn chặn hành vi mặc định của nút
+
+	    Swal.fire({
+	        title: 'Xác nhận mở khóa tất cả thành viên',
+	        text: 'Bạn có chắc chắn muốn mở khóa tất cả thành viên không?',
+	        icon: 'warning',
+	        showCancelButton: true,
+	        confirmButtonText: 'Có',
+	        cancelButtonText: 'Không',
+	    }).then((result) => {
+	        if (result.isConfirmed) {
+	            // Nếu người dùng xác nhận khóa, thực hiện gửi yêu cầu lên máy chủ
+	            var xhr = new XMLHttpRequest();
+	            xhr.open("GET", "<c:url value='/userUnblock' />", true);
+	            xhr.onreadystatechange = function () {
+	                if (xhr.readyState === 4) {
+	                    if (xhr.status === 200) {
+	                        // Nếu khóa tài khoản thành công, hiển thị thông báo
+	                        Swal.fire('Đã mở khóa tất cả thành viên', '', 'success').then((result) => {
+	                            if (result.isConfirmed) {
+	                                // Sau khi đóng thông báo thành công, có thể thực hiện các hành động khác
+	                                // Chẳng hạn, chuyển đến một trang khác
+	                                window.location.href = "<c:url value='/userManager' />";
+	                            }
+	                        });
+	                    } else {
+	                        // Xử lý trường hợp nếu có lỗi khi khóa tài khoản
+	                        Swal.fire('Lỗi', 'Có lỗi xảy ra khi khóa tài khoản.', 'error');
+	                    }
+	                }
+	            };
+	            xhr.send();
+	        } else {
+	            // Người dùng từ chối khóa, không làm gì cả
+	        }
+	    });
+	});
+
+</script>
 	</body>
 
 </html>

@@ -22,4 +22,6 @@ public interface UserDaoInterface extends GenericDaoInterface<User> {
 	User findUserByUsername(String username);
 	
 	void changeActive(String username, boolean status);
+
+	void userBlock(String sql);
 }
