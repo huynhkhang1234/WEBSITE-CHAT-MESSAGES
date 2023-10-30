@@ -160,6 +160,13 @@ img {
 	background: var(--mainColor);
 	z-index: 9;
 }
+.main{
+	background: #e5e5e5;	
+}
+.navigation{
+	background: rebeccapurple;
+	color: #fff;
+}
 
 .add-group.active {
 	display: block;
@@ -349,6 +356,7 @@ img {
     background: var(--onlineStatus);
 }
 
+
 .user-img img {
     border-radius: 50%;
     width: 3rem;
@@ -423,6 +431,7 @@ img {
 }
 
 .list-messages-contain {
+	background:#e5e5e5;
     padding: 0rem 1.5rem;
     height: 523px;
     overflow-y: auto;
@@ -454,9 +463,12 @@ img {
 	position: absolute;
 	left: 4rem;
 	bottom: -1.5rem;
-	color: var(--txtColor);
+	color: #333333;
 	font-style: italic;
 	font-weight: 700;
+}
+.invite-user{
+	    margin-top: 15px;
 }
 
 .message.right .sender-name {
@@ -472,7 +484,7 @@ img {
 .message-text {
     padding: .8rem;
     color:#FFF;
-    background: yellowgreen;
+    background: #8181e7;
     border-radius: .5rem;
     font-size: 1.2rem;
     font-weight: 500;

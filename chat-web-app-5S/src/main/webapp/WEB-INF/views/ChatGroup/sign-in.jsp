@@ -1,32 +1,26 @@
 <%@page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-		
 		<meta charset="utf-8">
-		<title>Sign In â Swipe</title>
+		<title>Poly chat</title>
 		<meta name="description" content="#">		
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<!-- File JavaScript riêng -->
-  		<script type="text/javascript" src="<c:url value="/static/js/ShowAnnotation.js" />" charset="utf-8"></script>
 		<!-- Bootstrap core CSS -->
 		<link href="<c:url value="/static/dist/css/lib/bootstrap.min.css" />" type="text/css" rel="stylesheet">
 		<link href="<c:url value="/static/dist/css/swipe.min.css" />" type="text/css" rel="stylesheet">
-		<link href="<c:url value="/static/dist/img/favicon.png" />" type="image/png" rel="icon">		
-		
-		<!-- Bao gồm thư viện SweetAlert2 -->
+		<link href="<c:url value="/static/dist/img/favicon.png" />" type="image/png" rel="icon">					
+		<!-- File JavaScript riêng -->
+  		<script type="text/javascript" src="<c:url value="/static/js/ShowAnnotation.js" />" charset="utf-8"></script>
+  		<!-- Bao gồm thư viện SweetAlert2 -->
 	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@9">
 	    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-	    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	
-	   
+	    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>	
 	</head>
-	<body class="start" style="font-family: 'Times New Roman', Times, serif">	
+	<body class="start" style="font-family: 'Times New Roman', Times, serif">
 	
 	 <% 
 	    Object annotationLG = request.getAttribute("annotationLG");
@@ -58,6 +52,9 @@
 							<div class="col-md-12">
 								<div class="content">
 									<h1>Đăng nhập</h1>
+									<!-- <label class="btn btn-image" for="attach"> 
+									<i class="fa fa-file"></i></label> -->
+									
 									<div class="third-party">
 										<button class="btn item bg-blue">
 											<i class="material-icons">pages</i>
@@ -70,13 +67,13 @@
 										</button>
 									</div>
 									<!--  <p>Hoặc bắt đầu với email của bạn:</p> -->
-									<form action="<c:url value="/login" />" method="POST" id="loginForm"> 
+									<form action="<c:url value="/login" />" method="POST">
 										<div class="form-group">
-											<input type="text" name="username" value="" class="form-control" placeholder="Tài khoản" required>
+											<input type="text" name="username" id="inputUsername" class="form-control" placeholder="Tài khoản" required>
 											<button class="btn icon"><i class="material-icons">person_outline</i></button>
 										</div>
 										<div class="form-group">
-											<input type="password" name="password"  value="" class="form-control" placeholder="Password" required>
+											<input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
 											<button class="btn icon"><i class="material-icons">lock_outline</i></button>
 										</div>
 										<button type="submit" class="btn button">Đăng nhập</button>
@@ -96,10 +93,9 @@
 						<div class="col-md-12">
 							<div class="preference">
 								<h2>Xin chào bạn!</h2>
-								<p>Hãy bắt đầu đăng ký ngay để tham gia và không bỏ lỡ những thông tin thú vị từ bạn bè nhé!.</p>
-								<a href="sign-up.html" class="btn button">Đăng ký</a> <br> <br>
-								<a href="forgotPassword.html" class="btn button">Quên mật khẩu</a> <br> <br>
-								<a href="change_pass.html" class="btn button">Đổi mật khẩu</a>
+								<p>Hãy bắt đầu đăng ký ngay để tham gia và không bỏ lỡ những thông tin thú vị từ bạn bè nhé!.</p>																
+								<a  href="<c:url value="/users/forpass"/>" class="btn button">Quên mật khẩu</a> <br> <br>
+								<a  href="<c:url value="/users/changepass"/>" class="btn button">Đổi mật khẩu</a> <br> <br>
 							</div>
 						</div>
 					</div>

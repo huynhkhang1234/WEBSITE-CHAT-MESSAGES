@@ -17,4 +17,17 @@ public interface ConversationDaoInterface {
 	void deleteConversationById(Long id);
 
 	void deleteUserFromConversation(Long conversationId, String username);
+	
+	void updateGroup(Long id);
+	
+	String findIsActive(String id);
+	
+	List<Conversation> findAllGroup();	
+	
+	public Conversation findUserByUsername(String username);
+	
+	public void changeActive(String username, String status);
+	
+	public void chatBlock(String sql);
+		
 }

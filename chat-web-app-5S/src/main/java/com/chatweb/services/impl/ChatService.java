@@ -73,6 +73,7 @@ public class ChatService extends ChatServiceAbstract {
 	//gửi hình là chạy vô. 
 	@Override
 	public void sendMessageToOneUser(MessageDTO message, Queue<FileDTO> fileDTOs) {
+		
 		if (!message.getType().equals("text")) {
 			String fileName = message.getMessage();
 			fileName = fileName.replaceAll("\\s+", "");

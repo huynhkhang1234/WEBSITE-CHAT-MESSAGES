@@ -12,9 +12,12 @@ public class ConversationMapper implements RowMapperInterface<Conversation> {
 	public Conversation mapRow(ResultSet rs) {
 		Conversation conversation = new Conversation();
 		try {
+			conversation.setIsActive(rs.getString("isActive"));	
 			conversation.setId(rs.getLong("id"));
 			conversation.setName(rs.getString("name"));
 			conversation.setAvatar(rs.getString("avatar"));
+			conversation.setHideGroup(rs.getBoolean("hideGroup"));
+					
 		} catch (SQLException e) {
 			return null;
 		}

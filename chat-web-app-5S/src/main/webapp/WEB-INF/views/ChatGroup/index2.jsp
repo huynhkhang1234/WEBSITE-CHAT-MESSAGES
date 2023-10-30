@@ -3,6 +3,9 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
+<%
+response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+%>
 
 <head>
 <meta charset="utf-8">
@@ -10,51 +13,54 @@
 <meta name="description" content="#">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<!-- File JavaScript riêng -->
-  		 <script type="text/javascript" src="<c:url value="/static/js/ShowAnnotation.js" />" charset="utf-8"></script>
-		<!-- Bootstrap core CSS -->
-		<link href="<c:url value="/static/dist/css/lib/bootstrap.min.css" />"
-			type="text/css" rel="stylesheet">
-		<!-- Swipe core CSS -->
-		<link href="<c:url value="/static/dist/css/swipe.min.css" />"
-			type="text/css" rel="stylesheet">
-		<!-- Favicon -->
-		<link href="<c:url value="/static/dist/img/favicon.png" />"
-			type="image/png" rel="icon">
-		<link rel="stylesheet"
-			href="<c:url value="/static/dist/css/Styles.css" />">
-		<link
-			href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-			rel="stylesheet">
-		<link rel="stylesheet" href="<c:url value="/static/css/chat.css" />">
+<!-- Bootstrap core CSS -->
+<link href="<c:url value="/static/dist/css/lib/bootstrap.min.css" />"
+	type="text/css" rel="stylesheet">
+<!-- Swipe core CSS -->
+<link href="<c:url value="/static/dist/css/swipe.min.css" />"
+	type="text/css" rel="stylesheet">
+<!-- Favicon -->
+<link href="<c:url value="/static/dist/img/favicon.png" />"
+	type="image/png" rel="icon">
+<link rel="stylesheet"
+	href="<c:url value="/static/dist/css/Styles.css" />">
 
-		<!-- Bao gồm thư viện SweetAlert2 -->
-	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@9">
-	    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-	    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	
-	    
+<link
+	href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+	rel="stylesheet">
+
+<link rel="stylesheet" href="<c:url value="/static/css/chat.css" />">
+
+<!-- File JavaScript riêng -->
+<script type="text/javascript"
+	src="<c:url value="/static/js/ShowAnnotation.js" />" charset="utf-8"></script>
+<!-- Bao gồm thư viện SweetAlert2 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@9">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body style="font-family: 'Times New Roman', Times, serif">
 
-	   <% 
-	    Object annotationLG = request.getAttribute("annotationLG");
-	   %>
-	
-    <script>
- 	var annotationLGValue = '<%= annotationLG %>';
-      
-       	if(annotationLGValue==1){
-       		showAnnotation('Đăng nhập thành công', 'Chào mừng bạn đến chơiii', 1);
-       	}else if(annotationLGValue==2){
-       		
-       	}else{
-       		console.log('Không cần thông báo');
-       		console.log('Print nothing ');
-       	}
-    </script>
-    
+	<%
+	Object annotationLG = request.getAttribute("annotationLG");
+	%>
+
+	<script>
+ 	var annotationLGValue = '<%=annotationLG%>
+		';
+
+		if (annotationLGValue == 1) {
+			showAnnotation('Đăng nhập thành công', 'Chào mừng bạn đến chơiii',
+					1);
+		} else if (annotationLGValue == 2) {
+
+		} else {
+			console.log('Không cần thông báo');
+			console.log('Print nothing ');
+		}
+	</script>
+
 	<main>
 		<div class="layout">
 			<!-- Start of Navigation -->
@@ -64,30 +70,32 @@
 						<div class="nav nav-tab menu">
 							<button class="btn">
 								<img class="avatar-xl"
-									src="<c:url value="/static/dist/img/avatars/avatar-male-1.jpg" />"
+									src="<c:url value='/static/${currentUser.username}/${currentUser.avatar}' />"
 									alt="avatar">
 							</button>
 							<a style="cursor: pointer;" id="members"
 								onclick="toggleSidebar(this.id)" data-toggle="tab"
 								class="show active "><i onclick="chatOne(this)"
-								class="material-icons clickdouble">account_circle</i></a> <a
+								class="material-icons clickdouble">account_circle</i>
+								</a>
+								
+								 <a
 								style="cursor: pointer;" id="discussions"
 								onclick="toggleSidebar(this.id)" data-toggle="tab" class="show"><i
 								class="material-icons clickdouble" onclick="chatGroup(this)">chat_bubble_outline</i></a>
-							<a style="cursor: pointer;" id="notifications"
-								onclick="toggleSidebar(this.id)" data-toggle="tab"
-								class="f-grow1 show"><i class="material-icons clickdouble">notifications_none</i></a>
-							<button class="btn create " data-toggle="modal"
-								data-target="#AddGroupModal">
-								<a data-id="add-group" data-toggle="tab"
-									onclick="toggleModal(this, true)"><i class="material-icons">group_add</i></a>
-							</button>
+							<c:if test="${currentUser.isAdmin()}">
+								<a href="<c:url value="/users/register"/>"
+									style="cursor: pointer;" class="f-grow1 show"> <i
+									class="material-icons">group_add</i>
+								</a>
+							</c:if>
+
 							<input type="checkbox" id="darkModeToggle" hidden=""> <label
 								for="darkModeToggle"><i class="material-icons">brightness_2</i></label>
 							<a id="setting" onclick="toggleSidebar(this.id)"
-								data-toggle="tab"><i class="material-icons">settings</i></a>
-							<a href="<c:url value="/users/logout"/>" class="btn power" onclick="visitPage();">
-								<i class="material-icons">power_settings_new</i>
+								data-toggle="tab"><i class="material-icons">settings</i></a> <a
+								href="<c:url value="/users/logout"/>" class="btn power"
+								onclick="visitPage();"> <i class="material-icons">power_settings_new</i>
 							</a>
 						</div>
 					</div>
@@ -108,15 +116,7 @@
 											<i style="position: absolute; left: 20px; top: 1px;"
 												class="material-icons">search</i>
 										</button>
-									</form>									
-								</div>
-								<div class="list-group sort">
-									<button class="btn filterMembersBtn active show"
-										data-toggle="list" data-filter="all">Tất cả</button>
-									<button class="btn filterMembersBtn" data-toggle="list"
-										data-filter="online">Online</button>
-									<button class="btn filterMembersBtn" data-toggle="list"
-										data-filter="offline">Offline</button>
+									</form>
 								</div>
 								<div class="contacts">
 									<h1 class="name">Liên hệ</h1>
@@ -155,25 +155,22 @@
 									<form class="form-inline position-relative">
 										<input type="text" class="form-control" id="people"
 											placeholder="Tìm kiếm..." onkeyup="searchUser(this)">
-										<button id="searchGroup" type="button" class="btn btn-link loop">
-											<i class="material-icons">search</i>
+										<button id="searchGroup" type="button"
+											class="btn btn-link loop">
+											<i style="margin-top: -13px" class="material-icons">search</i>
 										</button>
 									</form>
-									<button class="btn create" data-toggle="modal"
-										data-target="#exampleModalCenter">
-										<i data-id="add-group" onclick="toggleModal(this, true)" class="material-icons">person_add</i>
-									</button>
-								</div>
-								<div class="list-group sort">
-									<button class="btn filterDiscussionsBtn active show"
-										data-toggle="list" data-filter="all">Tất cả</button>
-									<button class="btn filterDiscussionsBtn" data-toggle="list"
-										data-filter="read">Đọc</button>
-									<button class="btn filterDiscussionsBtn" data-toggle="list"
-										data-filter="unread">Chưa đọc</button>
+									<c:if test="${currentUser.isAdmin()}">
+										<button class="btn create" data-toggle="modal"
+											data-target="#exampleModalCenter">
+											<i data-id="add-group" onclick="showAddGroup(this, true)"
+												class="material-icons">person_add</i>
+										</button>
+									</c:if>
+
 								</div>
 								<div class="discussions">
-									<h1 class="name">Discussions</h1>
+									<h1 class="name">Trò chuyện</h1>
 
 									</span>
 									<div class="list-group" id="discussionsChats" role="tablist">
@@ -184,71 +181,7 @@
 							</div>
 							<!-- End of Discussions -->
 							<!-- Start of Notifications -->
-							<div id="notificationModal" class="tab-pane fade">
-								<div class="search">
-									<form class="form-inline position-relative">
-										<input type="search" class="form-control" id="notice"
-											placeholder="Filter notifications...">
-										<button type="button" class="btn btn-link loop">
-											<i class="material-icons filter-list">filter_list</i>
-										</button>
-									</form>
-								</div>
-								<div class="list-group sort">
-									<button class="btn filterNotificationsBtn active show"
-										data-toggle="list" data-filter="all">All</button>
-									<button class="btn filterNotificationsBtn" data-toggle="list"
-										data-filter="latest">Latest</button>
-									<button class="btn filterNotificationsBtn" data-toggle="list"
-										data-filter="oldest">Oldest</button>
-								</div>
-								<div class="notifications">
-									<h1 class="name">Notifications</h1>
-									<div class="list-group" id="alerts" role="tablist">
-										<a href="#"
-											class="filterNotifications all latest notification"
-											data-toggle="list"> <img class="avatar-md"
-											src="<c:url value="/static/dist/img/avatars/avatar-female-1.jpg" />"
-											data-toggle="tooltip" data-placement="top" title=""
-											alt="avatar" data-original-title="Janette">
-											<div class="status">
-												<i class="material-icons online">fiber_manual_record</i>
-											</div>
-											<div class="data">
-												<p>Janette has accepted your friend request on Swipe.</p>
-												<span>Oct 17, 2018</span>
-											</div>
-										</a> <a href="#"
-											class="filterNotifications all latest notification"
-											data-toggle="list"> <img class="avatar-md"
-											src="<c:url value="/static/dist/img/avatars/avatar-male-1.jpg" />"
-											data-toggle="tooltip" data-placement="top" title=""
-											alt="avatar" data-original-title="Michael">
-											<div class="status">
-												<i class="material-icons online">fiber_manual_record</i>
-											</div>
-											<div class="data">
-												<p>Michael, you have a new friend suggestion today.</p>
-												<span>Jun 21, 2018</span>
-											</div>
-										</a> <a href="#"
-											class="filterNotifications all latest notification"
-											data-toggle="list"> <img class="avatar-md"
-											src="<c:url value="/static/dist/img/avatars/avatar-male-2.jpg" />"
-											data-toggle="tooltip" data-placement="top" title=""
-											alt="avatar" data-original-title="Mariette">
-											<div class="status">
-												<i class="material-icons online">fiber_manual_record</i>
-											</div>
-											<div class="data">
-												<p>Mariette have just sent you a new message.</p>
-												<span>Feb 15, 2018</span>
-											</div>
-										</a>
 
-									</div>
-								</div>
-							</div>
 							<!-- End of Notifications -->
 							<!-- Start of Notifications Settings -->
 							<div class="category">
@@ -333,10 +266,11 @@
 								<div class="settings">
 									<div class="profile">
 										<img class="avatar-xl"
-											src="<c:url value="/static/dist/img/avatars/avatar-male-1.jpg" />"
+											src="<c:url value='/static/${currentUser.username}/${currentUser.avatar}' />"
 											alt="avatar">
+
 										<h1>
-											<a href="#">Bảo Khang</a>
+											<a href="#"><c:out value="${currentUser.username}" /></a>
 										</h1>
 										<span>Đồng Tháp, Việt Nam</span>
 										<div class="stats">
@@ -367,54 +301,22 @@
 													<p>Cập nhật chi tiết hồ sơ của bạn</p>
 												</div> <i class="material-icons">keyboard_arrow_right</i>
 											</a>
-											<div class="collapse show" id="collapseOne"
+											<div class="collapse" id="collapseOne"
 												aria-labelledby="headingOne"
 												data-parent="#accordionSettings">
 												<div class="content">
-													<div class="upload">
-														<div class="data">
-															<img class="avatar-xl"
-																src="dist/img/avatars/avatar-male-1.jpg" alt="image">
-															<label> <input type="file"> <span
-																class="btn button">Tải hình đại diện</span>
-															</label>
-														</div>
-														<p>Để có kết quả tốt nhất, hãy sử dụng hình ảnh có
-															kích thước tối thiểu 256px x 256px ở định dạng .jpg hoặc
-															.png!</p>
-													</div>
-													<form>
-														<div class="parent">
-															<div class="field">
-																<label for="firstName">Họ <span>*</span></label> <input
-																	type="text" class="form-control" id="firstName"
-																	placeholder="Họ" required>
-															</div>
-															<div class="field">
-																<label for="lastName">Tên<span>*</span></label> <input
-																	type="text" class="form-control" id="lastName"
-																	placeholder="Tên" required>
-															</div>
-														</div>
-														<div class="field">
-															<label for="email">Email <span>*</span></label> <input
-																type="email" class="form-control" id="email"
-																placeholder="Nhập địa chỉ email của bạn" required>
-														</div>
-														<div class="field">
-															<label for="password">Mật Khẩu</label> <input
-																type="password" class="form-control" id="password"
-																placeholder="Nhập mật khẩu mới" required>
-														</div>
-														<div class="field">
-															<label for="location">Đại chỉ</label> <input type="text"
-																class="form-control" id="location"
-																placeholder="Nhập địa chỉ của bạn" required>
-														</div>
-														<button class="btn btn-link w-100">Xóa tài khoản</button>
-														<button type="submit" class="btn button w-100">Áp
-															dụng</button>
-													</form>
+													<a href="<c:url value="/users/update"/>" >
+														<button style="font-size: 18px" type="submit"
+															class="btn button w-100">Cập nhật tài khoản</button>
+													</a> 
+													<a href="<c:url value="/userManager"/>">
+														<button style="font-size: 18px" class="btn btn-link w-100">Danh
+															sách cấm tài khoản</button>
+													</a>
+													
+													<a href="<c:url value="/userManager/group"/>">
+														<button style="font-size: 18px" class="btn btn-link w-100">Danh sách cấm chat</button>
+													</a>
 												</div>
 											</div>
 										</div>
@@ -464,6 +366,7 @@
 												data-toggle="collapse" data-target="#collapseThree"
 												aria-expanded="true" aria-controls="collapseThree"> <i
 												class="material-icons md-30 online">notifications_none</i>
+
 												<div class="data">
 													<h5>Thông báo</h5>
 													<p>Bật hoặc tắt thông báo</p>
@@ -626,13 +529,15 @@
 										<!-- End of Language -->
 										<!-- Start of Privacy & Safety -->
 										<div class="category">
-											<a href="#" class="title collapsed" id="headingSeven"
-												data-toggle="collapse" data-target="#collapseSeven"
-												aria-expanded="true" aria-controls="collapseSeven"> <i
+											<a href="<c:url value="/users/changepass"/>"
+												class="title collapsed" id="headingSeven"> <i
 												class="material-icons md-30 online">lock_outline</i>
 												<div class="data">
-													<h5>Quyền riêng tư và an toàn</h5>
+
+													<h5>Đổi mật khẩu</h5>
 													<p>Kiểm soát cài đặt quyền riêng tư của bạn</p>
+
+
 												</div> <i class="material-icons">keyboard_arrow_right</i>
 											</a>
 											<div class="collapse" id="collapseSeven"
@@ -732,19 +637,24 @@
 
 			<!-- ---------------------------------------------- -->
 			<div class="main">
-		
 				<div class="tab-content" id="nav-tabContent">
 					<!-- Start of Babble -->
-					<div border: 1px solid #a7a6a6;"
-						class="babble tab-pane fade active show" role="tabpanel"
-						aria-labelledby="list-chat-list">
+					<div border: 1px solid
+						#a7a6a6;"
+						class="babble tab-pane fade active show"
+						role="tabpanel" aria-labelledby="list-chat-list">
 						<!-- Start of Chat -->
 						<!-- code phần bỏ vô nhắn tin -->
-						<span id="receiver"></span>
+						<span style="position: relative;" id="receiver"> <img
+							class="logo" alt=""
+							style="width: 540px; position: absolute; top: 280px; left: 200px"
+							src="https://static.ybox.vn/2020/10/3/1602043205273-1595067112781-Logo5SGroup_2004.png"
+							width="700px">
+						</span>
 						<!-- code phần khi click thêm nhóm -->
 						<div class="modal-box border " id="add-group">
 							<div class="modal-box-head">
-								<div class="modal-box-title">Add Group</div>
+								<div class="modal-box-title">Thêm thành viên</div>
 								<div class="modal-box-close toggle-btn" data-id="add-group"
 									onclick="toggleModal(this, false)">
 									<i class="fa fa-times"></i>
@@ -754,9 +664,10 @@
 							<form action="" onsubmit="return createGroup(event);">
 								<div class="modal-box-body">
 									<input type="text" class="txt-input txt-group-name"
-										placeholder="Group Name...">
+										placeholder="Tên nhóm...">
 								</div>
-								<button type="submit" class="btn">Create Group</button>
+								<button style="color: blue" type="submit" class="btn">
+									Tạo nhóm</button>
 							</form>
 						</div>
 
@@ -771,8 +682,10 @@
 							<hr>
 							<form action="" onsubmit="return addMember(event);">
 								<div class="modal-box-body add-member-body">
-									<input type="text" class="txt-input txt-group-name"
-										placeholder="Name of member..."
+									<input style="background: #cccccc;" type="text"
+										class="txt-input txt-group-name" id="searchMember"
+										onclick="searchMemberByKeyword(this)"
+										placeholder="Tên thành viên..."
 										onkeyup="searchMemberByKeyword(this)">
 
 									<div class="list-user">
@@ -780,13 +693,14 @@
 										</ul>
 									</div>
 								</div>
-								<button style="color: blue; font-size: 20px" type="submit" class="btn">Thêm thành viên</button>
+								<button style="color: blue; font-size: 20px" type="submit"
+									class="btn">Thêm thành viên</button>
 							</form>
 						</div>
 
 						<div class="modal-box border" id="manage-user">
 							<div class="modal-box-head">
-								<div class="modal-box-title">All Member Of Group</div>
+								<div class="modal-box-title">Tất cả thành viên</div>
 								<div class="modal-box-close toggle-btn" data-id="manage-user"
 									onclick="toggleModal(this, false)">
 									<i class="fa fa-times"></i>
@@ -1239,6 +1153,8 @@
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
 		crossorigin="anonymous"></script>
 	<script>
+		var isAdmin = ${currentUser.isAdmin()};
+
 		window.jQuery
 				|| document
 						.write('<script src="dist/js/vendor/jquery-slim.min.js"><\/script>')
@@ -1384,7 +1300,7 @@
 		}
 
 		function visitPage() {
-			
+
 		}
 
 		var modal = document.getElementById('myModal');
@@ -1405,6 +1321,7 @@
 				modal.style.display = 'none';
 			}
 		}
+		var liked = false;
 	</script>
 	<script src="<c:url value="/static/dist/js/vendor/popper.min.js"/>"></script>
 	<%-- <script src="<c:url value="/static/dist/js/swipe.min.js" />"></script> --%>

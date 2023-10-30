@@ -28,6 +28,7 @@ public class ConversationController extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		  response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 		String url = request.getContextPath();
 		String conversationId = request.getParameter("conversationId");
 		String destPage = "/WEB-INF/views/group-form.jsp";
@@ -45,6 +46,7 @@ public class ConversationController extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		  response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 		System.out.println("conversations 2 người");
 		String conversationId = request.getParameter("groupId");
 		String groupName = request.getParameter("groupName").trim();

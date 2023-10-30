@@ -24,24 +24,26 @@
 								<div class="content">
                                     <div id="border">
                                         <h3 style="color: black;">Đổi mật khẩu</h3>
-									<form>
-										<!-- <div class="form-group">
-											<input type="text" id="inputEmail" class="form-control" placeholder="Nhập tài khoản" required>
+									<form action="<c:url value="/users/changepass" />" method="POST">
+										<% 
+	   									 Object message = request.getAttribute("message");
+	   									%>
+										<%=message %>
+										<h5 style="color: red"><b>${message2}</b> </h5>
+										<div class="form-group">										
+											<input type="text" name="username" class="form-control" placeholder="Nhập tài khoản" value="${sessionScope.user.username}" required>
 											<button class="btn icon"><i class="material-icons">mail_outline</i></button>
-										</div> -->
-										<div class="form-group">
-											<input type="password" id="inputPassword" class="form-control" placeholder="Nhập mật khẩu hiện tại" required>
+										</div>										
+                                        <div class="form-group">
+											<input  name="passnew" class="form-control" placeholder="Nhập mật khẩu mới" required value="">
 											<button class="btn icon"><i class="material-icons">lock_outline</i></button>
 										</div>
                                         <div class="form-group">
-											<input type="password" id="inputPassword" class="form-control" placeholder="Nhập mật khẩu mới" required>
+											<input type="password" name="passnew2" id="inputPassword" class="form-control" placeholder="Xác nhận mật khẩu mới" required>
 											<button class="btn icon"><i class="material-icons">lock_outline</i></button>
 										</div>
-                                        <div class="form-group">
-											<input type="password" id="inputPassword" class="form-control" placeholder="Xác nhận mật khẩu mới" required>
-											<button class="btn icon"><i class="material-icons">lock_outline</i></button>
-										</div>
-										<button type="submit" class="btn button" formaction="index.html">Đổi mật khẩu</button>
+										
+										<button type="submit" class="btn button" >Đổi mật khẩu</button>
 									</form>
                                     </div>
 								</div>
@@ -52,14 +54,7 @@
 				
 			</div> <!-- Layout -->
 		</main>
-		<!-- Bootstrap core JavaScript
-		================================================== -->
-		<!-- Placed at the end of the document so the pages load faster -->
-		<%--<script type="text/javascript"
-		 src="<c:url value="/static/dist/js/jquery-3.3.1.slim.min.js" />" charset="utf-8" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-		<script>window.jQuery || document.write('<script src="<c:url value="/static/dist/js/vendor/jquery-slim.min.js"><\/script>')</script>
-		<script	type="text/javascript"
-		 src="<c:url value="/static/dist/js/jquery-3.3.1.slim.min.js" />"></script>--%>
+
 		 <script 
 		src="<c:url value="/static/dist/js/bootstrap.min.js" />" ></script>  
 	</body>

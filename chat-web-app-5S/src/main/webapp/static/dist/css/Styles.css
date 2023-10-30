@@ -8,7 +8,7 @@
 }
 
 body {
-    background:url(https://cdn.wallpapersafari.com/13/6/Mpsg2b.jpg);
+   /*  background:url(https://cdn.wallpapersafari.com/13/6/Mpsg2b.jpg); */
     color: var(--text-color);
 }
 /* Định dạng nền và màu chữ cho giao diện Dark Mode */
@@ -46,20 +46,27 @@ body {
 
 .dark-mode .sidebar{
     background-color: #333333;
+    border-right: 1px solid #fff; 
 }
 .dark-mode  .user-contact{
 	 background-color: #333333;
+	 border-bottom: 1px solid #fff;
 }
 
 .dark-mode  .user-name{
 	 color: #fff;
 }
 .dark-mode  .form-send-message{
-	 background: #ccc;
+	 background: #333333;
+	 border-top: 1px solid #fff;  
 }
+.dark-mode  .form-send-message .btn{	 
+	 color: #fff;  
+}
+
 .dark-mode  .txt-input{
-	 background: #ccc;
-	 color: black;
+	 background: #333333;
+	 color: #fff;
 }
 .dark-mode  .message-text{
 	 background: #444141;	 
@@ -74,6 +81,21 @@ body {
 .dark-mode .notifications > .name{
     color: #ffffff;
 }  
+.dark-mode .navigation{
+    background: #333333;
+} 
+.dark-mode .list-messages-contain{
+    background: #333333;    
+}
+
+.dark-mode .main{
+    background: #333333;    
+}  
+
+ .dark-mode .message-img .sender-name {
+	color: #fff;	
+}
+
   /* Thay đổi màu nền và biểu tượng nếu cần */
   .dark-mode .dropdown-menu {
     background-color: #222; /* Màu nền menu dropdown trong chế độ tối */

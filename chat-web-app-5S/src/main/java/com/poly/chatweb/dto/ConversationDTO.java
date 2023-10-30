@@ -14,7 +14,14 @@ public class ConversationDTO {
 
 	@JsonProperty("avatar")
 	private String avatar;
-
+	
+	@JsonProperty("isActive")
+	private String isActive;
+	
+	@JsonProperty("hideGroup")
+	private boolean hideGroup;
+	
+	
 	@JsonProperty("users")
 	private List<UserDTO> users;
 
@@ -23,11 +30,20 @@ public class ConversationDTO {
 
 	@JsonCreator
 	public ConversationDTO(@JsonProperty("id") Long id, @JsonProperty("name") String name,
-			@JsonProperty("avatar") String avatar, @JsonProperty("users") List<UserDTO> users) {
+			@JsonProperty("avatar") String avatar,@JsonProperty("isActive") String isActive, @JsonProperty("hideGroup") boolean hideGroup, @JsonProperty("users") List<UserDTO> users) {
 		this.id = id;
 		this.name = name;
 		this.avatar = avatar;
-		this.users = users;
+		this.users = users;		
+		this.isActive = isActive;			
+	}
+
+	public boolean isHideGroup() {
+		return hideGroup;
+	}
+
+	public void setHideGroup(boolean hideGroup) {
+		this.hideGroup = hideGroup;
 	}
 
 	public Long getId() {
@@ -61,4 +77,14 @@ public class ConversationDTO {
 	public void setUsers(List<UserDTO> users) {
 		this.users = users;
 	}
+
+	public String getIsActive() {
+		return isActive;
+	}
+
+	public void setIsActive(String isActive) {
+		this.isActive = isActive;
+	}
+	
+
 }

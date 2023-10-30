@@ -68,8 +68,7 @@
 							<h2>Chào mừng bạn</h2>
 							<p>Đăng nhập ngay để không bỏ lỡ những điều thú vị.</p>
 							
-							<a  href="<c:url value="/users/login"/>" class="btn button">Đăng nhập</a> <br> <br>
-							<a class="btn button"  href="<c:url value="/users/register" />">Đăng ký</a> <br> <br>
+							<a  href="<c:url value="/users/login"/>" class="btn button">Đăng nhập</a> <br> <br>							
 							<a  href="<c:url value="/users/changepass"/>" class="btn button">Đổi mật khẩu</a>
 						</div>
 					</div>

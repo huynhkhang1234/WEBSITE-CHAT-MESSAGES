@@ -2221,7 +2221,7 @@ transparent
 		min-width: 100px;
 		max-width: 100px;
 		overflow-y: auto;
-		border-right: 2px solid #fbfbfb
+		border-right: 2px solid #fbfbfb;
 	}
 	.navigation::-webkit-scrollbar {
 		display: none
