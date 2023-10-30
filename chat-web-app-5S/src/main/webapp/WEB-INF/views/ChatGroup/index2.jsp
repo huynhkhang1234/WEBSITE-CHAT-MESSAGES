@@ -311,11 +311,11 @@ response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 													</a> 
 													<a href="<c:url value="/userManager"/>">
 														<button style="font-size: 18px" class="btn btn-link w-100">Danh
-															sách cấm tài khoản</button>
+															sách tài khoản</button>
 													</a>
 													
 													<a href="<c:url value="/userManager/group"/>">
-														<button style="font-size: 18px" class="btn btn-link w-100">Danh sách cấm chat</button>
+														<button style="font-size: 18px" class="btn btn-link w-100">Danh sách chat</button>
 													</a>
 												</div>
 											</div>
