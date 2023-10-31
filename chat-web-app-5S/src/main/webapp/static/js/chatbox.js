@@ -315,8 +315,7 @@ function createGroup(e) {
 			let appendDelete = '';
 			//console.log(isAdmin)
 			if (isAdmin) {
-				appendDelete = '<button style="width: 300px;background: rebeccapurple;color: #fff;"  data-id="' + data.id + '" onclick="deleteGroup(this)">Xoá</button>' +
-					'</br> <button style="width: 300px;background: rebeccapurple;color: #fff;"  data-id="' + data.id + '" onclick="hidenGroup(this)">Ẩn</button>';
+				appendDelete = '<button style="width: 300px;background: rebeccapurple;color: #fff;border-radius: 22px;border: none;height: 37px; "  data-id="' + data.id + '" onclick="deleteGroup(this)">Xóa</button>';
 			} else {
 				appendDelete = '';
 			}
@@ -341,9 +340,17 @@ function createGroup(e) {
 				'</div> ' +
 				'</a>' + appendDelete
 				+ '</span>';
+
+
 			document.querySelector("#discussionsChats").innerHTML += appendUser;
 			document.querySelector(".txt-group-name").value = "";
 		});
+	Swal.fire({
+		icon: 'success',
+		title: 'Tạo nhóm thành công',
+		text: '',
+		timer: 2000
+	})
 }
 //add người vào nhóm
 function addMember(e) {
@@ -364,7 +371,6 @@ function addMember(e) {
 		user.avatar = null;
 		//thêm vào object.
 		object.users.push(user);
-		
 	});
 
 
@@ -389,8 +395,6 @@ function addMember(e) {
 			document.getElementById("group-" + groupId).querySelector(".user-contain").setAttribute("data-number", numberMember);
 			// thêm vào lạ group.			
 		});
-		const search = document.getElementById("searchMember");
-		search.click();
 }
 //tìm kiếm user và thông tin message add vào group lại
 function fetchUser() {
@@ -438,7 +442,6 @@ function fetchUser() {
 }
 
 function deleteGroup(ele) {
-	alert('Xóa nhóm thành công');
 	document.getElementById('receiver').innerHTML = "";
 	let grpId = ele.getAttribute('data-id');
 
@@ -451,19 +454,13 @@ function deleteGroup(ele) {
 		.then(function(data) {
 			let groupNumber = document.getElementById("group-" + grpId);
 			if (groupNumber) groupNumber.outerHTML = "";
+			Swal.fire({
+				icon: 'success',
+				title: 'Xóa nhóm thành công',
+				text: '',
+				timer: 2000
+			})
 
-		})
-		.catch(ex => console.log(ex));
-}
-function hideGroup(ele) {
-	let grpId = ele.getAttribute('data-id');
-
-	fetch("http://" + window.location.host + "/chat-web-app/conversations-rest-controller?conversationId=" + grpId, {
-		method: 'put'
-	})
-		.then(function(data) {
-			alert("Cập nhật thành công");
-			fetchGroup();
 		})
 		.catch(ex => console.log(ex));
 }
@@ -472,15 +469,24 @@ function toggleLike(id) {
 	if (likeButton) {
 		if (liked) {
 
-			alert('chat dc')
-
 			likeButton.innerHTML = '<i onclick="toggleLike(groupId)" class="fa fa-bell" aria-hidden="true"></i>';
 			liked = false;
+			Swal.fire({
+				icon: 'success',
+				title: 'Cấm chat thành công',
+				text: 'Thông báo hệ thống',
+				timer: 2000
+			})
 		} else {
-
-			alert('ko chat')
+			
 			likeButton.innerHTML = '<i onclick="toggleLike(groupId)" class="fa fa-bell-slash-o" aria-hidden="true"></i>';
 			liked = true;
+			Swal.fire({
+				icon: 'success',
+				title: 'Mở khóa chat thành công',
+				text: 'Thông báo hệ thống',
+				timer: 2000
+			})
 		}
 	}
 
@@ -683,54 +689,46 @@ function fetchGroup() {
 			return data.json();
 		})
 		.then(data => {
+
 			document.querySelector("#discussionsChats").innerHTML = "";
 			document.querySelector("#receiver").innerHTML = "";
 			data.forEach(function(data) {
-				console.log(data);
 				let numberMember = data.users ? data.users.length : 0;
 
 				let findObject = data.users.find(element => element.username == username);
 				let isAdmin = findObject.admin;
+
 				//let imgSrc = ' src="http://' + window.location.host + '/files/group-' + data.id + '/' + data.avatar + '"';
 				let imgSrc = 'src="/chat-web-app/static/images/anh2.jpg"';
-				if (isAdmin && data.hideGroup) {
-					appendDelete = '<button style="width: 300px;background: rebeccapurple;color: #fff;" data-id="' + data.id + '" onclick="deleteGroup(this)">Xoá</button>' +
-						'</br> <button style="width: 300px;background: rebeccapurple;color: #fff;"  data-id="' + data.id + '" onclick="hideGroup(this)">Bỏ ẩn</button>';
-				} else if (isAdmin && !data.hideGroup) {
-					appendDelete = '<button style="width: 300px;background: rebeccapurple;color: #fff;" data-id="' + data.id + '" onclick="deleteGroup(this)">Xoá</button>' +
-						'</br> <button style="width: 300px;background: rebeccapurple;color: #fff;"  data-id="' + data.id + '" onclick="hideGroup(this)">Ẩn</button>';
+				if (isAdmin) {
+					appendDelete = '<button style="width: 300px;background: rebeccapurple;color: #fff;border-radius: 22px;border: none;height: 37px; "  data-id="' + data.id + '" onclick="deleteGroup(this)">Xóa</button>';
 				} else {
 					appendDelete = '';
 				}
-				if (data.hideGroup && !isAdmin) {
-					let appendUser = '';
-					document.querySelector("#discussionsChats").innerHTML += appendUser;
 
-				} else {
-					let appendUser = '<span id="group-' + data.id + '" >' +
-						'<a  data-id="' + data.id + '"  data-number="' + numberMember + '" data-name="' + data.name + '"  onclick="setGroup(this)"' +
-						'class="filterDiscussions all unread single active" ' +
-						'data-toggle="list" role="tab"> ' +
-						'<img class="avatar-md" id="img-group-' + data.id + '"  ' +
-						'src="http://localhost:8080/chat-web-app/static/images/anhNhom.jpg" ' +
-						'data-toggle="tooltip" data-placement="top" title="Janette" ' +
-						'alt="avatar"> ' +
-						'<div class="status"> ' +
-						'<i class="material-icons online">fiber_manual_record</i> ' +
-						'</div> ' +
-						'<div class="new bg-yellow"> ' +
-						'<span>+7</span> ' +
-						'</div> ' +
-						'<div class="data-id"> ' +
-						'<h5>' + data.name + '</h5> ' +
-						'<p>Mới tạo nhóm</p> ' +
-						'</div> ' +
-						'</a>' + appendDelete
-						+ '</span>';
+				let appendUser = '<span id="group-' + data.id + '" >' +
+					'<a  data-id="' + data.id + '"  data-number="' + numberMember + '" data-name="' + data.name + '"  onclick="setGroup(this)"' +
+					'class="filterDiscussions all unread single active" ' +
+					'data-toggle="list" role="tab"> ' +
+					'<img class="avatar-md" id="img-group-' + data.id + '"  ' +
+					'src="http://localhost:8080/chat-web-app/static/images/anhNhom.jpg" ' +
+					'data-toggle="tooltip" data-placement="top" title="Janette" ' +
+					'alt="avatar"> ' +
+					'<div class="status"> ' +
+					'<i class="material-icons online">fiber_manual_record</i> ' +
+					'</div> ' +
+					'<div class="new bg-yellow"> ' +
+					'<span>+7</span> ' +
+					'</div> ' +
+					'<div class="data-id"> ' +
+					'<h5>' + data.name + '</h5> ' +
+					'<p>Mới tạo nhóm</p> ' +
+					'</div> ' +
+					'</a>' + appendDelete
+					+ '</span>';
 
 
-					document.querySelector("#discussionsChats").innerHTML += appendUser;
-				}
+				document.querySelector("#discussionsChats").innerHTML += appendUser;
 			});
 		}).catch(ex => {
 			console.log(ex);
@@ -1170,7 +1168,7 @@ function searchGroupByKeyword(value) {
 					'<h5>' + data.name + '</h5> ' +
 					'<p>Mới tạo nhóm</p> ' +
 					'</div> ' +
-					'<button style="width: 300px;background: rebeccapurple;color: #fff;" data-id="' + data.id + '" onclick="deleteGroup(this)">Xoá</button>' +
+					'<button style="width: 300px;background: rebeccapurple;color: #fff;" data-id="' + data.id + '" onclick="deleteGroup(this)">Xóa</button>' +
 					'</a>';
 				//	if (isAdmin) {
 				//	appendUser += '<div class="group-delete border" data-id="' + data.id + '" onclick="deleteGroup(this)">Delete</div>';
