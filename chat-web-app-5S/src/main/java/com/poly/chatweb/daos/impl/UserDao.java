@@ -34,7 +34,7 @@ public class UserDao extends GenericDao<User> implements UserDaoInterface {
 
 	@Override
 	public List<User> findFriends(String userName) {
-		StringBuilder sql = new StringBuilder("select distinct u.username, u.avatar, u.gender");
+		StringBuilder sql = new StringBuilder("select  *");
 		sql.append(" from users u");
 		sql.append(" where u.username LIKE ?");
 		String param = "%" + userName + "%";
@@ -123,14 +123,14 @@ public class UserDao extends GenericDao<User> implements UserDaoInterface {
 
 	@Override
 	public List<User> findAllUser() {
-		StringBuilder sql = new StringBuilder("select * from Users");
+		StringBuilder sql = new StringBuilder("select * from Users ORDER BY username ASC");
 		List<User> users = query(sql.toString(), new UserMapper());
 		return users;
 	}
 
 	@Override
 	public User findUserByUsername(String username) {
-		StringBuilder sql = new StringBuilder("select username, gender, avatar, is_admin, is_active");
+		StringBuilder sql = new StringBuilder("select *");
 		sql.append(" from users where username=?");
 		List<User> users = query(sql.toString(), new UserMapper(), username);
 		return users.isEmpty() ? null : users.get(0);

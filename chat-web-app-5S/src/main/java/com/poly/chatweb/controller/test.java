@@ -31,9 +31,12 @@ public class test extends HttpServlet {
 		 
 		 User currentUser = (User) request.getSession().getAttribute("user");		 
 			List<User> friends = userService.findFriends(currentUser.getUsername());
+			List<User> allUser = userService.getAllUser();
+			
+			request.setAttribute("allUser", allUser);
 			request.setAttribute("friends", friends);
 			request.setAttribute("user", currentUser);	
-			System.out.println("tesst thu no ben kia nha anh em");			
+			//System.out.println("tesst thu no ben kia nha anh em");			
 			//System.out.println("ADMIN?: "+currentUser.isAdmin());
 			
 			request.setAttribute("currentUser", currentUser);

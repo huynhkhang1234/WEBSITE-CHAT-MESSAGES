@@ -37,7 +37,11 @@ public class ConversationRestController extends HttpServlet {
 		String usersConversationId = request.getParameter("usersConversationId");
 		String messagesConversationId = request.getParameter("messagesConversationId");
 		String conversationKeyword = request.getParameter("conversationKeyword");	
-		String json = "Must have username or conversation id as request param";		
+		String json = "Must have username or conversation id as request param";	
+		System.out.println(username);
+		System.out.println(conversationKeyword);
+		System.out.println(messagesConversationId);
+		
 		ObjectMapper objectMapper = new ObjectMapper();
 
 		if (conversationKeyword != null && !conversationKeyword.isEmpty() && username != null && !username.isEmpty()) {

@@ -36,7 +36,7 @@ public class UploadServlet extends HttpServlet {
             Workbook workbook = WorkbookFactory.create(fileContent);
             org.apache.poi.ss.usermodel.Sheet sheet = workbook.getSheetAt(0); // Đây là ví dụ, bạn cần chỉ định sheet cụ thể
 
-            for (int rowIndex = 0; rowIndex < sheet.getPhysicalNumberOfRows(); rowIndex++) {
+            for (int rowIndex = 1; rowIndex < sheet.getPhysicalNumberOfRows(); rowIndex++) {
                 Row row = sheet.getRow(rowIndex);
 
                 // Đọc dữ liệu từ từng dòng của tệp Excel và nhập vào cơ sở dữ liệu
@@ -55,8 +55,10 @@ public class UploadServlet extends HttpServlet {
                     // Xử lý trường hợp khác nếu cần thiết
                     password = ""; // Hoặc bạn có thể xử lý theo cách khác tùy vào yêu cầu của bạn
                 }
-
-                userService.saveUser(true, username, password, false, null, true, true);
+                
+                Boolean gender = row.getCell(2).getBooleanCellValue();
+                Boolean isadmin = row.getCell(2).getBooleanCellValue();
+                userService.saveUser(true, username, password, gender, null, isadmin, true);
             }
         } catch (Exception e) {
             e.printStackTrace();

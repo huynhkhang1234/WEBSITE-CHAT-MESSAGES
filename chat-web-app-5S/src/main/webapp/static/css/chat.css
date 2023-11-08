@@ -353,7 +353,7 @@ img {
 }
 
 .user-img-dot.online {
-    background: var(--onlineStatus);
+    color: blue; 
 }
 
 
@@ -609,4 +609,8 @@ img {
         display: none;
         border-radius: 1rem;
     }
+}
+
+.sidebar .contacts .contact .online{
+	color: blue;
 }
