@@ -33,8 +33,11 @@ public class userBlockController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String sql = "update users set is_active = 0 ";
-		userService.userBlock(sql);
+		
+		User utemp = (User) request.getSession().getAttribute("user");
+		String sql1 = "update users set is_active = 0 where username != '"+utemp.getUsername()+"'";
+		userService.userBlock(sql1);
+		
 		List<User> listUser = userService.getAllUser();
 		
 		request.setAttribute("listU", listUser);

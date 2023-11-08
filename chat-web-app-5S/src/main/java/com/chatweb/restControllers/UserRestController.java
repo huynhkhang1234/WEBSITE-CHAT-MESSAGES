@@ -30,7 +30,7 @@ public class UserRestController extends HttpServlet {
 	public UserRestController() {
 		super();
 	}
-
+	int checkLogin = 0;
 	
 	//sử lí kiểm tra xem có tồn tại user và trang thái on hay ko bằng socket.
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -75,21 +75,20 @@ public class UserRestController extends HttpServlet {
 	    boolean isActive = Boolean.valueOf(request.getParameter("isActive"));
 		//kiểm tra username đã tồn tại
 		if(userServiceInterface.usernameIsExit(username)==true) {
-			//status 400
-			response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-			//đặt định dạng của phản hồi
-			response.setContentType("text/plain");
-			//lấy đối tượng PrintWriter
-			PrintWriter writer = response.getWriter();
-			//in dòng thông báo
-			writer.println("Username already exist!");
-			return;
-		}
-		Boolean gender= Boolean.valueOf(request.getParameter("gender"));
-		Part avarta = request.getPart("avarta");
-		userServiceInterface.saveUser(true, username, password, gender, avarta, isAdmin, isActive);
+			checkLogin = 1;
+			 request.setAttribute("annotationLG", checkLogin);
+			 System.out.println(checkLogin);
+				String url  = request.getContextPath();
+				RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/ChatGroup/sign-up.jsp");
+				rd.forward(request, response);
+		}else {
+			Boolean gender= Boolean.valueOf(request.getParameter("gender"));
+			Part avarta = request.getPart("avarta");
+			userServiceInterface.saveUser(true, username, password, gender, avarta, isAdmin, true);
 
-		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/ChatGroup/sign-in.jsp");
-		rd.forward(request, response);
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/ChatGroup/sign-in.jsp");
+			rd.forward(request, response);
+		}
+	
 	}
 }

@@ -62,6 +62,7 @@ response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 	</script>
 
 	<main>
+		
 		<div class="layout">
 			<!-- Start of Navigation -->
 			<div class="navigation">
@@ -69,15 +70,31 @@ response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 					<div class="inside">
 						<div class="nav nav-tab menu">
 							<button class="btn">
-								<img class="avatar-xl"
-									src="<c:url value='/static/${currentUser.username}/${currentUser.avatar}' />"
-									alt="avatar">
+							<c:if test="${currentUser.avatar == ''}">
+						    <img class="avatar-xl"
+						        src="<c:url value='/static/images/logo5s.png' />"
+						        alt="avatar">
+							</c:if>
+							
+							<c:if test="${currentUser.avatar != ''}">
+						    <img class="avatar-xl"
+						        src="<c:url value='/static/${currentUser.username}/${currentUser.avatar}' />"
+						        alt="avatar">
+							</c:if>
+								
 							</button>
-							<a style="cursor: pointer;" id="members"
+							<!-- này là kết bạn -->
+							<!-- <a style="cursor: pointer;" id="members"
 								onclick="toggleSidebar(this.id)" data-toggle="tab"
 								class="show active "><i onclick="chatOne(this)"
 								class="material-icons clickdouble">account_circle</i>
-								</a>
+								</a> -->
+								<!--  này danh sách user-->
+							 <a style="cursor: pointer;" id="members"
+								onclick="toggleSidebar(this.id)" data-toggle="tab"
+								class="show active "><i onclick="loadUser()"
+								class="material-icons clickdouble">account_circle</i>
+								</a> 
 								
 								 <a
 								style="cursor: pointer;" id="discussions"
@@ -111,7 +128,8 @@ response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 								<div class="search" style="cursor: text;">
 									<form class="form-inline position-relative">
 										<input type="text" class="form-control" id="people"
-											placeholder="Tìm kiếm..." onkeyup="searchUser(this)">
+											placeholder="Tìm kiếm..." onkeyup="findUsers(this)">
+										
 										<button id="search" type="button" class="btn btn-link loop">
 											<i style="position: absolute; left: 20px; top: 1px;"
 												class="material-icons">search</i>
@@ -125,22 +143,33 @@ response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 										<c:url value="/static/images/anh2.jpg" />
 									</p>
 									<div class="list-group" id="contacts" role="tablist">
-										<c:forEach var="friend" items="${friends}">
+										<c:forEach var="friend" items="${allUser}">
 											<a id="${friend.username }" onclick="setReceiver(this);"
 												class="filterMembers all online contact" data-toggle="list">
+												<c:if test="${ empty  friend.avatar}">
 												<img id="img-${friend.username}" class="avatar-md"
-												src="<c:url value="/static/data/${friend.username}/${friend.avatar}" />"
+												src="<c:url value="/static/images/anh2.jpg" />"
 												data-toggle="tooltip" data-placement="top" title="Janette"
-												alt="avatar"> <%-- <div class="status" id="status-${friend.username}"
-													class="user-img-dot">
-													<i class="material-icons online">fiber_manual_record</i>
-												</div> --%>
-												<div id="status-${friend.username}" class="user-img-dot"></div>
+												alt="avatar"> 
+												</c:if>
+												
+												<c:if test="${ not empty friend.avatar}">
+												<img id="img-${friend.username}" class="avatar-md"
+												src="<c:url value="/static/${friend.username}/${friend.avatar}" />"
+												data-toggle="tooltip" data-placement="top" title="Janette"
+												alt="avatar"> 
+												</c:if>
+												
+											 <div  id="status-${friend.username}" class="status">
+													
+												</div>   
+												
+											 <%-- 	<div id="status-${friend.username}" class="user-img-dot"></div> --%> 
+											 	
 												<div class="data">
 													<h5>${friend.username}</h5>
 													<p>Bạc Liêu, VIệt Nam</p>
 												</div>
-
 
 											</a>
 										</c:forEach>
@@ -179,7 +208,6 @@ response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 									</div>
 								</div>
 							</div>
-							<!-- End of Discussions -->
 							<!-- Start of Notifications -->
 
 							<!-- End of Notifications -->
@@ -309,14 +337,22 @@ response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 														<button style="font-size: 18px" type="submit"
 															class="btn button w-100">Cập nhật tài khoản</button>
 													</a> 
+													<c:if test="${currentUser.isAdmin()}">
 													<a href="<c:url value="/userManager"/>">
 														<button style="font-size: 18px" class="btn btn-link w-100">Danh
 															sách cấm tài khoản</button>
 													</a>
 													
 													<a href="<c:url value="/userManager/group"/>">
-														<button style="font-size: 18px" class="btn btn-link w-100">Danh sách cấm chat</button>
+														<button style="font-size: 18px" class="btn btn-link w-100">Danh sách cấm chat nhóm</button>
 													</a>
+													</c:if>
+													
+													<a href="<c:url value="/vitri"/>">
+														<button style="font-size: 18px" class="btn btn-link w-100">
+														Vị trí </button>
+													</a>
+													
 												</div>
 											</div>
 										</div>

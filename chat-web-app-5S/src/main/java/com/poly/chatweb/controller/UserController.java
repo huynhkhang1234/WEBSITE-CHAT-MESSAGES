@@ -13,6 +13,7 @@ import javax.servlet.http.Part;
 
 import com.chatweb.services.UserServiceInterface;
 import com.chatweb.services.impl.UserService;
+import com.poly.chatweb.models.User;
 
 @WebServlet("/users/*")
 @MultipartConfig
@@ -97,7 +98,10 @@ public class UserController extends HttpServlet {
 	        userService.saveUser(true, username, password, Boolean.valueOf(gender), avatar, isAdmin, isActive);
 	        response.sendRedirect(url + "/login");
 	    } else if (path.endsWith("update")) {
-	        userService.saveUser(false, username, password, Boolean.valueOf(gender), avatar, isAdmin, isActive);
+	    	User us =	userService.findUserByUsername(username);
+	    	System.out.println(username);
+	    	System.out.println(us.getPassword());
+	        userService.saveUser(false, username, "123", Boolean.valueOf(gender), avatar, isAdmin, isActive);
 	        // Đặt một thuộc tính trong request để thông báo rằng cập nhật thành công
 	        request.setAttribute("updateSuccess", true);
 

@@ -18,6 +18,17 @@ public class User {
 		this.gender = gender;
 		this.avatar = avatar;
 	}
+	
+
+	public User(String username, String password, boolean gender, String avatar, boolean isAdmin, boolean is_active) {
+		super();
+		this.username = username;
+		this.password = password;
+		this.gender = gender;
+		this.avatar = avatar;
+		this.isAdmin = isAdmin;
+		this.is_active = is_active;
+	}
 
 	public String getUsername() {
 		return username;

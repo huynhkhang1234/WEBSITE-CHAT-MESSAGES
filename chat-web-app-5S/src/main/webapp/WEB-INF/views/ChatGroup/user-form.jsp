@@ -127,14 +127,16 @@
             <div class="register-form form active">
                 <form action="<c:url value="/users/update" />" enctype="multipart/form-data" method="POST">
                     <c:choose>
-                        <c:when test="${user.username != null}">
-                            <input type="text" class="txt-input border" name="username" value="${user.username}" readonly>
-                        </c:when>
-                        <c:otherwise>
-                            <input type="text" class="txt-input border" name="username" placeholder="Username">
-                        </c:otherwise>
-                    </c:choose>
-                    <input type="password" class="txt-input border" placeholder="Password" name="password">
+						<c:when test="${user.username != null}">
+							<input type="text" class="txt-input border" name="username"
+								value="${user.username}" readonly>
+						</c:when>
+						<c:otherwise>
+							<input type="text" class="txt-input border" name="username"
+								placeholder="Username">
+						</c:otherwise>
+					</c:choose>
+                   
                     <select name="gender" class="gender-select">
                         <option value="true">Hoạt Động</option>
                     </select>
