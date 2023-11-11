@@ -44,6 +44,10 @@
 			showAnnotation('Đăng nhập thất bại',
 					'Rất tiếc. Tài khoản của bạn đã bị khóa', 0);
 			console.log('Print: dung khi dang nhap dung nhung tk bi khoa');
+		} else if (annotationLGValue == 5) {
+			showAnnotation('Đăng kí tài khoản thành công',
+					'', 1);
+			
 		} else {
 			console.log('Không cần thông báo');
 			console.log('Print: nothing');

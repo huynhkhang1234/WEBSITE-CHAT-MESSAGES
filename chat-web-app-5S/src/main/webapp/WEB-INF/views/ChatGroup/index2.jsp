@@ -46,20 +46,7 @@ response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 	Object annotationLG = request.getAttribute("annotationLG");
 	%>
 
-	<script>
- 	var annotationLGValue = '<%=annotationLG%>
-		';
 
-		if (annotationLGValue == 1) {
-			showAnnotation('Đăng nhập thành công', 'Chào mừng bạn đến chơiii',
-					1);
-		} else if (annotationLGValue == 2) {
-
-		} else {
-			console.log('Không cần thông báo');
-			console.log('Print nothing ');
-		}
-	</script>
 
 	<main>
 		
@@ -72,7 +59,7 @@ response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 							<button class="btn">
 							<c:if test="${currentUser.avatar == ''}">
 						    <img class="avatar-xl"
-						        src="<c:url value='/static/images/logo5s.png' />"
+						        src="<c:url value='/static/images/anh2.jpg' />"
 						        alt="avatar">
 							</c:if>
 							

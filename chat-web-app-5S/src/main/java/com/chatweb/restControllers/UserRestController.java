@@ -82,6 +82,8 @@ public class UserRestController extends HttpServlet {
 				RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/ChatGroup/sign-up.jsp");
 				rd.forward(request, response);
 		}else {
+			checkLogin = 5;
+			 request.setAttribute("annotationLG", checkLogin);
 			Boolean gender= Boolean.valueOf(request.getParameter("gender"));
 			Part avarta = request.getPart("avarta");
 			userServiceInterface.saveUser(true, username, password, gender, avarta, isAdmin, true);
